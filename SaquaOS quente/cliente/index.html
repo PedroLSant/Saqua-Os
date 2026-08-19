@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Painel – SaquaOs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="/inicio/inicio.html" class="logo-link">
+      <span class="logo-icon">⚙</span>
+      <span class="logo-nome">SaquaOs</span>
+    </a>
+    <div class="header-dir">
+      <span id="clienteNome">Carregando...</span>
+      <button id="btnSair" class="btn-sair">Sair</button>
+    </div>
+  </header>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="tabs-nav">
+    <button class="tab-btn ativo" data-tab="pedido">📦 Pedido</button>
+    <button class="tab-btn" data-tab="historico">📋 Histórico</button>
+    <button class="tab-btn" data-tab="chat">💬 Chat</button>
+    <button class="tab-btn" data-tab="perfil">👤 Perfil</button>
+  </nav>
+
+  <!-- CONTEÚDO -->
+  <main class="main">
+
+    <!-- ===== TAB: PEDIDO ATUAL ===== -->
+    <section class="tab-content" id="tab-pedido">
+      <div class="card">
+        <h2 class="card-titulo">📦 Meu Pedido</h2>
+
+        <div id="semPedido" class="sem-pedido">
+          <p>Você ainda não tem nenhum pedido em andamento.</p>
+          <a href="/sistema/sistema.html" class="btn-primario">Criar meu sistema</a>
+        </div>
+
+        <div id="pedidoInfo" class="oculto">
+          <div class="prazo-box">
+            <div class="prazo-label">⏱ Prazo estimado</div>
+            <div class="prazo-data" id="prazoData">—</div>
+            <div class="prazo-dias" id="prazoDias"></div>
+          </div>
+
+          <div class="steps">
+            <div class="step" id="step-pendente"><div class="step-circulo">1</div><div class="step-label">Recebido</div></div>
+            <div class="step-linha"></div>
+            <div class="step" id="step-em_andamento"><div class="step-circulo">2</div><div class="step-label">Em andamento</div></div>
+            <div class="step-linha"></div>
+            <div class="step" id="step-concluido"><div class="step-circulo">3</div><div class="step-label">Concluído</div></div>
+          </div>
+
+          <div class="detalhes">
+            <div class="detalhe-item"><span class="detalhe-label">Serviço</span><span class="detalhe-valor" id="osServico">—</span></div>
+            <div class="detalhe-item"><span class="detalhe-label">Descrição</span><span class="detalhe-valor" id="osDescricao">—</span></div>
+            <div class="detalhe-item"><span class="detalhe-label">Valor</span><span class="detalhe-valor" id="osValor">—</span></div>
+            <div class="detalhe-item"><span class="detalhe-label">Status</span><span class="detalhe-valor" id="osStatus">—</span></div>
+            <div class="detalhe-item" id="osObsWrap" style="display:none"><span class="detalhe-label">Observação</span><span class="detalhe-valor" id="osObs">—</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TAB: HISTÓRICO ===== -->
+    <section class="tab-content oculto" id="tab-historico">
+      <div class="card">
+        <h2 class="card-titulo">📋 Histórico de Pedidos</h2>
+        <div id="listaHistorico">
+          <p class="vazio-msg">Carregando...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TAB: CHAT ===== -->
+    <section class="tab-content oculto" id="tab-chat">
+      <div class="card card-chat">
+        <h2 class="card-titulo">💬 Chat com a equipe</h2>
+        <div class="msgs-area" id="msgsArea">
+          <p class="msg-aviso">Nenhuma mensagem ainda. Diga olá! 👋</p>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" id="inputMsg" placeholder="Digite sua mensagem..." />
+          <button id="btnEnviar">Enviar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TAB: PERFIL ===== -->
+    <section class="tab-content oculto" id="tab-perfil">
+      <div class="card">
+        <h2 class="card-titulo">👤 Meu Perfil</h2>
+        <form id="formPerfil">
+          <label>Nome</label>
+          <input type="text" id="perfilNome" placeholder="Seu nome">
+          <label>Email</label>
+          <input type="email" id="perfilEmail" disabled>
+          <label>Telefone</label>
+          <input type="tel" id="perfilTelefone" placeholder="(00) 00000-0000">
+          <label>Data de nascimento</label>
+          <input type="date" id="perfilNascimento">
+          <button type="submit" class="btn-primario" style="margin-top:8px;width:100%">Salvar alterações</button>
+        </form>
+        <div class="perfil-divider"></div>
+        <h3 class="perfil-subtitulo">🔒 Alterar Senha</h3>
+        <form id="formSenha">
+          <label>Nova senha</label>
+          <input type="password" id="novaSenha" placeholder="Mínimo 6 caracteres" minlength="6">
+          <label>Confirmar nova senha</label>
+          <input type="password" id="confirmarSenha" placeholder="Repita a senha">
+          <button type="submit" class="btn-secundario" style="margin-top:8px;width:100%">Alterar senha</button>
+        </form>
+        <p class="perfil-feedback oculto" id="perfilFeedback"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL AVALIAÇÃO -->
+  <div class="modal-overlay oculto" id="modalAvaliacao">
+    <div class="modal-avaliacao">
+      <div class="modal-emoji">🎉</div>
+      <h2>Seu sistema ficou pronto!</h2>
+      <p>Conte pra gente como foi sua experiência:</p>
+      <div class="estrelas-container" id="estrelasContainer">
+        <span class="estrela" data-nota="1">★</span>
+        <span class="estrela" data-nota="2">★</span>
+        <span class="estrela" data-nota="3">★</span>
+        <span class="estrela" data-nota="4">★</span>
+        <span class="estrela" data-nota="5">★</span>
+      </div>
+      <span class="nota-texto" id="notaTexto">Selecione uma nota</span>
+      <textarea id="avaliacaoComentario" placeholder="Deixe um comentário (opcional)..."></textarea>
+      <button class="btn-primario" id="btnEnviarAvaliacao" style="width:100%">Enviar Avaliação</button>
+      <button class="btn-pular" id="btnPularAvaliacao">Pular por agora</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

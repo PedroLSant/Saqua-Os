@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgendaPro – Modelo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#0a0a12;color:#e2e8f0}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:#0f0f1a;border-bottom:1px solid rgba(255,255,255,.05)}
+.logo{font-size:20px;font-weight:700;color:#8b5cf6}
+nav a{margin-left:22px;text-decoration:none;color:#64748b;font-size:14px;transition:.2s}nav a:hover{color:#e2e8f0}
+.resumo{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:28px 40px 0}
+.box{display:flex;align-items:center;gap:16px;padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);transition:transform .2s}.box:hover{transform:translateY(-3px)}
+.box-icon{font-size:26px;width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bi1{background:rgba(139,92,246,.12)}.bi2{background:rgba(59,130,246,.12)}.bi3{background:rgba(16,185,129,.12)}.bi4{background:rgba(245,158,11,.12)}
+.box h4{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.05em;font-weight:600;margin-bottom:4px}
+.box-valor{font-size:22px;font-weight:800;color:#fff}
+.conteudo{display:grid;grid-template-columns:1fr 340px;gap:20px;padding:24px 40px 40px}
+.painel{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:24px}
+.painel h3{margin:0 0 18px;font-size:15px;color:#94a3b8;font-weight:600}
+.painel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.painel-header h3{margin:0}
+
+/* AGENDA SEMANAL */
+.semana-header{display:grid;grid-template-columns:70px repeat(7,1fr);gap:0;margin-bottom:2px}
+.semana-dia{text-align:center;font-size:11px;color:#64748b;text-transform:uppercase;padding:8px 0;font-weight:600}
+.semana-dia.hoje{color:#8b5cf6;font-weight:700}
+.agenda-grid{display:grid;grid-template-columns:70px repeat(7,1fr);gap:0}
+.hora-label{font-size:11px;color:#475569;padding:8px 8px 8px 0;text-align:right;border-right:1px solid rgba(255,255,255,.04);height:60px;display:flex;align-items:flex-start;justify-content:flex-end}
+.slot{border:1px solid rgba(255,255,255,.03);height:60px;position:relative;transition:background .15s;cursor:pointer}
+.slot:hover{background:rgba(255,255,255,.03)}
+.slot.hoje-col{background:rgba(139,92,246,.03)}
+.agendamento{position:absolute;left:3px;right:3px;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:600;overflow:hidden;z-index:2;cursor:pointer;line-height:1.3}
+.ag-roxo{background:rgba(139,92,246,.2);border-left:3px solid #8b5cf6;color:#c4b5fd}
+.ag-azul{background:rgba(59,130,246,.2);border-left:3px solid #3b82f6;color:#93c5fd}
+.ag-verde{background:rgba(16,185,129,.2);border-left:3px solid #10b981;color:#6ee7b7}
+.ag-laranja{background:rgba(245,158,11,.2);border-left:3px solid #f59e0b;color:#fcd34d}
+.ag-nome{display:block;font-weight:700;font-size:11px}.ag-serv{font-weight:400;font-size:10px;color:inherit;opacity:.7}
+
+/* PRÓXIMOS */
+.prox-item{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.04)}.prox-item:last-child{border:none}
+.prox-hora-box{width:52px;height:52px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;font-weight:700}
+.prox-hora-box span:first-child{font-size:16px;line-height:1}.prox-hora-box span:last-child{font-size:10px;opacity:.6}
+.ph1{background:rgba(139,92,246,.12);color:#a78bfa}.ph2{background:rgba(59,130,246,.12);color:#93c5fd}.ph3{background:rgba(16,185,129,.12);color:#6ee7b7}.ph4{background:rgba(245,158,11,.12);color:#fcd34d}
+.prox-info{flex:1}.prox-nome{font-size:14px;font-weight:600;color:#e2e8f0;display:block}.prox-serv{font-size:12px;color:#64748b}
+.prox-status{font-size:11px;padding:4px 10px;border-radius:12px;font-weight:600}
+.st-conf{background:rgba(16,185,129,.12);color:#68d391}
+.st-pend{background:rgba(245,158,11,.12);color:#f6ad55}
+
+/* PROFISSIONAIS */
+.prof-section{padding:0 40px 40px}
+.prof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.prof-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px;text-align:center;transition:transform .2s}.prof-card:hover{transform:translateY(-3px)}
+.prof-avatar{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 10px}
+.pa1{background:rgba(139,92,246,.15)}.pa2{background:rgba(59,130,246,.15)}.pa3{background:rgba(16,185,129,.15)}.pa4{background:rgba(236,72,153,.15)}
+.prof-nome{font-size:14px;font-weight:700;color:#e2e8f0}.prof-cargo{font-size:12px;color:#64748b;margin:2px 0 10px}
+.prof-stats{display:flex;justify-content:center;gap:16px}
+.prof-stat{text-align:center}.prof-stat span:first-child{font-size:16px;font-weight:800;color:#fff;display:block}.prof-stat span:last-child{font-size:10px;color:#64748b}
+
+.btn-nav{position:fixed;bottom:30px;padding:14px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:14px;z-index:50;transition:.3s;box-shadow:0 8px 25px rgba(0,0,0,.3)}
+.btn-voltar{left:30px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:#fff}
+.btn-proximo{right:30px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:#fff}
+.btn-nav:hover{transform:translateY(-4px) scale(1.05)}
+
+@media(max-width:900px){.resumo{grid-template-columns:repeat(2,1fr)}.conteudo{grid-template-columns:1fr}.prof-grid{grid-template-columns:repeat(2,1fr)}header,.resumo,.conteudo,.prof-section{padding-left:20px;padding-right:20px}}
+@media(max-width:500px){.resumo{grid-template-columns:1fr}.prof-grid{grid-template-columns:1fr}.semana-header,.agenda-grid{grid-template-columns:50px repeat(7,1fr)}}
+</style>
+</head>
+<body>
+<header><span class="logo">📅 AgendaPro</span><nav><a href="#">Dashboard</a><a href="#">Agenda</a><a href="#">Clientes</a><a href="#">Serviços</a></nav></header>
+
+<section class="resumo">
+  <div class="box"><span class="box-icon bi1">📅</span><div><h4>Agendamentos hoje</h4><span class="box-valor" style="color:#8b5cf6">8</span></div></div>
+  <div class="box"><span class="box-icon bi2">👥</span><div><h4>Clientes no mês</h4><span class="box-valor" style="color:#3b82f6">67</span></div></div>
+  <div class="box"><span class="box-icon bi3">💰</span><div><h4>Faturamento (mês)</h4><span class="box-valor" style="color:#10b981">R$ 12.840</span></div></div>
+  <div class="box"><span class="box-icon bi4">⭐</span><div><h4>Avaliação média</h4><span class="box-valor" style="color:#f59e0b">4.8</span></div></div>
+</section>
+
+<section class="conteudo">
+  <!-- AGENDA SEMANAL -->
+  <div class="painel" style="overflow-x:auto">
+    <h3>Agenda da Semana</h3>
+    <div class="semana-header">
+      <div></div>
+      <div class="semana-dia">Seg</div><div class="semana-dia">Ter</div><div class="semana-dia hoje">Qua</div><div class="semana-dia">Qui</div><div class="semana-dia">Sex</div><div class="semana-dia">Sáb</div><div class="semana-dia">Dom</div>
+    </div>
+    <div class="agenda-grid" id="agendaGrid"></div>
+  </div>
+
+  <!-- PRÓXIMOS -->
+  <div class="painel">
+    <h3>Próximos Atendimentos</h3>
+    <div class="prox-item"><div class="prox-hora-box ph1"><span>09:00</span><span>AM</span></div><div class="prox-info"><span class="prox-nome">Lucas Mendes</span><span class="prox-serv">Corte + Barba</span></div><span class="prox-status st-conf">Confirmado</span></div>
+    <div class="prox-item"><div class="prox-hora-box ph2"><span>10:30</span><span>AM</span></div><div class="prox-info"><span class="prox-nome">Ana Paula Silva</span><span class="prox-serv">Coloração</span></div><span class="prox-status st-conf">Confirmado</span></div>
+    <div class="prox-item"><div class="prox-hora-box ph3"><span>11:00</span><span>AM</span></div><div class="prox-info"><span class="prox-nome">Rafael Costa</span><span class="prox-serv">Corte Masculino</span></div><span class="prox-status st-pend">Pendente</span></div>
+    <div class="prox-item"><div class="prox-hora-box ph4"><span>14:00</span><span>PM</span></div><div class="prox-info"><span class="prox-nome">Carla Ribeiro</span><span class="prox-serv">Manicure + Pedicure</span></div><span class="prox-status st-conf">Confirmado</span></div>
+    <div class="prox-item"><div class="prox-hora-box ph1"><span>15:30</span><span>PM</span></div><div class="prox-info"><span class="prox-nome">Pedro Oliveira</span><span class="prox-serv">Barba</span></div><span class="prox-status st-pend">Pendente</span></div>
+    <div class="prox-item"><div class="prox-hora-box ph2"><span>16:00</span><span>PM</span></div><div class="prox-info"><span class="prox-nome">Julia Santos</span><span class="prox-serv">Escova progressiva</span></div><span class="prox-status st-conf">Confirmado</span></div>
+  </div>
+</section>
+
+<!-- PROFISSIONAIS -->
+<section class="prof-section">
+  <div class="painel">
+    <h3>Profissionais</h3>
+    <div class="prof-grid">
+      <div class="prof-card"><div class="prof-avatar pa1">👨‍🦱</div><div class="prof-nome">Carlos</div><div class="prof-cargo">Barbeiro Senior</div><div class="prof-stats"><div class="prof-stat"><span>142</span><span>Clientes</span></div><div class="prof-stat"><span>4.9</span><span>Nota</span></div></div></div>
+      <div class="prof-card"><div class="prof-avatar pa2">👩</div><div class="prof-nome">Juliana</div><div class="prof-cargo">Cabeleireira</div><div class="prof-stats"><div class="prof-stat"><span>118</span><span>Clientes</span></div><div class="prof-stat"><span>4.8</span><span>Nota</span></div></div></div>
+      <div class="prof-card"><div class="prof-avatar pa3">👨</div><div class="prof-nome">Ricardo</div><div class="prof-cargo">Barbeiro</div><div class="prof-stats"><div class="prof-stat"><span>96</span><span>Clientes</span></div><div class="prof-stat"><span>4.7</span><span>Nota</span></div></div></div>
+      <div class="prof-card"><div class="prof-avatar pa4">💅</div><div class="prof-nome">Patrícia</div><div class="prof-cargo">Manicure</div><div class="prof-stats"><div class="prof-stat"><span>84</span><span>Clientes</span></div><div class="prof-stat"><span>4.9</span><span>Nota</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<a href="../modelo2/modelo2.html" class="btn-nav btn-voltar">← Anterior</a>
+<a href="../sistema/sistema.html" class="btn-nav btn-proximo">Criar meu sistema →</a>
+
+<script>
+// Gera agenda semanal
+const horas = ["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00"];
+const agendamentos = [
+  {dia:0,hora:1,dur:1,nome:"Lucas M.",serv:"Corte+Barba",cor:"ag-roxo"},
+  {dia:0,hora:3,dur:1,nome:"Marcos",serv:"Corte",cor:"ag-azul"},
+  {dia:1,hora:0,dur:1,nome:"Fernanda",serv:"Coloração",cor:"ag-verde"},
+  {dia:1,hora:2,dur:2,nome:"Rita",serv:"Progressiva",cor:"ag-laranja"},
+  {dia:2,hora:1,dur:1,nome:"Lucas M.",serv:"Corte+Barba",cor:"ag-roxo"},
+  {dia:2,hora:2,dur:1,nome:"Ana P.",serv:"Coloração",cor:"ag-azul"},
+  {dia:2,hora:5,dur:1,nome:"Rafael",serv:"Corte",cor:"ag-verde"},
+  {dia:2,hora:6,dur:1,nome:"Carla",serv:"Mani+Pedi",cor:"ag-laranja"},
+  {dia:2,hora:7,dur:1,nome:"Pedro",serv:"Barba",cor:"ag-roxo"},
+  {dia:3,hora:0,dur:1,nome:"Julia",serv:"Escova",cor:"ag-azul"},
+  {dia:3,hora:3,dur:1,nome:"Thiago",serv:"Corte",cor:"ag-verde"},
+  {dia:4,hora:1,dur:1,nome:"Camila",serv:"Coloração",cor:"ag-laranja"},
+  {dia:4,hora:4,dur:2,nome:"Bruna",serv:"Progressiva",cor:"ag-roxo"},
+  {dia:5,hora:0,dur:1,nome:"André",serv:"Corte+Barba",cor:"ag-azul"},
+  {dia:5,hora:2,dur:1,nome:"Patrícia",serv:"Manicure",cor:"ag-verde"},
+];
+
+const grid = document.getElementById("agendaGrid");
+let html = "";
+horas.forEach((h, hi) => {
+  html += `<div class="hora-label">${h}</div>`;
+  for (let d = 0; d < 7; d++) {
+    const isHoje = d === 2;
+    html += `<div class="slot${isHoje ? ' hoje-col' : ''}" data-dia="${d}" data-hora="${hi}">`;
+    const ag = agendamentos.find(a => a.dia === d && a.hora === hi);
+    if (ag) {
+      const altura = ag.dur * 58 - 4;
+      html += `<div class="agendamento ${ag.cor}" style="top:2px;height:${altura}px"><span class="ag-nome">${ag.nome}</span><span class="ag-serv">${ag.serv}</span></div>`;
+    }
+    html += `</div>`;
+  }
+});
+grid.innerHTML = html;
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nós – SaquaOs</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:radial-gradient(circle at center,#111,#050505);color:#e2e8f0;min-height:100vh}
+.fundo{position:fixed;width:100%;height:100%;z-index:-1;filter:blur(1px)}.fundo svg{width:100%;height:100%}
+.line{fill:none;stroke:rgba(255,255,255,.05);stroke-width:1.5;stroke-dasharray:1000;animation:moveLine linear infinite}
+.line:nth-child(1){animation-duration:6s}.line:nth-child(2){animation-duration:8s}.line:nth-child(3){animation-duration:10s}.line:nth-child(4){animation-duration:12s}
+@keyframes moveLine{0%{stroke-dashoffset:1000}100%{stroke-dashoffset:-1000}}
+.btn-voltar{position:fixed;top:20px;left:20px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-size:14px;border:1px solid rgba(255,255,255,.1);transition:.3s;z-index:1000}.btn-voltar:hover{background:#fff;color:#000}
+.page{max-width:800px;margin:0 auto;padding:80px 30px 60px;position:relative;z-index:2}
+.page h1{font-size:36px;font-weight:800;margin-bottom:8px;text-align:center}
+.page .sub{text-align:center;color:rgba(255,255,255,.4);font-size:15px;margin-bottom:48px}
+.section{margin-bottom:48px}
+.section h2{font-size:20px;font-weight:700;color:#6c8cff;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.8}
+.valores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.valor-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:24px;text-align:center}
+.valor-icone{font-size:28px;margin-bottom:10px}
+.valor-card h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
+.valor-card p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5}
+.equipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.membro{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:24px;text-align:center}
+.membro-avatar{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 12px}
+.ma1{background:rgba(108,140,255,.15)}.ma2{background:rgba(16,185,129,.15)}.ma3{background:rgba(245,158,11,.15)}
+.membro h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:2px}
+.membro span{font-size:12px;color:#64748b}
+@media(max-width:600px){.valores-grid,.equipe-grid{grid-template-columns:1fr}.page h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="fundo"><svg viewBox="0 0 1440 800" preserveAspectRatio="none"><path class="line" d="M0,200 C400,100 800,300 1440,200"/><path class="line" d="M0,300 C400,200 800,400 1440,300"/><path class="line" d="M0,400 C400,300 800,500 1440,400"/><path class="line" d="M0,500 C400,400 800,600 1440,500"/></svg></div>
+<a href="../inicio/inicio.html" class="btn-voltar">← Voltar</a>
+<div class="page">
+  <h1>Sobre Nós</h1>
+  <p class="sub">Conheça a equipe por trás do SaquaOs</p>
+
+  <div class="section">
+    <h2>🎯 Nossa Missão</h2>
+    <p>Democratizar o acesso a sistemas de gestão personalizados para pequenos e médios negócios. Acreditamos que toda empresa merece ferramentas profissionais, independente do tamanho. O SaquaOs nasceu com o objetivo de entregar soluções sob medida com agilidade, qualidade e preço acessível.</p>
+  </div>
+
+  <div class="section">
+    <h2>💡 Nossos Valores</h2>
+    <div class="valores-grid">
+      <div class="valor-card"><div class="valor-icone">⚡</div><h3>Agilidade</h3><p>Entregas rápidas sem abrir mão da qualidade.</p></div>
+      <div class="valor-card"><div class="valor-icone">🤝</div><h3>Transparência</h3><p>O cliente acompanha cada etapa do processo em tempo real.</p></div>
+      <div class="valor-card"><div class="valor-icone">🎨</div><h3>Personalização</h3><p>Cada sistema é único, feito sob medida para o seu negócio.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>👥 Nossa Equipe</h2>
+    <div class="equipe-grid">
+      <div class="membro"><div class="membro-avatar ma1">👨‍💻</div><h3>Pedro Lucas</h3><span>Desenvolvedor Full Stack</span></div>
+      <div class="membro"><div class="membro-avatar ma2">🎨</div><h3>Designer</h3><span>UI/UX Design</span></div>
+      <div class="membro"><div class="membro-avatar ma3">📊</div><h3>Gestão</h3><span>Projetos & Atendimento</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📍 Como nos encontrar</h2>
+    <p>Somos 100% digitais. Todos os nossos serviços são realizados online, com suporte direto pelo chat da plataforma. Atendemos clientes de todo o Brasil.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaquaOs</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4950bc">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon_new.ico">
+</head>
+<body>
+    <!-- FUNDO ANIMADO -->
+    <div class="fundo-grid"></div>
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+    
+    <div class="fundo">
+        <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+            <path class="line" d="M0,200 C400,100 800,300 1440,200" />
+            <path class="line" d="M0,300 C400,200 800,400 1440,300" />
+            <path class="line" d="M0,400 C400,300 800,500 1440,400" />
+            <path class="line" d="M0,500 C400,400 800,600 1440,500" />
+        </svg>
+    </div>
+
+    <header>
+        <a href="/inicio/inicio.html" class="logo-link">
+            <svg class="logo-svg" viewBox="0 0 200 44" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22" cy="22" r="16" fill="none" stroke="url(#grad1)" stroke-width="2.5"/>
+                <circle cx="22" cy="22" r="6" fill="url(#grad1)"/>
+                <g stroke="url(#grad1)" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="22" y1="2" x2="22" y2="7"/><line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/><line x1="37" y1="22" x2="42" y2="22"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/><line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/><line x1="12" y1="32" x2="8" y2="36"/>
+                </g>
+                <text x="52" y="20" font-family="'Segoe UI',sans-serif" font-size="18" font-weight="700" fill="white" letter-spacing="0.5">Saqua</text>
+                <text x="114" y="20" font-family="'Segoe UI',sans-serif" font-size="18" font-weight="700" fill="url(#grad1)" letter-spacing="0.5">Os</text>
+                <text x="52" y="36" font-family="'Segoe UI',sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" letter-spacing="3">SISTEMAS</text>
+                <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6c8cff"/><stop offset="100%" stop-color="#4b5eff"/></linearGradient></defs>
+            </svg>
+        </a>
+        <nav id="auth-nav">
+            <span>Carregando...</span>
+            <a href="../login/login.html">Fazer Login</a>
+        </nav>
+    </header>
+
+    <script type="module" src="script.js"></script>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <h1>Gerencie suas Ordens de Serviço com mais agilidade e menos esforço.</h1>
+        <p>Automatize suas Ordens de Serviço e ganhe mais produtividade com um sistema simples e eficiente.</p>
+        <div class="botaos">
+            <a href="../sistema/sistema.html"><button class="botao1">Crie seu Sistema</button></a>
+            <a href="../modelo1/modelo1.html"><button class="botao2">Conheça Modelos</button></a>
+        </div>
+        <div class="carrossel">
+            <div class="track">
+                <img src="https://img.freepik.com/vetores-premium/pagina-inicial-do-site-abstrato-modelo-para-sites-ou-aplicativos_213860-336.jpg">
+                <img src="https://img.freepik.com/vetores-premium/design-da-pagina-de-destino-do-aplicativo-movel_672162-197.jpg">
+                <img src="https://blog.webnode.com/br/files/2021/11/navegacao-pouco-intuitiva-1.png">
+                <img src="https://us-wd.gr-cdn.com/blog/sites/5/2023/07/1507/exemplo-de-site-de-financiamento-coletivo-fundable.webp">
+                <img src="https://img.freepik.com/vetores-premium/pagina-inicial-do-site-abstrato-modelo-para-sites-ou-aplicativos_213860-336.jpg">
+                <img src="https://img.freepik.com/vetores-premium/design-da-pagina-de-destino-do-aplicativo-movel_672162-197.jpg">
+                <img src="https://blog.webnode.com/br/files/2021/11/navegacao-pouco-intuitiva-1.png">
+                <img src="https://us-wd.gr-cdn.com/blog/sites/5/2023/07/1507/exemplo-de-site-de-financiamento-coletivo-fundable.webp">
+                <img src="https://img.freepik.com/vetores-premium/pagina-inicial-do-site-abstrato-modelo-para-sites-ou-aplicativos_213860-336.jpg">
+                <img src="https://img.freepik.com/vetores-premium/design-da-pagina-de-destino-do-aplicativo-movel_672162-197.jpg">
+                <img src="https://blog.webnode.com/br/files/2021/11/navegacao-pouco-intuitiva-1.png">
+                <img src="https://us-wd.gr-cdn.com/blog/sites/5/2023/07/1507/exemplo-de-site-de-financiamento-coletivo-fundable.webp">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTADORES ===== -->
+    <section class="contadores">
+        <div class="contador">
+            <div class="contador-valor-row">
+                <span class="contador-num" data-target="47">0</span>
+            </div>
+            <span class="contador-label">Sistemas Entregues</span>
+        </div>
+        <div class="contador">
+            <div class="contador-valor-row">
+                <span class="contador-num" data-target="32">0</span>
+            </div>
+            <span class="contador-label">Clientes Ativos</span>
+        </div>
+        <div class="contador">
+            <div class="contador-valor-row">
+                <span class="contador-num" data-target="98">0</span>
+                <span class="contador-suffix">%</span>
+            </div>
+            <span class="contador-label">Satisfação</span>
+        </div>
+        <div class="contador">
+            <div class="contador-valor-row">
+                <span class="contador-num" data-target="5">0</span>
+                <span class="contador-suffix">.0 ⭐</span>
+            </div>
+            <span class="contador-label">Avaliação Média</span>
+        </div>
+    </section>
+
+    <!-- ===== COMO FUNCIONA ===== -->
+    <section class="como-funciona">
+        <h2 class="secao-titulo">Como funciona</h2>
+        <p class="secao-sub">Do pedido à entrega em 4 passos simples</p>
+        <div class="passos-grid">
+            <div class="passo">
+                <div class="passo-num">1</div>
+                <div class="passo-icone">📋</div>
+                <h3>Escolha o modelo</h3>
+                <p>Selecione o tipo de sistema ideal para o seu negócio entre nossos modelos prontos.</p>
+            </div>
+            <div class="passo-seta">→</div>
+            <div class="passo">
+                <div class="passo-num">2</div>
+                <div class="passo-icone">💰</div>
+                <h3>Faça o pagamento</h3>
+                <p>Pague via Pix ou cartão de crédito com parcelamento em até 12x.</p>
+            </div>
+            <div class="passo-seta">→</div>
+            <div class="passo">
+                <div class="passo-num">3</div>
+                <div class="passo-icone">⚙️</div>
+                <h3>Acompanhe o progresso</h3>
+                <p>Veja cada etapa da construção do seu sistema pelo painel do cliente em tempo real.</p>
+            </div>
+            <div class="passo-seta">→</div>
+            <div class="passo">
+                <div class="passo-num">4</div>
+                <div class="passo-icone">🚀</div>
+                <h3>Receba pronto</h3>
+                <p>Seu sistema é entregue funcionando, com suporte e ajustes inclusos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFÓLIO ===== -->
+    <section class="portfolio">
+        <h2 class="secao-titulo">Nosso Portfólio</h2>
+        <p class="secao-sub">Alguns dos sistemas que já entregamos</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-img" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
+                    <span class="portfolio-emoji">💰</span>
+                </div>
+                <div class="portfolio-info">
+                    <h4>FinançasPro</h4>
+                    <p>Sistema de gestão financeira completo com dashboard, fluxo de caixa e relatórios.</p>
+                    <span class="portfolio-tag">Financeiro</span>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-img" style="background:linear-gradient(135deg,#1a2e1a,#162e21)">
+                    <span class="portfolio-emoji">🏭</span>
+                </div>
+                <div class="portfolio-info">
+                    <h4>ProduçãoMax</h4>
+                    <p>Controle de produção com pipeline visual, ordens e monitoramento de máquinas.</p>
+                    <span class="portfolio-tag">Produção</span>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-img" style="background:linear-gradient(135deg,#2e1a2e,#2e1640)">
+                    <span class="portfolio-emoji">📅</span>
+                </div>
+                <div class="portfolio-info">
+                    <h4>AgendaPro</h4>
+                    <p>Agendamento inteligente com calendário semanal e gestão de profissionais.</p>
+                    <span class="portfolio-tag">Agendamento</span>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-img" style="background:linear-gradient(135deg,#2e2a1a,#2e2216)">
+                    <span class="portfolio-emoji">🛒</span>
+                </div>
+                <div class="portfolio-info">
+                    <h4>VendasFácil</h4>
+                    <p>Plataforma de vendas com controle de pedidos, estoque e comissões por vendedor.</p>
+                    <span class="portfolio-tag">E-commerce</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="depoimentos">
+        <h2 class="secao-titulo">O que nossos clientes dizem</h2>
+        <p class="secao-sub">Depoimentos reais de quem já usou nossos serviços</p>
+        <div class="depoimentos-grid" id="depoimentosGrid">
+            <!-- Carrega do Firestore automaticamente -->
+            <div class="depo-card visivel">
+                <div class="depo-estrelas">⭐⭐⭐⭐⭐</div>
+                <p class="depo-texto">"Meu sistema ficou exatamente como eu queria. A equipe entendeu minha necessidade desde o primeiro contato. Super recomendo!"</p>
+                <div class="depo-autor">
+                    <div class="depo-avatar" style="background:rgba(108,140,255,.15)">M</div>
+                    <div><strong>Marcos Oliveira</strong><span>Cliente</span></div>
+                </div>
+            </div>
+            <div class="depo-card visivel">
+                <div class="depo-estrelas">⭐⭐⭐⭐⭐</div>
+                <p class="depo-texto">"O sistema de produção que fizeram pra minha confecção economiza horas do meu dia. Consigo ver tudo em tempo real."</p>
+                <div class="depo-autor">
+                    <div class="depo-avatar" style="background:rgba(16,185,129,.15)">A</div>
+                    <div><strong>Ana Paula Santos</strong><span>Cliente</span></div>
+                </div>
+            </div>
+            <div class="depo-card visivel">
+                <div class="depo-estrelas">⭐⭐⭐⭐⭐</div>
+                <p class="depo-texto">"Entregaram antes do prazo e com qualidade absurda. O suporte pelo chat é muito rápido. Já encomendei o segundo sistema."</p>
+                <div class="depo-autor">
+                    <div class="depo-avatar" style="background:rgba(245,158,11,.15)">R</div>
+                    <div><strong>Rafael Costa</strong><span>Cliente</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para carregar avaliações reais do Firestore -->
+    <script type="module">
+    import { db } from "../firebase.js";
+    import { collection, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    async function carregarAvaliacoes() {
+      try {
+        const q = query(collection(db, "avaliacoes"), orderBy("timestamp", "desc"), limit(6));
+        const snap = await getDocs(q);
+        if (snap.empty) return; // mantém os hardcoded
+
+        const cores = ["rgba(108,140,255,.15)","rgba(16,185,129,.15)","rgba(245,158,11,.15)","rgba(139,92,246,.15)","rgba(236,72,153,.15)","rgba(59,130,246,.15)"];
+        const grid = document.getElementById("depoimentosGrid");
+
+        grid.innerHTML = snap.docs.map((d, i) => {
+          const a = d.data();
+          const estrelas = "⭐".repeat(a.nota || 5);
+          const inicial = (a.clienteNome || "C").charAt(0).toUpperCase();
+          const comentario = a.comentario || "Ótima experiência!";
+          return `
+            <div class="depo-card visivel">
+              <div class="depo-estrelas">${estrelas}</div>
+              <p class="depo-texto">"${comentario}"</p>
+              <div class="depo-autor">
+                <div class="depo-avatar" style="background:${cores[i % cores.length]}">${inicial}</div>
+                <div><strong>${a.clienteNome || "Cliente"}</strong><span>Cliente</span></div>
+              </div>
+            </div>
+          `;
+        }).join("");
+      } catch(e) { console.log("Sem avaliacoes do Firestore, usando hardcoded"); }
+    }
+    carregarAvaliacoes();
+    </script>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+        <h2 class="secao-titulo">Perguntas Frequentes</h2>
+        <p class="secao-sub">Tire suas dúvidas antes de começar</p>
+        <div class="faq-lista">
+            <div class="faq-item">
+                <button class="faq-pergunta">Quanto tempo demora para entregar meu sistema? <span class="faq-seta">+</span></button>
+                <div class="faq-resposta"><p>O prazo depende do tipo de sistema escolhido. Em média, nossos projetos são entregues entre 7 e 30 dias úteis. Você pode acompanhar o progresso em tempo real pelo painel do cliente.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pergunta">Quais formas de pagamento vocês aceitam? <span class="faq-seta">+</span></button>
+                <div class="faq-resposta"><p>Aceitamos Pix (pagamento instantâneo) e cartão de crédito com parcelamento em até 12x. O pagamento é feito diretamente pela plataforma de forma segura.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pergunta">Posso pedir alterações depois de pronto? <span class="faq-seta">+</span></button>
+                <div class="faq-resposta"><p>Sim! Após a entrega, você tem direito a ajustes dentro do escopo contratado. Basta enviar uma mensagem pelo chat do painel que nossa equipe responde rapidamente.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pergunta">O sistema funciona no celular? <span class="faq-seta">+</span></button>
+                <div class="faq-resposta"><p>Todos os nossos sistemas são responsivos, ou seja, funcionam perfeitamente em celulares, tablets e computadores.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pergunta">Vocês oferecem suporte após a entrega? <span class="faq-seta">+</span></button>
+                <div class="faq-resposta"><p>Sim, oferecemos suporte completo pelo chat da plataforma. Nossa equipe está disponível para tirar dúvidas e resolver problemas técnicos.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cta-final">
+        <h2>Pronto para ter seu sistema?</h2>
+        <p>Comece agora e tenha seu sistema personalizado funcionando em poucos dias.</p>
+        <div class="botaos">
+            <a href="../sistema/sistema.html"><button class="botao1">Começar Agora</button></a>
+            <a href="../modelo1/modelo1.html"><button class="botao2">Ver Modelos</button></a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>SaquaOs</h4>
+                <p>Sistemas sob medida para o seu negócio. Do pedido à entrega com agilidade e qualidade.</p>
+            </div>
+            <div>
+                <h4>Links</h4>
+                <a href="../modelo1/modelo1.html">Modelos</a>
+                <a href="../sistema/sistema.html">Criar Sistema</a>
+                <a href="../sobre/sobre.html">Sobre Nós</a>
+                <a href="../login/login.html">Login</a>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <a href="#">contato@saquaos.com</a>
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+                <a href="../termos/termos.html">Termos de Uso</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 SaquaOs — Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js")
+        .then(() => console.log("SW registrado"))
+        .catch(err => console.log("Erro SW:", err));
+    }
+
+    // Contadores animados
+    const contadores = document.querySelectorAll('.contador-num');
+    const animarContador = (el) => {
+      const target = +el.getAttribute('data-target');
+      const dur = 2000;
+      const start = performance.now();
+      const tick = (now) => {
+        const prog = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - prog, 3);
+        el.textContent = Math.floor(ease * target);
+        if (prog < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(tick);
+    };
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animarContador(e.target);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    contadores.forEach(c => obs.observe(c));
+
+    // Fade-in ao scroll — agora com diferentes direções
+    const animEls = document.querySelectorAll('.passo, .portfolio-card, .depo-card, .faq-item, .contador, .secao-titulo, .secao-sub, .cta-final h2, .cta-final p, .cta-final .botaos');
+
+    // Adiciona classe de animação baseada no tipo
+    document.querySelectorAll('.passo').forEach((el, i) => { el.style.transitionDelay = `${i * 0.1}s`; el.classList.add('anim-up'); });
+    document.querySelectorAll('.portfolio-card').forEach((el, i) => { el.style.transitionDelay = `${i * 0.12}s`; el.classList.add('anim-up'); });
+    document.querySelectorAll('.depo-card').forEach((el, i) => { el.style.transitionDelay = `${i * 0.15}s`; el.classList.add('anim-up'); });
+    document.querySelectorAll('.faq-item').forEach((el, i) => { el.style.transitionDelay = `${i * 0.08}s`; el.classList.add('anim-slide-right'); });
+    document.querySelectorAll('.contador').forEach((el, i) => { el.style.transitionDelay = `${i * 0.1}s`; el.classList.add('anim-zoom'); });
+    document.querySelectorAll('.secao-titulo, .secao-sub').forEach(el => { el.classList.add('anim-up'); });
+    document.querySelectorAll('.cta-final h2, .cta-final p, .cta-final .botaos').forEach((el, i) => { el.style.transitionDelay = `${i * 0.15}s`; el.classList.add('anim-up'); });
+
+    const fadeObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visivel');
+          fadeObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Hero parallax suave (só desktop)
+    const hero = document.querySelector('.hero');
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) {
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (hero && y < 900) {
+          hero.style.transform = `translateY(${y * 0.15}px)`;
+          hero.style.opacity = Math.max(1 - y / 700, 0);
+        }
+      });
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-pergunta').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const ativo = item.classList.contains('faq-aberto');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('faq-aberto'));
+        if (!ativo) item.classList.add('faq-aberto');
+      });
+    });
+
+    // Observar tudo
+    document.querySelectorAll('.anim-up, .anim-slide-right, .anim-zoom').forEach(el => fadeObs.observe(el));
+    fadeEls.forEach(el => fadeObs.observe(el));
+    </script>
+</body>
+</html>

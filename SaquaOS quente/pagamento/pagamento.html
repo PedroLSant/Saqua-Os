@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento – SaquaOs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="../sistema/sistema.html" class="btn-voltar">← Voltar</a>
+
+<!-- FUNDO -->
+<div class="fundo">
+  <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+    <path class="line" d="M0,200 C400,100 800,300 1440,200" />
+    <path class="line" d="M0,300 C400,200 800,400 1440,300" />
+    <path class="line" d="M0,400 C400,300 800,500 1440,400" />
+    <path class="line" d="M0,500 C400,400 800,600 1440,500" />
+  </svg>
+</div>
+
+<section class="pagamento-page">
+  <div class="pagamento-container">
+
+    <!-- LADO ESQUERDO: RESUMO -->
+    <div class="resumo-lado">
+      <h2>Resumo do Pedido</h2>
+      <div class="resumo-card" id="resumoCard">
+        <p class="vazio-msg">Nenhum pedido encontrado.</p>
+      </div>
+    </div>
+
+    <!-- LADO DIREITO: PAGAMENTO -->
+    <div class="pagamento-lado">
+
+      <!-- ETAPA PAGAMENTO -->
+      <div id="etapaPagamento">
+        <h2>Pagamento</h2>
+
+        <!-- Método -->
+        <div class="metodo-tabs">
+          <button class="tab-btn ativo" data-metodo="pix" id="tabPix">
+            <span class="tab-icone">◉</span> Pix
+          </button>
+          <button class="tab-btn" data-metodo="cartao" id="tabCartao">
+            <span class="tab-icone">💳</span> Cartão
+          </button>
+        </div>
+
+        <!-- PIX -->
+        <div class="metodo-conteudo" id="areaPix">
+          <div class="pix-box">
+            <p class="pix-instrucao">Escaneie o QR Code ou copie o código Pix:</p>
+            <div class="qr-wrapper">
+              <img id="imgQR" src="" alt="QR Code Pix">
+            </div>
+            <div class="pix-codigo-area">
+              <input type="text" id="pixCodigo" readonly class="pix-input">
+              <button type="button" class="btn-copiar" id="btnCopiar">Copiar</button>
+            </div>
+            <p class="pix-aviso">Após o pagamento, clique em "Confirmar Pagamento"</p>
+          </div>
+          <button class="botao-pagar" id="btnConfirmarPix">Confirmar Pagamento</button>
+        </div>
+
+        <!-- CARTÃO -->
+        <div class="metodo-conteudo oculto" id="areaCartao">
+          <form id="formCartao">
+            <label>Nome no cartão</label>
+            <input type="text" id="nomeCartao" placeholder="Seu nome completo" required>
+
+            <label>Número do cartão</label>
+            <input type="text" id="numCartao" placeholder="0000 0000 0000 0000" maxlength="19" required>
+
+            <div class="linha-campos">
+              <div>
+                <label>Validade</label>
+                <input type="text" id="validade" placeholder="MM/AA" maxlength="5" required>
+              </div>
+              <div>
+                <label>CVV</label>
+                <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+              </div>
+            </div>
+
+            <label>Parcelas</label>
+            <select id="parcelas"></select>
+
+            <button type="submit" class="botao-pagar">Pagar Agora</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ETAPA CONFIRMAÇÃO -->
+      <div id="etapaConfirmacao" class="oculto">
+        <div class="confirmacao">
+          <div class="check-icon">✓</div>
+          <h2>Pagamento confirmado!</h2>
+          <p>Seu pedido foi registrado com sucesso. Acompanhe o progresso pelo seu painel.</p>
+          <a href="/cliente/index.html" class="botao-pagar" style="text-decoration:none;text-align:center;display:block;">
+            Ir para Meu Painel
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

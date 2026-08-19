@@ -1,0 +1,1 @@
+// Script inline no HTML

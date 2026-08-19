@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crie seu Sistema – SaquaOs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="../inicio/inicio.html" class="btn-voltar">← Voltar</a>
+
+<!-- FUNDO -->
+<div class="fundo">
+  <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+    <path class="line" d="M0,200 C400,100 800,300 1440,200" />
+    <path class="line" d="M0,300 C400,200 800,400 1440,300" />
+    <path class="line" d="M0,400 C400,300 800,500 1440,400" />
+    <path class="line" d="M0,500 C400,400 800,600 1440,500" />
+  </svg>
+</div>
+
+<!-- CONTEÚDO -->
+<section class="hero">
+  <div class="form-container">
+    <h1>Crie seu Sistema</h1>
+    <p class="subtitulo">Escolha o modelo ideal para o seu negócio</p>
+
+    <!-- ETAPA 1: CARDS DOS SERVIÇOS -->
+    <div id="etapa1">
+      <div class="servicos-grid" id="listaServicos">
+        <div class="loading-msg">Carregando serviços...</div>
+      </div>
+    </div>
+
+    <!-- ETAPA 2: DETALHES DO PEDIDO -->
+    <div id="etapa2" class="oculto">
+      <div class="servico-escolhido" id="servicoEscolhido"></div>
+
+      <form id="formPedido">
+        <label>Nome do Sistema</label>
+        <input type="text" id="nomeSistema" placeholder="Ex: Sistema para minha loja" required>
+
+        <label>Descrição / Observações</label>
+        <textarea id="descricao" placeholder="Descreva detalhes do que precisa..."></textarea>
+
+        <label>Funcionalidades extras</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="Login de usuários"> Login de usuários</label>
+          <label><input type="checkbox" value="Cadastro de clientes"> Cadastro de clientes</label>
+          <label><input type="checkbox" value="Relatórios"> Relatórios</label>
+          <label><input type="checkbox" value="WhatsApp"> Integração com WhatsApp</label>
+          <label><input type="checkbox" value="Dashboard"> Dashboard</label>
+        </div>
+
+        <div class="form-btns">
+          <button type="button" class="botao2" id="btnVoltar">← Voltar</button>
+          <button type="submit" class="botao1">Enviar Pedido</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ETAPA 3: CONFIRMAÇÃO -->
+    <div id="etapa3" class="oculto">
+      <div class="confirmacao">
+        <div class="check-icon">✓</div>
+        <h2>Pedido enviado!</h2>
+        <p>Seu pedido foi registrado. Você pode acompanhar o progresso e conversar com a equipe pelo seu painel.</p>
+        <a href="/cliente/index.html" class="botao1" style="display:inline-block;text-decoration:none;text-align:center;margin-top:16px;">
+          Ir para Meu Painel
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
