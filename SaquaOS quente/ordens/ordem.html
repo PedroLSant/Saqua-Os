@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordens de Serviço | SaquaOs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topo">
+    <a href="../inicio/inicio.html" class="logo">
+      <span>✦</span>
+      <strong>Saqua</strong>
+      <b>Os</b>
+    </a>
+
+    <nav>
+      <a id="linkPainel" href="../adm/index.html">
+        Painel administrativo
+      </a>
+      <a href="../inicio/inicio.html">← Início</a>
+      <button id="btnSair" class="btn-icon" type="button">Sair</button>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <section class="cabecalho">
+      <div>
+        <p class="eyebrow">GESTÃO OPERACIONAL</p>
+        <h1 id="tituloPagina">Ordens de Serviço</h1>
+        <p id="subtitulo">
+          Cadastre, acompanhe e atualize os serviços da equipe.
+        </p>
+      </div>
+
+      <a class="btn-primary" href="cadastro.html">＋ Nova ordem</a>
+    </section>
+
+    <section id="resumo" class="resumo-grid">
+      <article>
+        <strong id="totalOrdens">0</strong>
+        <span>Total de ordens</span>
+      </article>
+
+      <article>
+        <strong id="ordensAbertas">0</strong>
+        <span>Abertas</span>
+      </article>
+
+      <article>
+        <strong id="ordensAndamento">0</strong>
+        <span>Em andamento</span>
+      </article>
+
+      <article>
+        <strong id="ordensConcluidas">0</strong>
+        <span>Concluídas</span>
+      </article>
+    </section>
+
+    <section class="painel">
+      <div class="painel-topo">
+        <div>
+          <h2 id="tituloLista">Ordens cadastradas</h2>
+          <p id="descricaoLista">
+            Use os filtros para localizar uma ordem rapidamente.
+          </p>
+        </div>
+
+        <div class="filtros">
+          <label class="busca">
+            ⌕
+            <input
+              id="busca"
+              type="search"
+              placeholder="Buscar cliente ou equipamento"
+            >
+          </label>
+
+          <select id="filtroStatus" aria-label="Filtrar por status">
+            <option value="">Todos os status</option>
+            <option value="aberta">Aberta</option>
+            <option value="aguardando_diagnostico">
+              Aguardando diagnóstico
+            </option>
+            <option value="em_analise">Em análise</option>
+            <option value="aguardando_aprovacao">
+              Aguardando aprovação
+            </option>
+            <option value="aguardando_peca">Aguardando peça</option>
+            <option value="em_execucao">Em execução</option>
+            <option value="pronta_entrega">Pronta para entrega</option>
+            <option value="concluida">Concluída</option>
+            <option value="cancelada">Cancelada</option>
+          </select>
+        </div>
+      </div>

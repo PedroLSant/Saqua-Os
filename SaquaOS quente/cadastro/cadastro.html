@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro – SaquaOs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="fundo">
+  <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+    <path class="line" d="M0,200 C400,100 800,300 1440,200" />
+    <path class="line" d="M0,300 C400,200 800,400 1440,300" />
+    <path class="line" d="M0,400 C400,300 800,500 1440,400" />
+    <path class="line" d="M0,500 C400,400 800,600 1440,500" />
+  </svg>
+</div>
+
+<a href="../login/login.html" class="btn-voltar">← Voltar</a>
+
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-logo">⚙</div>
+    <h1>Criar Conta</h1>
+    <p class="auth-sub">Preencha os dados para começar</p>
+
+    <div class="auth-form">
+      <div class="campo">
+        <label>Nome completo</label>
+        <input type="text" id="nome" placeholder="Seu nome completo">
+      </div>
+
+      <div class="campo">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="seu@email.com">
+      </div>
+
+      <div class="campo">
+        <label>Telefone</label>
+        <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+      </div>
+
+      <div class="campo-linha">
+        <div class="campo">
+          <label>Nascimento</label>
+          <input type="date" id="nascimento">
+        </div>
+        <div class="campo">
+          <label>Gênero</label>
+          <select id="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Senha</label>
+        <input type="password" id="senha" placeholder="Mínimo 6 caracteres">
+      </div>
+
+      <div class="campo">
+        <label>Confirmar senha</label>
+        <input type="password" id="confirmarSenha" placeholder="Repita a senha">
+      </div>
+
+      <button class="btn-principal" id="btnCadastrar">Criar minha conta</button>
+    </div>
+
+    <div class="auth-divider"><span>ou</span></div>
+
+    <button class="btn-google" id="btnGoogle">
+      <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59a14.5 14.5 0 010-9.18l-7.98-6.19a24.08 24.08 0 000 21.56l7.98-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      Continuar com Google
+    </button>
+
+    <p class="auth-link">Já tem conta? <a href="../login/login.html">Fazer login</a></p>
+  </div>
+</div>
+
+<script type="module" src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin – SaquaOs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-icon">⚙</span>
+      <span class="logo-text">SaquaOs <em>Admin</em></span>
+    </div>
+    <nav>
+      <button class="nav-btn active" data-tab="dashboard">
+        📊 Dashboard
+      </button>
+      <button class="nav-btn" data-tab="ordens">
+        📋 Ordens de Serviço
+      </button>
+      <button class="nav-btn" data-tab="valores">
+        💰 Valores / Prazos
+      </button>
+      <button class="nav-btn" data-tab="chat">
+        💬 Chat
+        <span class="badge" id="badgeChat" style="display:none">0</span>
+      </button>
+      <button class="nav-btn" data-tab="usuarios">
+        👥 Usuários
+      </button>
+    </nav>
+    <div class="sidebar-footer">
+      <span id="adminNome">Carregando...</span>
+      <button id="btnSair" class="btn-sair">Sair</button>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- ===== DASHBOARD ===== -->
+    <section class="tab" id="tab-dashboard">
+      <div class="tab-header"><h2>Dashboard</h2></div>
+
+      <div class="dash-cards">
+        <div class="dash-card dc-azul">
+          <span class="dc-icon">💰</span>
+          <div><h4>Faturamento (mês)</h4><span class="dc-valor" id="dashFaturamento">R$ 0,00</span></div>
+        </div>
+        <div class="dash-card dc-verde">
+          <span class="dc-icon">✅</span>
+          <div><h4>OS Concluídas</h4><span class="dc-valor" id="dashConcluidas">0</span></div>
+        </div>
+        <div class="dash-card dc-amarelo">
+          <span class="dc-icon">⏳</span>
+          <div><h4>OS Pendentes</h4><span class="dc-valor" id="dashPendentes">0</span></div>
+        </div>
+        <div class="dash-card dc-roxo">
+          <span class="dc-icon">📊</span>
+          <div><h4>Ticket Médio</h4><span class="dc-valor" id="dashTicket">R$ 0,00</span></div>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-painel">
+          <h3>Ordens por Status</h3>
+          <div class="dash-barras" id="dashBarras"></div>
+        </div>
+        <div class="dash-painel">
+          <h3>Últimas Ordens</h3>
+          <div id="dashUltimas" class="dash-lista"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ORDENS DE SERVIÇO ===== -->
+    <section class="tab oculto" id="tab-ordens">
+      <div class="tab-header">
+        <h2>Ordens de Serviço</h2>
+        <div class="filtros">
+          <select id="filtroStatus">
+            <option value="">Todos os status</option>
+            <option value="pendente">Pendente</option>
+            <option value="em_andamento">Em andamento</option>
+            <option value="concluido">Concluído</option>
+            <option value="cancelado">Cancelado</option>
+          </select>
+        </div>
+      </div>
+      <table class="tabela" id="tabelaOrdens">
+        <thead><tr><th>#</th><th>Cliente</th><th>Descrição</th><th>Status</th><th>Valor</th><th>Prazo</th><th>Ações</th></tr></thead>
+        <tbody id="listaOrdens"><tr><td colspan="7" class="vazio">Carregando ordens...</td></tr></tbody>
+      </table>
+    </section>
+
+    <!-- ===== VALORES / PRAZOS ===== -->
+    <section class="tab oculto" id="tab-valores">
+      <div class="tab-header">
+        <h2>Valores e Prazos</h2>
+        <button class="btn-primario" id="btnAddServico">+ Adicionar Serviço</button>
+      </div>
+      <table class="tabela" id="tabelaValores">
+        <thead><tr><th>Serviço</th><th>Valor (R$)</th><th>Prazo (dias)</th><th>Ações</th></tr></thead>
+        <tbody id="listaValores"><tr><td colspan="4" class="vazio">Carregando...</td></tr></tbody>
+      </table>
+    </section>
+
+    <!-- ===== CHAT ===== -->
+    <section class="tab oculto" id="tab-chat">
+      <div class="chat-layout">
+        <div class="chat-lista">
+          <div class="chat-lista-header">Conversas</div>
+          <div id="listaClientes"><p class="vazio-chat">Nenhuma conversa ainda.</p></div>
+        </div>
+        <div class="chat-janela" id="chatJanela">
+          <div class="chat-vazio" id="chatVazio"><p>Selecione um cliente para abrir a conversa.</p></div>
+          <div class="chat-msgs oculto" id="chatMsgs">
+            <div class="chat-topo" id="chatTopo"><strong id="chatNomeCliente"></strong></div>
+            <div class="msgs-area" id="msgsArea"></div>
+            <div class="chat-input-area">
+              <input type="text" id="inputMsg" placeholder="Digite uma mensagem..." />
+              <button id="btnEnviar">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== USUÁRIOS ===== -->
+    <section class="tab oculto" id="tab-usuarios">
+      <div class="tab-header"><h2>Usuários</h2></div>
+      <table class="tabela">
+        <thead><tr><th>Nome</th><th>Email</th><th>Role</th><th>Ações</th></tr></thead>
+        <tbody id="listaUsuarios"><tr><td colspan="4" class="vazio">Carregando...</td></tr></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- MODAIS (mesmos de antes) -->
+  <div class="modal-overlay oculto" id="modalOS">
+    <div class="modal">
+      <h3>Editar Ordem de Serviço</h3>
+      <input type="hidden" id="osId">
+      <label>Status</label>
+      <select id="osStatus"><option value="pendente">Pendente</option><option value="em_andamento">Em andamento</option><option value="concluido">Concluído</option><option value="cancelado">Cancelado</option></select>
+      <label>Valor (R$)</label><input type="number" id="osValor" step="0.01" placeholder="0.00">
+      <label>Prazo</label><input type="date" id="osPrazo">
+      <label>Observação</label><textarea id="osObs" placeholder="Observação interna..."></textarea>
+      <div class="modal-btns"><button class="btn-secundario" id="btnCancelarOS">Cancelar</button><button class="btn-primario" id="btnSalvarOS">Salvar</button></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay oculto" id="modalServico">
+    <div class="modal">
+      <h3 id="modalServicoTitulo">Novo Serviço</h3>
+      <input type="hidden" id="servicoIdx">
+      <label>Nome do Serviço</label><input type="text" id="servicoNome" placeholder="Ex: Site institucional">
+      <label>Valor (R$)</label><input type="number" id="servicoValor" step="0.01" placeholder="0.00">
+      <label>Prazo (dias)</label><input type="number" id="servicoPrazo" placeholder="Ex: 15">
+      <div class="modal-btns"><button class="btn-secundario" id="btnCancelarServico">Cancelar</button><button class="btn-primario" id="btnSalvarServico">Salvar</button></div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
