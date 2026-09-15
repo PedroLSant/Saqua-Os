@@ -1,273 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-.cadastro-page {
-    max-width: 1000px;
-    margin: auto;
-    padding: 46px 28px 80px;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.cadastro-intro {
-    margin-bottom: 30px;
-}
+  <title>Nova Ordem de Serviço | SaquaOs</title>
 
-.cadastro-intro h1 {
-    font-size: 36px;
-    margin: 0 0 9px;
-    letter-spacing: -.04em;
-}
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cadastro.css">
+</head>
 
-.cadastro-intro p:not(.eyebrow) {
-    color: #8994b2;
-    margin: 0;
-    font-size: 14px;
-}
+<body>
 
-.cadastro-intro b,
-label em {
-    color: #8b9aff;
-    font-style: normal;
-}
+  <header class="topo">
+    <a href="index.html" class="logo">
+      <span>✦</span>
+      <strong>Saqua</strong>
+      <b>Os</b>
+    </a>
 
-.cadastro-form {
-    background: #121526;
-    border: 1px solid #242c42;
-    border-radius: 15px;
-    padding: 26px;
-    box-shadow: 0 18px 46px #0003;
-}
+    <nav>
+      <a href="ordem.html">← Ordens de serviço</a>
+      <button id="btnSair" class="btn-icon" type="button">Sair</button>
+    </nav>
+  </header>
 
-.cadastro-section {
-    border-top: 1px solid #272f47;
-    padding: 27px 0 8px;
-}
+  <main class="cadastro-page">
 
-.cadastro-section:first-child {
-    border-top: 0;
-    padding-top: 0;
-}
+    <section class="cadastro-intro">
+      <div>
+        <p class="eyebrow">NOVA SOLICITAÇÃO</p>
 
-.section-title {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    margin-bottom: 21px;
-}
+        <h1>Cadastrar ordem de serviço</h1>
 
-.section-title > span {
-    display: grid;
-    place-items: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 9px;
-    background: #202c58;
-    color: #9aa8ff;
-    font-size: 11px;
-    font-weight: bold;
-}
+        <p>
+          Preencha os dados do atendimento.
+          Os campos marcados com <b>*</b> são obrigatórios.
+        </p>
+      </div>
+    </section>
 
-.section-title h2 {
-    font-size: 17px;
-    margin: 0 0 4px;
-}
+    <form id="formCadastro" class="cadastro-form">
 
-.section-title p {
-    font-size: 11px;
-    color: #77819e;
-    margin: 0;
-}
+      <section class="cadastro-section">
 
-.cadastro-section .form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-}
+        <div class="section-title">
+          <span>01</span>
 
-.cadastro-section label {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    color: #aeb8d2;
-    font-size: 11px;
-    font-weight: bold;
-}
+          <div>
+            <h2>Dados da ordem</h2>
+            <p>Informações principais do atendimento</p>
+          </div>
+        </div>
 
-.cadastro-section label input,
-.cadastro-section label select,
-.cadastro-section label textarea {
-    border: 1px solid #303952;
-    border-radius: 8px;
-    padding: 11px 12px;
-    background: #0b0f1b;
-    color: #e4eaff;
-    outline: 0;
-    font: inherit;
-    font-weight: normal;
-    font-size: 13px;
-}
+        <div class="form-grid">
 
-.cadastro-section label input:focus,
-.cadastro-section label select:focus,
-.cadastro-section label textarea:focus {
-    border-color: #697cff;
-    box-shadow: 0 0 0 3px #697cff1f;
-}
+          <label>
+            Número da OS
+            <input
+              id="numeroOS"
+              placeholder="Gerado automaticamente"
+              readonly
+            >
+          </label>
 
-.cadastro-section textarea {
-    resize: vertical;
-}
+          <label>
+            Cliente <em>*</em>
+            <input id="cliente" required>
+          </label>
 
-.cadastro-section .largo {
-    grid-column: 1 / -1;
-}
+          <label>
+            Local do atendimento <em>*</em>
+            <input
+              id="local"
+              required
+              placeholder="Endereço ou unidade"
+            >
+          </label>
 
-.componente-card {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr .6fr 1fr 1.4fr auto auto;
-    gap: 8px;
-    align-items: end;
-    background: #101321;
-    border: 1px solid #252d44;
-    border-radius: 10px;
-    padding: 13px;
-    margin-bottom: 12px;
-}
+          <label>
+            Tipo de serviço <em>*</em>
 
-.componente-card label {
-    font-size: 10px;
-}
+            <select id="tipoServico" required>
+              <option value="">Selecione</option>
+              <option>Manutenção preventiva</option>
+              <option>Manutenção corretiva</option>
+              <option>Instalação</option>
+              <option>Visita técnica</option>
+              <option>Garantia</option>
+              <option>Outro</option>
+            </select>
+          </label>
 
-.componente-card input {
-    min-width: 0;
-}
+          <label class="largo">
+            Título da solicitação <em>*</em>
+            <input id="titulo" required>
+          </label>
 
-.componente-card button {
-    height: 38px;
-    border: 0;
-    background: transparent;
-    color: #f08b8b;
-    font-size: 18px;
-}
+          <label class="largo">
+            Descrição detalhada <em>*</em>
+            <textarea id="descricao" rows="4" required></textarea>
+          </label>
 
-.devolvido {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center;
-    padding-bottom: 10px;
-    white-space: nowrap;
-}
+          <label>
+            Prioridade <em>*</em>
 
-.devolvido input {
-    accent-color: #7185ff;
-}
+            <select id="prioridade" required>
+              <option value="baixa">Baixa</option>
+              <option value="normal" selected>Normal</option>
+              <option value="alta">Alta</option>
+              <option value="urgente">Urgente</option>
+            </select>
+          </label>
 
-.anexos-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-}
+          <label>
+            Data prevista <em>*</em>
+            <input id="dataPrevista" type="date" required>
+          </label>
 
-.anexo-card {
-    position: relative;
-    min-height: 118px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 7px;
-    padding: 15px;
-    border: 1px dashed #3a4665;
-    border-radius: 10px;
-    background: #101321;
-    color: #aebaff;
-    font-size: 20px;
-    cursor: pointer;
-}
+          <label>
+            Técnico responsável <em>*</em>
+            <input id="tecnico" required>
+          </label>
 
-.anexo-card strong {
-    color: #dbe1f5;
-    font-size: 11px;
-    line-height: 1.35;
-}
+          <label>
+            Status <em>*</em>
 
-.anexo-card small {
-    color: #77819e;
-    font-size: 10px;
-}
+            <select id="status" required>
+              <option value="aberta">Aberta</option>
+              <option value="em_analise">Em análise</option>
+              <option value="em_execucao">Em execução</option>
+              <option value="aguardando_peca">Aguardando peça</option>
+              <option value="pronta_entrega">Pronta para entrega</option>
+              <option value="concluida">Concluída</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+          </label>
 
-.anexo-card input {
-    position: absolute !important;
-    inset: 0;
-    opacity: 0;
-    cursor: pointer;
-}
+          <label class="largo">
+            Observações
+            <textarea id="observacoes" rows="3"></textarea>
+          </label>
 
-.cadastro-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    border-top: 1px solid #272f47;
-    margin-top: 26px;
-    padding-top: 20px;
-}
+        </div>
+      </section>
 
-.cadastro-actions a {
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-}
+      <section class="cadastro-section">
 
-.cadastro-form .btn-secondary {
-    font-weight: bold;
-    font-size: 13px;
-}
+        <div class="section-title">
+          <span>02</span>
 
-.cadastro-form .erro {
-    min-height: 17px;
-}
+          <div>
+            <h2>Equipamento atendido</h2>
+            <p>Identificação do produto ou equipamento</p>
+          </div>
+        </div>
 
-@media (max-width: 900px) {
-    .anexos-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+        <div class="form-grid">
 
-    .componente-card {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+          <label>
+            Equipamento/produto <em>*</em>
+            <input id="equipamento" required>
+          </label>
 
-@media (max-width: 600px) {
-    .cadastro-page {
-        padding: 32px 15px 60px;
-    }
+          <label>
+            Marca
+            <input id="marca">
+          </label>
 
-    .cadastro-form {
-        padding: 20px;
-    }
+          <label>
+            Modelo
+            <input id="modelo">
+          </label>
 
-    .cadastro-intro h1 {
-        font-size: 29px;
-    }
+          <label>
+            Número de série
+            <input id="numeroSerie">
+          </label>
 
-    .cadastro-section .form-grid {
-        grid-template-columns: 1fr;
-    }
+          <label>
+            Número de patrimônio
+            <input id="patrimonio">
+          </label>
 
-    .cadastro-section .largo {
-        grid-column: auto;
-    }
+          <label>
+            Código interno
+            <input id="codigoInterno">
+          </label>
 
-    .anexos-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+          <label class="largo">
+            Informações de garantia
+            <textarea id="garantia" rows="3"></textarea>
+          </label>
 
-    .componente-card {
-        grid-template-columns: 1fr;
-    }
+        </div>
+      </section>
 
-    .cadastro-actions {
-        flex-direction: column-reverse;
-    }
+      <section class="cadastro-section">
 
-    .cadastro-actions > * {
-        width: 100%;
-        justify-content: center;
-    }
-}
+        <div class="section-title">
+          <span>03</span>
+
+          <div>
+            <h2>Componentes e acessórios recebidos</h2>
+            <p>Itens entregues junto com o equipamento</p>
+          </div>
+        </div>
+
+        <div id="componentes"></div>
+
+        <button
+          type="button"
+          class="btn-secondary"
+          id="btnAdicionarComponente"
+        >
+          ＋ Adicionar componente
+        </button>
+
+      </section>
+
+      <section class="cadastro-section">
+
+        <div class="section-title">
+          <span>04</span>
+
+          <div>
+            <h2>Fotos e anexos</h2>
+            <p>Arquivos relacionados ao atendimento</p>
+          </div>
+        </div>
+
+        <div class="anexos-grid">
+
+          <label class="anexo-card">
+            📷
+            <strong>Fotos antes do atendimento</strong>
+
+            <small>
+              Selecionar arquivos
+              <input
+                type="file"
+                id="fotosAntes"
+                multiple
+                accept="image/*"
+              >
+            </small>
+          </label>
+
+          <label class="anexo-card">
+            🧰
+            <strong>Produtos ou componentes utilizados</strong>
+
+            <small>
+              Selecionar arquivos
+              <input
+                type="file"
+                id="fotosUtilizados"
+                multiple
+                accept="image/*"
+              >
+            </small>
+          </label>
+
+          <label class="anexo-card">
+            📷
+            <strong>Fotos depois do atendimento</strong>
+
+            <small>
+              Selecionar arquivos
+              <input
+                type="file"
+                id="fotosDepois"
+                multiple
+                accept="image/*"
+              >
+            </small>
+          </label>
+
+          <label class="anexo-card">
+            📄
+            <strong>Documentos</strong>
+
+            <small>
+              Selecionar arquivos
+              <input
+                type="file"
+                id="documentos"
+                multiple
+              >
+            </small>
+          </label>
+
+          <label class="anexo-card">
+            📎
+            <strong>Outros anexos</strong>
+
+            <small>
+              Selecionar arquivos
+              <input
+                type="file"
+                id="outrosAnexos"
+                multiple
+              >
+            </small>
+          </label>
+
+        </div>
+      </section>
+
+      <section class="cadastro-section">
+
+        <div class="section-title">
+          <span>05</span>
+
+          <div>
+            <h2>Execução e encerramento</h2>
+            <p>Registro técnico e aceite do cliente</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+
+          <label class="largo">
+            Diagnóstico
+            <textarea id="diagnostico" rows="3"></textarea>
+          </label>
+
+          <label class="largo">
+            Serviço realizado
+            <textarea id="servicoRealizado" rows="3"></textarea>
+          </label>
+
+          <label class="largo">
+            Materiais e peças utilizados
+            <textarea id="materiais" rows="3"></textarea>
+          </label>
+
+          <label class="largo">
+            Resultado do atendimento
+            <em id="resultadoObrigatorio"></em>
+            <textarea id="resultado" rows="3"></textarea>
+          </label>
+
+          <label>
+            Pendências
+            <textarea id="pendencias" rows="2"></textarea>
+          </label>
+
+          <label>
+            Recomendações
+            <textarea id="recomendacoes" rows="2"></textarea>
+          </label>
+
+          <label>
+            Necessidade de retorno
+
+            <select id="retorno">
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+              <option value="avaliar">Avaliar posteriormente</option>
+            </select>
+          </label>
+
+          <label>
+            Aceite do cliente
+            <em id="aceiteObrigatorio"></em>
+
+            <select id="aceite">
+              <option value="">Selecione</option>
+              <option value="aceito">Aceito</option>
+              <option value="recusado">Recusado</option>
+              <option value="pendente">Pendente</option>
+            </select>
+          </label>
+
+          <label>
+            Assinatura do cliente
+            <input id="assinatura">
+          </label>
+
+          <label>
+            Data de conclusão
+            <input id="dataConclusao" type="date">
+          </label>
+
+        </div>
+      </section>
+
+      <p id="erroCadastro" class="erro"></p>
+
+      <div class="cadastro-actions">
+        <a href="index.html" class="btn-secondary">
+          Cancelar
+        </a>
+
+        <button class="btn-primary" type="submit">
+          Salvar ordem
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
