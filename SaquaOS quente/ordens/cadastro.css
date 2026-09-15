@@ -1,0 +1,272 @@
+.cadastro-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 46px 28px 80px;
+}
+
+.cadastro-intro {
+    margin-bottom: 30px;
+}
+
+.cadastro-intro h1 {
+    font-size: 36px;
+    margin: 0 0 9px;
+    letter-spacing: -.04em;
+}
+
+.cadastro-intro p:not(.eyebrow) {
+    color: #8994b2;
+    margin: 0;
+    font-size: 14px;
+}
+
+.cadastro-intro b,
+label em {
+    color: #8b9aff;
+    font-style: normal;
+}
+
+.cadastro-form {
+    background: #121526;
+    border: 1px solid #242c42;
+    border-radius: 15px;
+    padding: 26px;
+    box-shadow: 0 18px 46px #0003;
+}
+
+.cadastro-section {
+    border-top: 1px solid #272f47;
+    padding: 27px 0 8px;
+}
+
+.cadastro-section:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 21px;
+}
+
+.section-title > span {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: #202c58;
+    color: #9aa8ff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 17px;
+    margin: 0 0 4px;
+}
+
+.section-title p {
+    font-size: 11px;
+    color: #77819e;
+    margin: 0;
+}
+
+.cadastro-section .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.cadastro-section label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #aeb8d2;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.cadastro-section label input,
+.cadastro-section label select,
+.cadastro-section label textarea {
+    border: 1px solid #303952;
+    border-radius: 8px;
+    padding: 11px 12px;
+    background: #0b0f1b;
+    color: #e4eaff;
+    outline: 0;
+    font: inherit;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.cadastro-section label input:focus,
+.cadastro-section label select:focus,
+.cadastro-section label textarea:focus {
+    border-color: #697cff;
+    box-shadow: 0 0 0 3px #697cff1f;
+}
+
+.cadastro-section textarea {
+    resize: vertical;
+}
+
+.cadastro-section .largo {
+    grid-column: 1 / -1;
+}
+
+.componente-card {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr .6fr 1fr 1.4fr auto auto;
+    gap: 8px;
+    align-items: end;
+    background: #101321;
+    border: 1px solid #252d44;
+    border-radius: 10px;
+    padding: 13px;
+    margin-bottom: 12px;
+}
+
+.componente-card label {
+    font-size: 10px;
+}
+
+.componente-card input {
+    min-width: 0;
+}
+
+.componente-card button {
+    height: 38px;
+    border: 0;
+    background: transparent;
+    color: #f08b8b;
+    font-size: 18px;
+}
+
+.devolvido {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.devolvido input {
+    accent-color: #7185ff;
+}
+
+.anexos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.anexo-card {
+    position: relative;
+    min-height: 118px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    padding: 15px;
+    border: 1px dashed #3a4665;
+    border-radius: 10px;
+    background: #101321;
+    color: #aebaff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.anexo-card strong {
+    color: #dbe1f5;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.anexo-card small {
+    color: #77819e;
+    font-size: 10px;
+}
+
+.anexo-card input {
+    position: absolute !important;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.cadastro-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #272f47;
+    margin-top: 26px;
+    padding-top: 20px;
+}
+
+.cadastro-actions a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cadastro-form .btn-secondary {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.cadastro-form .erro {
+    min-height: 17px;
+}
+
+@media (max-width: 900px) {
+    .anexos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .componente-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cadastro-page {
+        padding: 32px 15px 60px;
+    }
+
+    .cadastro-form {
+        padding: 20px;
+    }
+
+    .cadastro-intro h1 {
+        font-size: 29px;
+    }
+
+    .cadastro-section .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cadastro-section .largo {
+        grid-column: auto;
+    }
+
+    .anexos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .componente-card {
+        grid-template-columns: 1fr;
+    }
+
+    .cadastro-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cadastro-actions > * {
+        width: 100%;
+        justify-content: center;
+    }
+}
