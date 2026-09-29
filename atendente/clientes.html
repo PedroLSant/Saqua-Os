@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Clientes</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="styleclientes.css">
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <svg class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="22" cy="22" r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+                <circle cx="22" cy="22" r="6"
+                    fill="url(#grad1)"/>
+
+                <g stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round">
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text x="52" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5">
+                    Saqua
+                </text>
+
+                <text x="114" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5">
+                    Os
+                </text>
+
+                <text x="52" y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3">
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+
+                        <stop offset="0%"
+                            stop-color="#6c8cff"/>
+
+                        <stop offset="100%"
+                            stop-color="#4b5eff"/>
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="clientes.html" class="ativo">
+                <i class="fa-solid fa-users"></i>
+                <span>Clientes</span>
+            </a>
+
+            <a href="nova-os.html">
+                <i class="fa-solid fa-plus-circle"></i>
+                <span>Nova OS</span>
+            </a>
+
+            <a href="ordens-servico.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Ordens de Serviço</span>
+            </a>
+
+            <a href="perfil.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../login/login.html" id="btnSair">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="conteudo">
+
+        <header class="topo">
+
+            <div>
+
+                <span class="titulo-pequeno">
+                    ATENDIMENTO
+                </span>
+
+                <h1>
+                    Clientes
+                </h1>
+
+                <p>
+                    Consulte e gerencie os clientes cadastrados no sistema.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+                <button
+                    class="notificacao"
+                    id="btnNotificacao">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>3</span>
+
+                </button>
+
+
+                <div class="perfil-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <small>
+                            Atendente
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="barra-acoes">
+
+            <div class="pesquisa">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="pesquisaCliente"
+                    placeholder="Pesquisar por nome, e-mail ou telefone...">
+
+            </div>
+
+
+            <button
+                class="btn-novo"
+                id="btnNovoCliente">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Novo cliente
+
+            </button>
+
+        </section>
+
+
+        <div
+            class="mensagem-pesquisa"
+            id="mensagemPesquisa">
+        </div>
+
+
+        <section class="resumo">
+
+            <div class="resumo-item">
+
+                <span>
+                    Total de clientes
+                </span>
+
+                <strong id="totalClientes">
+                    32
+                </strong>
+
+            </div>
+
+
+            <div class="resumo-item">
+
+                <span>
+                    Clientes ativos
+                </span>
+
+                <strong>
+                    30
+                </strong>
+
+            </div>
+
+
+            <div class="resumo-item">
+
+                <span>
+                    Novos este mês
+                </span>
+
+                <strong>
+                    5
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <section class="clientes-area">
+
+            <div class="area-topo">
+
+                <div>
+
+                    <span class="titulo-pequeno">
+                        CADASTRO
+                    </span>
+
+                    <h2>
+                        Clientes cadastrados
+                    </h2>
+
+                </div>
+
+                <button
+                    class="btn-limpar"
+                    id="btnLimpar">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    Limpar pesquisa
+
+                </button>
+
+            </div>
+
+
+            <div class="clientes-grid" id="listaClientes">
+
+
+                <article
+                    class="cliente-card"
+                    data-nome="Carlos Almeida"
+                    data-email="carlos@email.com"
+                    data-telefone="22999990001">
+
+                    <div class="cliente-cabecalho">
+
+                        <div class="cliente-avatar">
+                            CA
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Carlos Almeida
+                            </h3>
+
+                            <span>
+                                Cliente #001
+                            </span>
+
+                        </div>
+
+                        <span class="status-ativo">
+                            Ativo
+                        </span>
+
+                    </div>
+
+
+                    <div class="cliente-info">
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            carlos@email.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            (22) 99999-0001
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Saquarema - RJ
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="cliente-acoes">
+
+                        <button
+                            class="btn-editar"
+                            data-cliente="Carlos Almeida">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="btn-os"
+                            data-cliente="Carlos Almeida">
+
+                            <i class="fa-solid fa-clipboard-list"></i>
+
+                            Ver OS
+
+                        </button>
+
+
+                        <button
+                            class="btn-excluir"
+                            data-cliente="Carlos Almeida">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="cliente-card"
+                    data-nome="Mariana Souza"
+                    data-email="mariana@email.com"
+                    data-telefone="22999990002">
+
+                    <div class="cliente-cabecalho">
+
+                        <div class="cliente-avatar">
+                            MS
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Mariana Souza
+                            </h3>
+
+                            <span>
+                                Cliente #002
+                            </span>
+
+                        </div>
+
+                        <span class="status-ativo">
+                            Ativo
+                        </span>
+
+                    </div>
+
+
+                    <div class="cliente-info">
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            mariana@email.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            (22) 99999-0002
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Saquarema - RJ
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="cliente-acoes">
+
+                        <button
+                            class="btn-editar"
+                            data-cliente="Mariana Souza">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="btn-os"
+                            data-cliente="Mariana Souza">
+
+                            <i class="fa-solid fa-clipboard-list"></i>
+
+                            Ver OS
+
+                        </button>
+
+
+                        <button
+                            class="btn-excluir"
+                            data-cliente="Mariana Souza">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="cliente-card"
+                    data-nome="João Ferreira"
+                    data-email="joao@email.com"
+                    data-telefone="22999990003">
+
+                    <div class="cliente-cabecalho">
+
+                        <div class="cliente-avatar">
+                            JF
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                João Ferreira
+                            </h3>
+
+                            <span>
+                                Cliente #003
+                            </span>
+
+                        </div>
+
+                        <span class="status-ativo">
+                            Ativo
+                        </span>
+
+                    </div>
+
+
+                    <div class="cliente-info">
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            joao@email.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            (22) 99999-0003
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Saquarema - RJ
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="cliente-acoes">
+
+                        <button
+                            class="btn-editar"
+                            data-cliente="João Ferreira">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="btn-os"
+                            data-cliente="João Ferreira">
+
+                            <i class="fa-solid fa-clipboard-list"></i>
+
+                            Ver OS
+
+                        </button>
+
+
+                        <button
+                            class="btn-excluir"
+                            data-cliente="João Ferreira">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="cliente-card"
+                    data-nome="Fernanda Lima"
+                    data-email="fernanda@email.com"
+                    data-telefone="22999990004">
+
+                    <div class="cliente-cabecalho">
+
+                        <div class="cliente-avatar">
+                            FL
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Fernanda Lima
+                            </h3>
+
+                            <span>
+                                Cliente #004
+                            </span>
+
+                        </div>
+
+                        <span class="status-ativo">
+                            Ativo
+                        </span>
+
+                    </div>
+
+
+                    <div class="cliente-info">
+
+                        <p>
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            fernanda@email.com
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            (22) 99999-0004
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Saquarema - RJ
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="cliente-acoes">
+
+                        <button
+                            class="btn-editar"
+                            data-cliente="Fernanda Lima">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="btn-os"
+                            data-cliente="Fernanda Lima">
+
+                            <i class="fa-solid fa-clipboard-list"></i>
+
+                            Ver OS
+
+                        </button>
+
+
+                        <button
+                            class="btn-excluir"
+                            data-cliente="Fernanda Lima">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <div
+                class="sem-resultado"
+                id="semResultado">
+
+                <i class="fa-solid fa-users-slash"></i>
+
+                <h3>
+                    Nenhum cliente encontrado
+                </h3>
+
+                <p>
+                    Tente pesquisar utilizando outro nome, e-mail ou telefone.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de Gestão de Ordens de Serviço
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- MODAL NOVO CLIENTE -->
+
+    <div
+        class="modal"
+        id="modalCliente">
+
+        <div class="modal-conteudo">
+
+            <div class="modal-topo">
+
+                <div>
+
+                    <span class="titulo-pequeno">
+                        CADASTRO
+                    </span>
+
+                    <h2>
+                        Novo cliente
+                    </h2>
+
+                </div>
+
+                <button
+                    class="btn-fechar"
+                    id="btnFecharModal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="formCliente">
+
+                <div class="campo">
+
+                    <label>
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeCliente"
+                        required
+                        placeholder="Digite o nome completo">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailCliente"
+                        required
+                        placeholder="cliente@email.com">
+
+                </div>
+
+
+                <div class="campos-duplos">
+
+                    <div class="campo">
+
+                        <label>
+                            Telefone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telefoneCliente"
+                            required
+                            placeholder="(22) 99999-9999">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            CPF / Identificador
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cpfCliente"
+                            placeholder="Digite o CPF">
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Endereço
+                    </label>
+
+                    <input
+                        type="text"
+                        id="enderecoCliente"
+                        placeholder="Rua, número, bairro">
+
+                </div>
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="btn-cancelar"
+                        id="btnCancelar">
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn-salvar">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Cadastrar cliente
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="javascriptclientes.js"></script>
+
+</body>
+
+</html>

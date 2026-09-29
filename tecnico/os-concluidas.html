@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OS Concluídas - Saqua OS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleosconcluidas.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <svg class="logo-svg" viewBox="0 0 200 44" xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="22" cy="22" r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+                <circle cx="22" cy="22" r="6"
+                    fill="url(#grad1)"/>
+
+                <g stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round">
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text x="52" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5">
+                    Saqua
+                </text>
+
+                <text x="114" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5">
+                    Os
+                </text>
+
+                <text x="52" y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3">
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+
+                        <stop offset="0%" stop-color="#6c8cff"/>
+                        <stop offset="100%" stop-color="#4b5eff"/>
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="minhas-os.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Minhas OS</span>
+            </a>
+
+            <a href="os-pendentes.html">
+                <i class="fa-solid fa-clock"></i>
+                <span>OS Pendentes</span>
+                <span class="menu-badge">3</span>
+            </a>
+
+            <a href="os-andamento.html">
+                <i class="fa-solid fa-gears"></i>
+                <span>OS Em andamento</span>
+                <span class="menu-badge">2</span>
+            </a>
+
+            <a href="os-concluidas.html" class="ativo">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>OS Concluídas</span>
+            </a>
+
+            <a href="perfil.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../login/login.html" id="btnSair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="conteudo">
+
+        <header class="topo">
+
+            <div>
+
+                <span class="topo-label">
+                    PAINEL DO TÉCNICO
+                </span>
+
+                <h1>
+                    OS Concluídas
+                </h1>
+
+                <p>
+                    Consulte as ordens de serviço finalizadas.
+                </p>
+
+            </div>
+
+
+            <div class="perfil-topo">
+
+                <button class="notificacao"
+                    id="btnNotificacao"
+                    title="Notificações">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>2</span>
+
+                </button>
+
+
+                <div class="usuario-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <small>
+                            Técnico
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="resumo-concluidas">
+
+            <div class="resumo-icon">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+            <div>
+
+                <span class="resumo-numero">
+                    3
+                </span>
+
+                <span class="resumo-texto">
+                    OS concluídas
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <section class="filtros-concluidas">
+
+            <div class="campo-pesquisa">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="pesquisaOS"
+                    placeholder="Pesquisar por número da OS ou cliente...">
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnLimpar"
+                class="btn-limpar">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Limpar
+
+            </button>
+
+        </section>
+
+
+        <div
+            id="mensagemPesquisa"
+            class="mensagem-pesquisa">
+        </div>
+
+
+        <section class="lista-concluidas">
+
+
+            <!-- OS 1015 -->
+
+            <article
+                class="concluida-card"
+                data-os="1015"
+                data-cliente="Fernanda Lima">
+
+                <div class="concluida-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            #1015
+                        </span>
+
+                        <h2>
+                            Manutenção de notebook
+                        </h2>
+
+                    </div>
+
+                    <span class="status-concluida">
+                        <i class="fa-solid fa-check"></i>
+                        Concluída
+                    </span>
+
+                </div>
+
+
+                <div class="concluida-info">
+
+                    <div>
+                        <span>Cliente</span>
+                        <strong>Fernanda Lima</strong>
+                    </div>
+
+                    <div>
+                        <span>Equipamento</span>
+                        <strong>Notebook</strong>
+                    </div>
+
+                    <div>
+                        <span>Concluída em</span>
+                        <strong>18/09/2026</strong>
+                    </div>
+
+                    <div>
+                        <span>Prioridade</span>
+                        <strong class="prioridade-baixa">
+                            Baixa
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="servico-realizado">
+
+                    <span>
+                        <i class="fa-solid fa-wrench"></i>
+                        Serviço realizado
+                    </span>
+
+                    <p>
+                        Limpeza interna, manutenção preventiva
+                        e otimização do sistema.
+                    </p>
+
+                </div>
+
+
+                <div class="concluida-footer">
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Saquarema - RJ
+                    </span>
+
+                    <button
+                        type="button"
+                        class="btn-detalhes"
+                        data-os="1015">
+
+                        <i class="fa-solid fa-eye"></i>
+                        Ver detalhes
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- OS 1007 -->
+
+            <article
+                class="concluida-card"
+                data-os="1007"
+                data-cliente="Paulo Henrique">
+
+                <div class="concluida-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            #1007
+                        </span>
+
+                        <h2>
+                            Configuração de computador
+                        </h2>
+
+                    </div>
+
+                    <span class="status-concluida">
+                        <i class="fa-solid fa-check"></i>
+                        Concluída
+                    </span>
+
+                </div>
+
+
+                <div class="concluida-info">
+
+                    <div>
+                        <span>Cliente</span>
+                        <strong>Paulo Henrique</strong>
+                    </div>
+
+                    <div>
+                        <span>Equipamento</span>
+                        <strong>Computador</strong>
+                    </div>
+
+                    <div>
+                        <span>Concluída em</span>
+                        <strong>15/09/2026</strong>
+                    </div>
+
+                    <div>
+                        <span>Prioridade</span>
+                        <strong class="prioridade-normal">
+                            Normal
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="servico-realizado">
+
+                    <span>
+                        <i class="fa-solid fa-wrench"></i>
+                        Serviço realizado
+                    </span>
+
+                    <p>
+                        Configuração do sistema operacional,
+                        drivers e instalação dos programas necessários.
+                    </p>
+
+                </div>
+
+
+                <div class="concluida-footer">
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Saquarema - RJ
+                    </span>
+
+                    <button
+                        type="button"
+                        class="btn-detalhes"
+                        data-os="1007">
+
+                        <i class="fa-solid fa-eye"></i>
+                        Ver detalhes
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- OS 1003 -->
+
+            <article
+                class="concluida-card"
+                data-os="1003"
+                data-cliente="Marcos Silva">
+
+                <div class="concluida-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            #1003
+                        </span>
+
+                        <h2>
+                            Instalação de impressora
+                        </h2>
+
+                    </div>
+
+                    <span class="status-concluida">
+                        <i class="fa-solid fa-check"></i>
+                        Concluída
+                    </span>
+
+                </div>
+
+
+                <div class="concluida-info">
+
+                    <div>
+                        <span>Cliente</span>
+                        <strong>Marcos Silva</strong>
+                    </div>
+
+                    <div>
+                        <span>Equipamento</span>
+                        <strong>Impressora</strong>
+                    </div>
+
+                    <div>
+                        <span>Concluída em</span>
+                        <strong>12/09/2026</strong>
+                    </div>
+
+                    <div>
+                        <span>Prioridade</span>
+                        <strong class="prioridade-normal">
+                            Normal
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="servico-realizado">
+
+                    <span>
+                        <i class="fa-solid fa-wrench"></i>
+                        Serviço realizado
+                    </span>
+
+                    <p>
+                        Instalação da impressora, configuração
+                        de driver e teste de impressão.
+                    </p>
+
+                </div>
+
+
+                <div class="concluida-footer">
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Saquarema - RJ
+                    </span>
+
+                    <button
+                        type="button"
+                        class="btn-detalhes"
+                        data-os="1003">
+
+                        <i class="fa-solid fa-eye"></i>
+                        Ver detalhes
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <section
+            id="semResultado"
+            class="sem-resultado">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            <h3>
+                Nenhuma OS encontrada
+            </h3>
+
+            <p>
+                Tente pesquisar por outro número
+                ou nome de cliente.
+            </p>
+
+        </section>
+
+
+        <footer class="rodape">
+
+            <span>
+                Saqua OS © 2026
+            </span>
+
+            <span>
+                Sistema de gerenciamento de ordens de serviço
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="javascriptosconcluidas.js"></script>
+
+</body>
+
+</html>

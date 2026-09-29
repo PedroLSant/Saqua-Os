@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Cliente</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- FUNDO -->
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+    <div class="fundo">
+        <div class="line"></div>
+    </div>
+
+
+    <!-- PAINEL PRINCIPAL -->
+    <div class="painel">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo-link">
+
+                <svg class="logo-svg"
+                    viewBox="0 0 200 44"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <circle cx="22" cy="22" r="16"
+                        fill="none"
+                        stroke="url(#grad1)"
+                        stroke-width="2.5"/>
+
+                    <circle cx="22" cy="22" r="6"
+                        fill="url(#grad1)"/>
+
+                    <g stroke="url(#grad1)"
+                        stroke-width="2.5"
+                        stroke-linecap="round">
+
+                        <line x1="22" y1="2" x2="22" y2="7"/>
+                        <line x1="22" y1="37" x2="22" y2="42"/>
+
+                        <line x1="2" y1="22" x2="7" y2="22"/>
+                        <line x1="37" y1="22" x2="42" y2="22"/>
+
+                        <line x1="8" y1="8" x2="12" y2="12"/>
+                        <line x1="32" y1="32" x2="36" y2="36"/>
+
+                        <line x1="36" y1="8" x2="32" y2="12"/>
+                        <line x1="12" y1="32" x2="8" y2="36"/>
+
+                    </g>
+
+                    <text x="52"
+                        y="20"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="18"
+                        font-weight="700"
+                        fill="white"
+                        letter-spacing="0.5">
+                        Saqua
+                    </text>
+
+                    <text x="114"
+                        y="20"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="18"
+                        font-weight="700"
+                        fill="url(#grad1)"
+                        letter-spacing="0.5">
+                        Os
+                    </text>
+
+                    <text x="52"
+                        y="36"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="10"
+                        fill="rgba(255,255,255,0.4)"
+                        letter-spacing="3">
+                        SISTEMAS
+                    </text>
+
+                    <defs>
+
+                        <linearGradient id="grad1"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%">
+
+                            <stop offset="0%"
+                                stop-color="#6c8cff"/>
+
+                            <stop offset="100%"
+                                stop-color="#4b5eff"/>
+
+                        </linearGradient>
+
+                    </defs>
+
+                </svg>
+
+            </a>
+
+
+            <!-- MENU -->
+            <nav class="menu">
+
+                <!-- INÍCIO -->
+                <a href="index.html"
+                    class="menu-item ativo">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
+
+
+                <!-- MINHAS OS -->
+                <a href="minhas-os.html"
+                    class="menu-item">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    <span>
+                        Minhas OS
+                    </span>
+
+                </a>
+
+
+                <!-- MEU PERFIL -->
+                <a href="perfil.html"
+                    class="menu-item">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>
+                        Meu Perfil
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- FINAL DO MENU -->
+            <div class="menu-final">
+
+                <a href="../login/login.html"
+                    class="menu-item sair"
+                    id="btnSair">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <main class="conteudo">
+
+
+            <!-- TOPO -->
+            <header class="topo">
+
+                <div>
+
+                    <span class="titulo-pequeno">
+                        ÁREA DO CLIENTE
+                    </span>
+
+                </div>
+
+
+                <div class="topo-direita">
+
+                    <!-- NOTIFICAÇÃO -->
+                    <button class="btn-notificacao"
+                        id="btnNotificacao">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span class="badge">
+                            2
+                        </span>
+
+                    </button>
+
+
+                    <!-- PERFIL -->
+                    <div class="perfil">
+
+                        <div class="avatar">
+                            BG
+                        </div>
+
+                        <div class="perfil-info">
+
+                            <strong>
+                                Bruno Goulart
+                            </strong>
+
+                            <span>
+                                Cliente
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- CARDS -->
+            <section class="cards">
+
+
+                <!-- TOTAL -->
+                <div class="card">
+
+                    <div class="card-icone azul">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total de OS
+                        </span>
+
+                        <strong>
+                            5
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PENDENTES -->
+                <div class="card">
+
+                    <div class="card-icone amarelo">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Pendentes
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANDAMENTO -->
+                <div class="card">
+
+                    <div class="card-icone roxo">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Em andamento
+                        </span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONCLUÍDAS -->
+                <div class="card">
+
+                    <div class="card-icone verde">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Concluídas
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ÁREA PRINCIPAL -->
+            <section class="area-principal">
+
+
+                <!-- ORDENS DE SERVIÇO -->
+                <div class="painel-card">
+
+                    <div class="painel-titulo">
+
+                        <div>
+
+                            <h2>
+                                Minhas Ordens de Serviço
+                            </h2>
+
+                            <span>
+                                Acompanhe suas solicitações
+                            </span>
+
+                        </div>
+
+                        <a href="minhas-os.html"
+                            class="btn-principal">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver todas
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- TABELA -->
+                    <div class="tabela">
+
+
+                        <!-- CABEÇALHO -->
+                        <div class="tabela-cabecalho">
+
+                            <span>
+                                OS
+                            </span>
+
+                            <span>
+                                Serviço
+                            </span>
+
+                            <span>
+                                Data
+                            </span>
+
+                            <span>
+                                Status
+                            </span>
+
+                            <span>
+                                Ação
+                            </span>
+
+                        </div>
+
+
+                        <!-- OS 1024 -->
+                        <div class="linha">
+
+                            <span>
+                                #1024
+                            </span>
+
+                            <span>
+                                Manutenção de computador
+                            </span>
+
+                            <span>
+                                28/09/2026
+                            </span>
+
+                            <span>
+
+                                <span class="status andamento">
+                                    Em andamento
+                                </span>
+
+                            </span>
+
+                            <span>
+
+                                <button class="btn-ver"
+                                    data-os="1024">
+
+                                    Ver
+
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- OS 1021 -->
+                        <div class="linha">
+
+                            <span>
+                                #1021
+                            </span>
+
+                            <span>
+                                Instalação de impressora
+                            </span>
+
+                            <span>
+                                25/09/2026
+                            </span>
+
+                            <span>
+
+                                <span class="status pendente">
+                                    Pendente
+                                </span>
+
+                            </span>
+
+                            <span>
+
+                                <button class="btn-ver"
+                                    data-os="1021">
+
+                                    Ver
+
+                                </button>
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- OS 1018 -->
+                        <div class="linha">
+
+                            <span>
+                                #1018
+                            </span>
+
+                            <span>
+                                Configuração de rede
+                            </span>
+
+                            <span>
+                                20/09/2026
+                            </span>
+
+                            <span>
+
+                                <span class="status concluida">
+                                    Concluída
+                                </span>
+
+                            </span>
+
+                            <span>
+
+                                <button class="btn-ver"
+                                    data-os="1018">
+
+                                    Ver
+
+                                </button>
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AÇÕES RÁPIDAS -->
+                <div class="acoes-card">
+
+                    <div class="painel-titulo">
+
+                        <div>
+
+                            <h2>
+                                Acesso rápido
+                            </h2>
+
+                            <span>
+                                Consulte suas informações
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MINHAS OS -->
+                    <a href="minhas-os.html"
+                        class="acao">
+
+                        <div class="acao-icone">
+
+                            <i class="fa-solid fa-clipboard-list"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Minhas OS
+                            </strong>
+
+                            <span>
+                                Consulte todas as suas ordens
+                            </span>
+
+                        </div>
+
+                        <div class="seta">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+
+                    </a>
+
+
+                    <!-- PERFIL -->
+                    <a href="perfil.html"
+                        class="acao">
+
+                        <div class="acao-icone">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Meu Perfil
+                            </strong>
+
+                            <span>
+                                Consulte seus dados pessoais
+                            </span>
+
+                        </div>
+
+                        <div class="seta">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RODAPÉ -->
+            <footer>
+
+                <span>
+                    © 2026 Saqua OS
+                </span>
+
+                <span>
+                    Sistema de gerenciamento de ordens de serviço
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

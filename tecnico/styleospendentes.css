@@ -1,0 +1,973 @@
+/* =========================================
+   SAQUA OS
+   OS PENDENTES - TÉCNICO
+   ========================================= */
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+   ========================================= */
+
+.conteudo {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TOPO
+   ========================================= */
+
+.topo-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #6c8cff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.topo h1 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.topo p {
+    margin: 8px 0 0;
+
+    color: rgba(255,255,255,0.5);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BADGE DO MENU
+   ========================================= */
+
+.menu-badge {
+    margin-left: auto;
+
+    min-width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(108,140,255,0.15);
+
+    border: 1px solid rgba(108,140,255,0.3);
+
+    color: #8fa8ff;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   RESUMO
+   ========================================= */
+
+.resumo-pendente {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px 24px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(108,140,255,0.10),
+            rgba(75,94,255,0.04)
+        );
+
+    border: 1px solid rgba(108,140,255,0.18);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.20);
+}
+
+
+.resumo-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(108,140,255,0.12);
+
+    border: 1px solid rgba(108,140,255,0.2);
+
+    color: #6c8cff;
+
+    font-size: 21px;
+}
+
+
+.resumo-pendente > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.resumo-pendente > div:nth-child(2) span {
+    color: rgba(255,255,255,0.5);
+
+    font-size: 12px;
+}
+
+
+.resumo-pendente > div:nth-child(2) strong {
+    color: white;
+
+    font-size: 25px;
+}
+
+
+.resumo-texto {
+    margin-left: auto;
+
+    max-width: 400px;
+
+    color: rgba(255,255,255,0.45);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   FILTROS
+   ========================================= */
+
+.filtros-pendentes {
+    margin-top: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.campo-pesquisa {
+    position: relative;
+
+    flex: 1;
+
+    max-width: 520px;
+}
+
+
+.campo-pesquisa i {
+    position: absolute;
+
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: rgba(255,255,255,0.35);
+
+    font-size: 14px;
+}
+
+
+.campo-pesquisa input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 16px 13px 44px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    outline: none;
+
+    background: rgba(255,255,255,0.035);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.campo-pesquisa input::placeholder {
+    color: rgba(255,255,255,0.3);
+}
+
+
+.campo-pesquisa input:focus {
+    border-color: rgba(108,140,255,0.5);
+
+    background: rgba(108,140,255,0.05);
+
+    box-shadow:
+        0 0 0 3px rgba(108,140,255,0.07);
+}
+
+
+.btn-limpar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 13px 18px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(255,255,255,0.035);
+
+    color: rgba(255,255,255,0.65);
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.btn-limpar:hover {
+    border-color: rgba(108,140,255,0.35);
+
+    background: rgba(108,140,255,0.08);
+
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MENSAGEM DE PESQUISA
+   ========================================= */
+
+.mensagem-pesquisa {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    background: rgba(245,158,11,0.08);
+
+    border: 1px solid rgba(245,158,11,0.15);
+
+    color: #fbbf24;
+
+    font-size: 13px;
+}
+
+
+.mensagem-pesquisa.mostrar {
+    display: block;
+}
+
+
+/* =========================================
+   LISTA
+   ========================================= */
+
+.lista-pendentes {
+    margin-top: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   CARD DA OS
+   ========================================= */
+
+.pendente-card {
+    position: relative;
+
+    padding: 23px;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.045),
+            rgba(255,255,255,0.018)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.18);
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+
+.pendente-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(108,140,255,0.25);
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,0.25),
+        0 0 30px rgba(108,140,255,0.04);
+}
+
+
+/* =========================================
+   TOPO DO CARD
+   ========================================= */
+
+.pendente-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+
+.numero-os {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #6c8cff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.pendente-topo h2 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.status-pendente {
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: rgba(245,158,11,0.10);
+
+    border: 1px solid rgba(245,158,11,0.20);
+
+    color: #fbbf24;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+   ========================================= */
+
+.pendente-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    padding: 20px 0;
+}
+
+
+.pendente-info > div {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 0;
+}
+
+
+.pendente-info > div > i {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(108,140,255,0.08);
+
+    color: #7d96ff;
+
+    font-size: 13px;
+}
+
+
+.pendente-info > div > div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.pendente-info span {
+    color: rgba(255,255,255,0.38);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+.pendente-info strong {
+    overflow: hidden;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PRIORIDADE
+   ========================================= */
+
+.prioridade-normal {
+    color: #60a5fa !important;
+}
+
+
+.prioridade-alta-texto {
+    color: #f87171 !important;
+}
+
+
+.status-pendente.prioridade-alta {
+    background: rgba(239,68,68,0.10);
+
+    border-color: rgba(239,68,68,0.20);
+
+    color: #f87171;
+}
+
+
+/* =========================================
+   PROBLEMA
+   ========================================= */
+
+.problema {
+    padding: 17px;
+
+    border-radius: 12px;
+
+    background: rgba(0,0,0,0.15);
+
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+
+.problema span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: rgba(255,255,255,0.4);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+
+.problema p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.62);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RODAPÉ DO CARD
+   ========================================= */
+
+.pendente-footer {
+    margin-top: 18px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid rgba(255,255,255,0.06);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.pendente-footer > span {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: rgba(255,255,255,0.4);
+
+    font-size: 12px;
+}
+
+
+.pendente-footer > span i {
+    color: #6c8cff;
+}
+
+
+/* =========================================
+   BOTÃO ATENDER
+   ========================================= */
+
+.btn-atender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    border: 1px solid rgba(108,140,255,0.35);
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(108,140,255,0.16),
+            rgba(75,94,255,0.08)
+        );
+
+    color: #a8b9ff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.btn-atender:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(108,140,255,0.28),
+            rgba(75,94,255,0.15)
+        );
+
+    border-color: rgba(108,140,255,0.55);
+
+    color: white;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 25px rgba(75,94,255,0.12);
+}
+
+
+/* =========================================
+   SEM RESULTADO
+   ========================================= */
+
+.sem-resultado {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    border: 1px dashed rgba(255,255,255,0.1);
+
+    background: rgba(255,255,255,0.02);
+}
+
+
+.sem-resultado.mostrar {
+    display: block;
+}
+
+
+.sem-resultado i {
+    margin-bottom: 15px;
+
+    color: rgba(108,140,255,0.6);
+
+    font-size: 35px;
+}
+
+
+.sem-resultado h2 {
+    margin: 0 0 8px;
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 17px;
+}
+
+
+.sem-resultado p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.4);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.rodape {
+    margin-top: 40px;
+    padding: 25px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.05);
+
+    color: rgba(255,255,255,0.25);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .pendente-info {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .resumo-texto {
+        max-width: 300px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .topo-direita {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+
+    .resumo-pendente {
+        align-items: flex-start;
+    }
+
+
+    .resumo-texto {
+        display: none;
+    }
+
+
+    .filtros-pendentes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .campo-pesquisa {
+        max-width: none;
+    }
+
+
+    .btn-limpar {
+        width: 100%;
+    }
+
+
+    .pendente-topo {
+        flex-direction: column;
+    }
+
+
+    .status-pendente {
+        align-self: flex-start;
+    }
+
+
+    .pendente-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .btn-atender {
+        width: 100%;
+    }
+
+
+    .rodape {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .pendente-card {
+        padding: 18px;
+    }
+
+
+    .pendente-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    .pendente-topo h2 {
+        font-size: 16px;
+    }
+
+
+    .resumo-pendente {
+        padding: 18px;
+    }
+
+
+    .resumo-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+}
+
+
+/* =========================================
+   REDUZIR ANIMAÇÕES
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pendente-card,
+    .btn-atender,
+    .btn-limpar,
+    .campo-pesquisa input {
+        transition: none;
+    }
+
+}
+
+/* =========================================
+   MENU LATERAL - PADRÃO TÉCNICO
+   ========================================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    color: rgba(255, 255, 255, 0.60);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.menu a i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+
+    background: rgba(108, 140, 255, 0.08);
+
+    transform: translateX(2px);
+}
+
+.menu a:hover i {
+    color: #8fa8ff;
+}
+
+.menu a.ativo {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(108, 140, 255, 0.15),
+            rgba(108, 140, 255, 0.05)
+        );
+
+    border: 1px solid rgba(108, 140, 255, 0.12);
+}
+
+.menu a.ativo i {
+    color: #6c8cff;
+}
+
+.menu a span {
+    color: inherit;
+}
+
+.menu-badge {
+    margin-left: auto;
+
+    min-width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(108, 140, 255, 0.15);
+
+    border: 1px solid rgba(108, 140, 255, 0.30);
+
+    color: #8fa8ff !important;
+
+    font-size: 11px;
+    font-weight: 700;
+}

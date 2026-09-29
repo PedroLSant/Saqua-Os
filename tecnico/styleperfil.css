@@ -1,0 +1,880 @@
+/* =========================================
+   SAQUA OS
+   PERFIL - TÉCNICO
+   ========================================= */
+
+
+/* =========================================
+   TOPO
+   ========================================= */
+
+.topo-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #6c8cff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.topo h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.topo p {
+    margin: 7px 0 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   IDENTIDADE
+   ========================================= */
+
+.perfil-identidade {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 28px;
+    margin-bottom: 20px;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(108, 140, 255, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    border: 1px solid rgba(108, 140, 255, 0.14);
+
+    border-radius: 16px;
+}
+
+
+.avatar-grande {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c8cff,
+            #4b5eff
+        );
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 30px rgba(75, 94, 255, 0.25);
+}
+
+
+.identidade-info {
+    flex: 1;
+}
+
+.identidade-info h2 {
+    margin: 0 0 7px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+.identidade-info .cargo {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #8fa8ff;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.identidade-info p {
+    margin: 8px 0 0;
+
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 11px;
+}
+
+
+.status-conta {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(16, 185, 129, 0.08);
+
+    border: 1px solid rgba(16, 185, 129, 0.15);
+
+    color: #34d399;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.bolinha {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #34d399;
+
+    box-shadow:
+        0 0 8px rgba(52, 211, 153, 0.7);
+}
+
+
+/* =========================================
+   PAINEL
+   ========================================= */
+
+.painel {
+    margin-bottom: 20px;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 15px;
+}
+
+
+.painel-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.painel-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #6c8cff;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.painel-topo h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BOTÃO EDITAR
+   ========================================= */
+
+.btn-editar {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    background: rgba(108, 140, 255, 0.08);
+
+    border: 1px solid rgba(108, 140, 255, 0.16);
+
+    border-radius: 8px;
+
+    color: #9eafff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-editar:hover {
+    color: #ffffff;
+
+    background: rgba(108, 140, 255, 0.14);
+
+    border-color: rgba(108, 140, 255, 0.28);
+}
+
+
+/* =========================================
+   DADOS
+   ========================================= */
+
+.dados-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 17px;
+}
+
+
+.campo {
+    min-width: 0;
+}
+
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+.campo-valor {
+    position: relative;
+}
+
+
+.campo-valor > i {
+    position: absolute;
+
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: rgba(108, 140, 255, 0.65);
+
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+
+.campo-valor input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 13px 12px 38px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    transition: all 0.3s ease;
+}
+
+
+.campo-valor input:disabled {
+    cursor: default;
+
+    opacity: 0.8;
+}
+
+
+.campo-valor input:not(:disabled) {
+    border-color: rgba(108, 140, 255, 0.30);
+
+    background: rgba(108, 140, 255, 0.035);
+
+    color: #ffffff;
+}
+
+
+.campo-valor input:focus {
+    border-color: rgba(108, 140, 255, 0.50);
+
+    box-shadow:
+        0 0 0 3px rgba(108, 140, 255, 0.06);
+}
+
+
+/* =========================================
+   AÇÕES
+   ========================================= */
+
+.acoes-edicao {
+    display: none;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.acoes-edicao.mostrar {
+    display: flex;
+}
+
+
+.btn-cancelar {
+    padding: 10px 16px;
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    color: rgba(255, 255, 255, 0.50);
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+.btn-cancelar:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+.btn-salvar {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c8cff,
+            #4b5eff
+        );
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 20px rgba(75, 94, 255, 0.20);
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-salvar:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 25px rgba(75, 94, 255, 0.30);
+}
+
+
+/* =========================================
+   SEGURANÇA
+   ========================================= */
+
+.seguranca-conteudo {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.seguranca-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: rgba(108, 140, 255, 0.08);
+
+    border: 1px solid rgba(108, 140, 255, 0.14);
+
+    color: #8fa8ff;
+
+    font-size: 16px;
+}
+
+
+.seguranca-texto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    flex: 1;
+}
+
+
+.seguranca-texto strong {
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 12px;
+}
+
+
+.seguranca-texto span {
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 10px;
+}
+
+
+.btn-senha {
+    padding: 9px 13px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    color: rgba(255, 255, 255, 0.60);
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-senha:hover {
+    color: #ffffff;
+
+    background: rgba(108, 140, 255, 0.08);
+
+    border-color: rgba(108, 140, 255, 0.20);
+}
+
+
+/* =========================================
+   FORMULÁRIO DE SENHA
+   ========================================= */
+
+.form-senha {
+    display: none;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 17px;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.form-senha.mostrar {
+    display: grid;
+}
+
+
+.form-senha .btn-salvar {
+    grid-column: 1 / -1;
+
+    justify-self: end;
+}
+
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+    color: rgba(255, 255, 255, 0.25);
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   MENU LATERAL
+   ========================================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    color: rgba(255, 255, 255, 0.60);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+
+.menu a i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.menu a:hover {
+    color: #ffffff;
+
+    background: rgba(108, 140, 255, 0.08);
+
+    transform: translateX(2px);
+}
+
+
+.menu a:hover i {
+    color: #8fa8ff;
+}
+
+
+.menu a.ativo {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(108, 140, 255, 0.15),
+            rgba(108, 140, 255, 0.05)
+        );
+
+    border: 1px solid rgba(108, 140, 255, 0.12);
+}
+
+
+.menu a.ativo i {
+    color: #6c8cff;
+}
+
+
+.menu a span {
+    color: inherit;
+}
+
+
+.menu-badge {
+    margin-left: auto;
+
+    min-width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(108, 140, 255, 0.15);
+
+    border: 1px solid rgba(108, 140, 255, 0.30);
+
+    color: #8fa8ff !important;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   SAIR
+   ========================================= */
+
+.menu-final {
+    margin-top: auto;
+
+    padding-top: 20px;
+}
+
+
+.menu-final a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+
+.menu-final a i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+
+.menu-final a:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    transform: translateX(2px);
+}
+
+
+.menu-final a:hover i {
+    color: #ff6b6b;
+}
+
+
+.menu-final a span {
+    color: inherit;
+}
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    .perfil-identidade {
+        align-items: flex-start;
+    }
+
+    .status-conta {
+        margin-left: auto;
+    }
+
+    .dados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    .form-senha {
+        grid-template-columns: 1fr;
+    }
+
+    .form-senha .btn-salvar {
+        grid-column: auto;
+        justify-self: stretch;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .perfil-identidade {
+        flex-direction: column;
+    }
+
+    .status-conta {
+        margin-left: 0;
+    }
+
+    .painel-topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .btn-editar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .seguranca-conteudo {
+        flex-wrap: wrap;
+    }
+
+    .btn-senha {
+        width: 100%;
+    }
+
+    .rodape {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .perfil-identidade {
+        padding: 18px;
+    }
+
+    .avatar-grande {
+        width: 60px;
+        height: 60px;
+    }
+
+    .acoes-edicao {
+        flex-direction: column;
+    }
+
+    .btn-cancelar,
+    .btn-salvar {
+        width: 100%;
+        justify-content: center;
+    }
+
+}

@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Técnicos</title>
+
+    <link rel="stylesheet"
+        href="styletecnicos.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <svg class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="22" cy="22" r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+                <circle cx="22" cy="22" r="6"
+                    fill="url(#grad1)"/>
+
+                <g stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round">
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text x="52" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5">
+                    Saqua
+                </text>
+
+                <text x="114" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5">
+                    Os
+                </text>
+
+                <text x="52" y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3">
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient id="grad1"
+                        x1="0%" y1="0%"
+                        x2="100%" y2="100%">
+
+                        <stop offset="0%"
+                            stop-color="#6c8cff"/>
+
+                        <stop offset="100%"
+                            stop-color="#4b5eff"/>
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Início</span>
+
+            </a>
+
+
+            <div class="menu-grupo">
+
+                <button class="menu-titulo ativo"
+                    id="btnUsuarios">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Usuários</span>
+
+                    <i class="fa-solid fa-chevron-down seta"></i>
+
+                </button>
+
+
+                <div class="submenu aberto"
+                    id="submenuUsuarios">
+
+                    <a href="clientes.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span>Clientes</span>
+
+                    </a>
+
+
+                    <a href="atendentes.html">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        <span>Atendentes</span>
+
+                    </a>
+
+
+                    <a href="tecnicos.html"
+                        class="submenu-ativo">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        <span>Técnicos</span>
+
+                    </a>
+
+
+                    <a href="supervisores.html">
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                        <span>Supervisores</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="ordens-servico.html">
+
+                <i class="fa-solid fa-clipboard-list"></i>
+
+                <span>Ordens de Serviço</span>
+
+            </a>
+
+
+            <a href="relatorios.html">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>Relatórios</span>
+
+            </a>
+
+
+            <a href="configuracoes.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Configurações</span>
+
+            </a>
+
+
+            <a href="perfil.html">
+
+                <i class="fa-solid fa-user-circle"></i>
+
+                <span>Perfil</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../login/login.html"
+                id="btnSair">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+
+        <!-- TOPO -->
+
+        <header class="topo">
+
+            <div>
+
+                <span class="categoria">
+                    ADMINISTRAÇÃO
+                </span>
+
+                <h1>Técnicos</h1>
+
+                <p>
+                    Gerencie os técnicos responsáveis
+                    pela execução das Ordens de Serviço.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+                <button class="notificacao"
+                    id="btnNotificacao">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>4</span>
+
+                </button>
+
+
+                <div class="perfil-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <small>
+                            Administrador
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- RESUMO -->
+
+        <section class="resumo">
+
+            <div class="card-resumo">
+
+                <div class="icone azul">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Total de técnicos
+                    </span>
+
+                    <strong>7</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <div class="icone verde">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Técnicos ativos
+                    </span>
+
+                    <strong>6</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <div class="icone amarelo">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Pendentes
+                    </span>
+
+                    <strong>1</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <div class="icone roxo">
+
+                    <i class="fa-solid fa-clipboard-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        OS em execução
+                    </span>
+
+                    <strong>7</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FILTROS -->
+
+        <section class="barra-acoes">
+
+            <div class="pesquisa">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="pesquisaTecnico"
+                    placeholder="Pesquisar por nome, e-mail ou especialidade..."
+                >
+
+            </div>
+
+
+            <button class="btn-limpar"
+                id="btnLimpar">
+
+                <i class="fa-solid fa-xmark"></i>
+
+                Limpar
+
+            </button>
+
+
+            <button class="btn-novo"
+                id="btnNovo">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Novo técnico
+
+            </button>
+
+        </section>
+
+
+        <p class="mensagem"
+            id="mensagemPesquisa">
+        </p>
+
+
+
+        <!-- TÉCNICOS -->
+
+        <section class="tecnicos-area">
+
+
+            <!-- TÉCNICO 1 -->
+
+            <article class="tecnico-card"
+                data-nome="Bruno Goulart"
+                data-email="bruno@email.com"
+                data-especialidade="computadores">
+
+                <div class="tecnico-topo">
+
+                    <div class="tecnico-avatar">
+                        BG
+                    </div>
+
+                    <div class="tecnico-identidade">
+
+                        <h2>
+                            Bruno Goulart
+                        </h2>
+
+                        <span>
+                            Técnico #001
+                        </span>
+
+                    </div>
+
+                    <span class="status ativo">
+                        Ativo
+                    </span>
+
+                </div>
+
+
+                <div class="especialidade">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    <span>
+                        Computadores e notebooks
+                    </span>
+
+                </div>
+
+
+                <div class="tecnico-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            bruno@email.com
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            (22) 99999-0101
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Saquarema - RJ
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicadores">
+
+                    <div>
+
+                        <span>
+                            OS atribuídas
+                        </span>
+
+                        <strong>
+                            8
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Em execução
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Concluídas
+                        </span>
+
+                        <strong>
+                            5
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes">
+
+                    <button class="btn-secundario btn-editar">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Editar
+
+                    </button>
+
+
+                    <button class="btn-secundario btn-os">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                        Ver OS
+
+                    </button>
+
+
+                    <button class="btn-excluir">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TÉCNICO 2 -->
+
+            <article class="tecnico-card"
+                data-nome="João Técnico"
+                data-email="joao.tecnico@email.com"
+                data-especialidade="redes">
+
+                <div class="tecnico-topo">
+
+                    <div class="tecnico-avatar">
+                        JT
+                    </div>
+
+                    <div class="tecnico-identidade">
+
+                        <h2>
+                            João Técnico
+                        </h2>
+
+                        <span>
+                            Técnico #002
+                        </span>
+
+                    </div>
+
+                    <span class="status ativo">
+                        Ativo
+                    </span>
+
+                </div>
+
+
+                <div class="especialidade">
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                    <span>
+                        Redes e infraestrutura
+                    </span>
+
+                </div>
+
+
+                <div class="tecnico-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            joao.tecnico@email.com
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            (22) 99999-0102
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Saquarema - RJ
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicadores">
+
+                    <div>
+
+                        <span>
+                            OS atribuídas
+                        </span>
+
+                        <strong>
+                            6
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Em execução
+                        </span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Concluídas
+                        </span>
+
+                        <strong>
+                            4
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes">
+
+                    <button class="btn-secundario btn-editar">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Editar
+
+                    </button>
+
+
+                    <button class="btn-secundario btn-os">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                        Ver OS
+
+                    </button>
+
+
+                    <button class="btn-excluir">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TÉCNICO 3 -->
+
+            <article class="tecnico-card"
+                data-nome="Carlos Técnico"
+                data-email="carlos.tecnico@email.com"
+                data-especialidade="impressoras">
+
+                <div class="tecnico-topo">
+
+                    <div class="tecnico-avatar">
+                        CT
+                    </div>
+
+                    <div class="tecnico-identidade">
+
+                        <h2>
+                            Carlos Técnico
+                        </h2>
+
+                        <span>
+                            Técnico #003
+                        </span>
+
+                    </div>
+
+                    <span class="status ativo">
+                        Ativo
+                    </span>
+
+                </div>
+
+
+                <div class="especialidade">
+
+                    <i class="fa-solid fa-print"></i>
+
+                    <span>
+                        Impressoras e periféricos
+                    </span>
+
+                </div>
+
+
+                <div class="tecnico-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            carlos.tecnico@email.com
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            (22) 99999-0103
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Saquarema - RJ
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicadores">
+
+                    <div>
+
+                        <span>
+                            OS atribuídas
+                        </span>
+
+                        <strong>
+                            5
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Em execução
+                        </span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Concluídas
+                        </span>
+
+                        <strong>
+                            3
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes">
+
+                    <button class="btn-secundario btn-editar">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Editar
+
+                    </button>
+
+
+                    <button class="btn-secundario btn-os">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                        Ver OS
+
+                    </button>
+
+
+                    <button class="btn-excluir">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TÉCNICO 4 -->
+
+            <article class="tecnico-card"
+                data-nome="Rafael Souza"
+                data-email="rafael.tecnico@email.com"
+                data-especialidade="celulares">
+
+                <div class="tecnico-topo">
+
+                    <div class="tecnico-avatar">
+                        RS
+                    </div>
+
+                    <div class="tecnico-identidade">
+
+                        <h2>
+                            Rafael Souza
+                        </h2>
+
+                        <span>
+                            Técnico #004
+                        </span>
+
+                    </div>
+
+                    <span class="status ativo">
+                        Ativo
+                    </span>
+
+                </div>
+
+
+                <div class="especialidade">
+
+                    <i class="fa-solid fa-mobile-screen"></i>
+
+                    <span>
+                        Celulares e dispositivos
+                    </span>
+
+                </div>
+
+
+                <div class="tecnico-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            rafael.tecnico@email.com
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            (22) 99999-0104
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Saquarema - RJ
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicadores">
+
+                    <div>
+
+                        <span>
+                            OS atribuídas
+                        </span>
+
+                        <strong>
+                            4
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Em execução
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Concluídas
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes">
+
+                    <button class="btn-secundario btn-editar">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Editar
+
+                    </button>
+
+
+                    <button class="btn-secundario btn-os">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                        Ver OS
+
+                    </button>
+
+
+                    <button class="btn-excluir">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TÉCNICO 5 -->
+
+            <article class="tecnico-card"
+                data-nome="Pedro Mendes"
+                data-email="pedro.tecnico@email.com"
+                data-especialidade="servidores">
+
+                <div class="tecnico-topo">
+
+                    <div class="tecnico-avatar">
+                        PM
+                    </div>
+
+                    <div class="tecnico-identidade">
+
+                        <h2>
+                            Pedro Mendes
+                        </h2>
+
+                        <span>
+                            Técnico #005
+                        </span>
+
+                    </div>
+
+                    <span class="status ativo">
+                        Ativo
+                    </span>
+
+                </div>
+
+
+                <div class="especialidade">
+
+                    <i class="fa-solid fa-server"></i>
+
+                    <span>
+                        Servidores e sistemas
+                    </span>
+
+                </div>
+
+
+                <div class="tecnico-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            pedro.tecnico@email.com
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            (22) 99999-0105
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Saquarema - RJ
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicadores">
+
+                    <div>
+
+                        <span>
+                            OS atribuídas
+                        </span>
+
+                        <strong>
+                            3
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Em execução
+                        </span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Concluídas
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes">
+
+                    <button class="btn-secundario btn-editar">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Editar
+
+                    </button>
+
+
+                    <button class="btn-secundario btn-os">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                        Ver OS
+
+                    </button>
+
+
+                    <button class="btn-excluir">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TÉCNICO PENDENTE -->
+
+            <article class="tecnico-card"
+                data-nome="Felipe Martins"
+                data-email="felipe.tecnico@email.com"
+                data-especialidade="computadores">
+
+                <div class="tecnico-topo">
+
+                    <div class="tecnico-avatar">
+                        FM
+                    </div>
+
+                    <div class="tecnico-identidade">
+
+                        <h2>
+                            Felipe Martins
+                        </h2>
+
+                        <span>
+                            Técnico #006
+                        </span>
+
+                    </div>
+
+                    <span class="status pendente-status">
+                        Pendente
+                    </span>
+
+                </div>
+
+
+                <div class="especialidade">
+
+                    <i class="fa-solid fa-laptop"></i>
+
+                    <span>
+                        Computadores e notebooks
+                    </span>
+
+                </div>
+
+
+                <div class="tecnico-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            felipe.tecnico@email.com
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            (22) 99999-0106
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <span>
+                            Cadastro 28/09/2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicadores">
+
+                    <div>
+
+                        <span>
+                            OS atribuídas
+                        </span>
+
+                        <strong>
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Em execução
+                        </span>
+
+                        <strong>
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Concluídas
+                        </span>
+
+                        <strong>
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes">
+
+                    <button class="btn-aprovar">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Aprovar
+
+                    </button>
+
+
+                    <button class="btn-secundario btn-editar">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Editar
+
+                    </button>
+
+
+                    <button class="btn-excluir">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- SEM RESULTADO -->
+
+        <div class="sem-resultado"
+            id="semResultado">
+
+            <i class="fa-solid fa-user-slash"></i>
+
+            <h3>
+                Nenhum técnico encontrado
+            </h3>
+
+            <p>
+                Tente pesquisar por outro nome,
+                e-mail ou especialidade.
+            </p>
+
+        </div>
+
+
+
+        <!-- RODAPÉ -->
+
+        <footer>
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de Gestão de Serviços
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="javascripttecnicos.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minhas OS - Saqua OS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="styleminhasos.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- FUNDO -->
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+    <div class="fundo">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+
+
+    <!-- PAINEL PRINCIPAL -->
+    <div class="painel">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo-link">
+
+                <svg class="logo-svg"
+                    viewBox="0 0 200 44"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <circle
+                        cx="22"
+                        cy="22"
+                        r="16"
+                        fill="none"
+                        stroke="url(#grad1)"
+                        stroke-width="2.5" />
+
+                    <circle
+                        cx="22"
+                        cy="22"
+                        r="6"
+                        fill="url(#grad1)" />
+
+                    <g
+                        stroke="url(#grad1)"
+                        stroke-width="2.5"
+                        stroke-linecap="round">
+
+                        <line x1="22" y1="2" x2="22" y2="7" />
+                        <line x1="22" y1="37" x2="22" y2="42" />
+
+                        <line x1="2" y1="22" x2="7" y2="22" />
+                        <line x1="37" y1="22" x2="42" y2="22" />
+
+                        <line x1="8" y1="8" x2="12" y2="12" />
+                        <line x1="32" y1="32" x2="36" y2="36" />
+
+                        <line x1="36" y1="8" x2="32" y2="12" />
+                        <line x1="12" y1="32" x2="8" y2="36" />
+
+                    </g>
+
+                    <text
+                        x="52"
+                        y="20"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="18"
+                        font-weight="700"
+                        fill="white"
+                        letter-spacing="0.5">
+                        Saqua
+                    </text>
+
+                    <text
+                        x="114"
+                        y="20"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="18"
+                        font-weight="700"
+                        fill="url(#grad1)"
+                        letter-spacing="0.5">
+                        Os
+                    </text>
+
+                    <text
+                        x="52"
+                        y="36"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="10"
+                        fill="rgba(255,255,255,0.4)"
+                        letter-spacing="3">
+                        SISTEMAS
+                    </text>
+
+                    <defs>
+
+                        <linearGradient
+                            id="grad1"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%">
+
+                            <stop
+                                offset="0%"
+                                stop-color="#6c8cff" />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#4b5eff" />
+
+                        </linearGradient>
+
+                    </defs>
+
+                </svg>
+
+            </a>
+
+
+            <!-- MENU -->
+            <nav class="menu">
+
+                <a href="index.html" class="menu-item">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Início</span>
+
+                </a>
+
+
+                <a href="minhas-os.html"
+                    class="menu-item ativo">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    <span>Minhas OS</span>
+
+                </a>
+
+
+                <a href="perfil.html"
+                    class="menu-item">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Meu Perfil</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- SAIR -->
+            <div class="menu-final">
+
+                <a href="../login/login.html"
+                    class="menu-item sair"
+                    id="btnSair">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Sair</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <main class="conteudo">
+
+
+            <!-- TOPO -->
+            <header class="topo">
+
+                <div>
+
+                    <div class="titulo-pequeno">
+                        Área do Cliente
+                    </div>
+
+                </div>
+
+
+                <div class="topo-direita">
+
+                    <!-- NOTIFICAÇÃO -->
+                    <button
+                        class="btn-notificacao"
+                        id="btnNotificacao"
+                        type="button">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span class="badge">
+                            2
+                        </span>
+
+                    </button>
+
+
+                    <!-- PERFIL -->
+                    <div class="perfil">
+
+                        <div class="avatar">
+                            BG
+                        </div>
+
+                        <div class="perfil-info">
+
+                            <strong>
+                                Bruno Goulart
+                            </strong>
+
+                            <span>
+                                Cliente
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- TÍTULO -->
+            <section class="cabecalho-os">
+
+                <div>
+
+                    <h1>
+                        Minhas Ordens de Serviço
+                    </h1>
+
+                    <p>
+                        Consulte suas ordens de serviço e acompanhe o andamento.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- PESQUISA -->
+            <section class="pesquisa-os">
+
+                <div class="campo-pesquisa">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="pesquisaOS"
+                        placeholder="Digite o número da OS...">
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-pesquisar"
+                    id="btnPesquisar">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Pesquisar
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn-limpar"
+                    id="btnLimpar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                    Limpar
+
+                </button>
+
+            </section>
+
+
+            <!-- MENSAGEM DA PESQUISA -->
+            <div
+                class="mensagem-pesquisa"
+                id="mensagemPesquisa">
+            </div>
+
+
+            <!-- LISTA DE OS -->
+            <section class="os-container">
+
+
+                <!-- OS 1024 -->
+                <article
+                    class="os-card"
+                    data-os="1024">
+
+                    <div class="os-topo">
+
+                        <div>
+
+                            <span class="os-numero">
+                                OS #1024
+                            </span>
+
+                            <h2 class="os-titulo">
+                                Manutenção de computador
+                            </h2>
+
+                        </div>
+
+
+                        <span class="os-status status-analise">
+                            Em análise
+                        </span>
+
+                    </div>
+
+
+                    <p class="os-descricao">
+                        Computador apresentando lentidão e falhas durante o uso.
+                    </p>
+
+
+                    <div class="os-data">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            28/09/2026
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-user-gear"></i>
+                            Técnico: João
+                        </span>
+
+                    </div>
+
+
+                    <div class="os-footer">
+
+                        <div class="os-info">
+
+                            <span>
+                                Status atual
+                            </span>
+
+                            <strong>
+                                Em análise
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            class="btn-detalhes"
+                            type="button"
+                            data-target="detalhes1024">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver detalhes
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- DETALHES -->
+                    <div
+                        class="detalhes-os"
+                        id="detalhes1024">
+
+                        <h3 class="detalhes-titulo">
+                            Acompanhamento da OS
+                        </h3>
+
+
+                        <div class="timeline">
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        OS aberta
+                                    </strong>
+
+                                    <span>
+                                        Solicitação registrada.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Técnico atribuído
+                                    </strong>
+
+                                    <span>
+                                        Técnico João foi atribuído.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item atual">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Em análise
+                                    </strong>
+
+                                    <span>
+                                        O equipamento está sendo analisado.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-bolinha"></div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Conserto em execução
+                                    </strong>
+
+                                    <span>
+                                        Aguardando início do serviço.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-bolinha"></div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Pronto para entrega
+                                    </strong>
+
+                                    <span>
+                                        Aguardando conclusão.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-bolinha"></div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Concluída
+                                    </strong>
+
+                                    <span>
+                                        OS será finalizada após o serviço.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OS 1021 -->
+                <article
+                    class="os-card"
+                    data-os="1021">
+
+                    <div class="os-topo">
+
+                        <div>
+
+                            <span class="os-numero">
+                                OS #1021
+                            </span>
+
+                            <h2 class="os-titulo">
+                                Instalação de impressora
+                            </h2>
+
+                        </div>
+
+
+                        <span class="os-status status-diagnostico">
+                            Aguardando diagnóstico
+                        </span>
+
+                    </div>
+
+
+                    <p class="os-descricao">
+                        Instalação e configuração de impressora no computador.
+                    </p>
+
+
+                    <div class="os-data">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            25/09/2026
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-user-gear"></i>
+                            Técnico: A definir
+                        </span>
+
+                    </div>
+
+
+                    <div class="os-footer">
+
+                        <div class="os-info">
+
+                            <span>
+                                Status atual
+                            </span>
+
+                            <strong>
+                                Aguardando diagnóstico
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            class="btn-detalhes"
+                            type="button"
+                            data-target="detalhes1021">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver detalhes
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- DETALHES -->
+                    <div
+                        class="detalhes-os"
+                        id="detalhes1021">
+
+                        <h3 class="detalhes-titulo">
+                            Acompanhamento da OS
+                        </h3>
+
+
+                        <div class="timeline">
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        OS aberta
+                                    </strong>
+
+                                    <span>
+                                        Solicitação registrada.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item atual">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Aguardando diagnóstico
+                                    </strong>
+
+                                    <span>
+                                        A OS aguarda análise técnica.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-bolinha"></div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Em análise
+                                    </strong>
+
+                                    <span>
+                                        Aguardando início da análise.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-bolinha"></div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Conserto em execução
+                                    </strong>
+
+                                    <span>
+                                        Aguardando diagnóstico.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-bolinha"></div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Pronto para entrega
+                                    </strong>
+
+                                    <span>
+                                        Aguardando conclusão.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-bolinha"></div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Concluída
+                                    </strong>
+
+                                    <span>
+                                        OS ainda não foi concluída.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OS 1018 -->
+                <article
+                    class="os-card"
+                    data-os="1018">
+
+                    <div class="os-topo">
+
+                        <div>
+
+                            <span class="os-numero">
+                                OS #1018
+                            </span>
+
+                            <h2 class="os-titulo">
+                                Configuração de rede
+                            </h2>
+
+                        </div>
+
+
+                        <span class="os-status status-concluida">
+                            Concluída
+                        </span>
+
+                    </div>
+
+
+                    <p class="os-descricao">
+                        Configuração da rede e ajustes de conexão.
+                    </p>
+
+
+                    <div class="os-data">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            20/09/2026
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-user-gear"></i>
+                            Técnico: Carlos
+                        </span>
+
+                    </div>
+
+
+                    <div class="os-footer">
+
+                        <div class="os-info">
+
+                            <span>
+                                Status atual
+                            </span>
+
+                            <strong>
+                                Concluída
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            class="btn-detalhes"
+                            type="button"
+                            data-target="detalhes1018">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver detalhes
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- DETALHES -->
+                    <div
+                        class="detalhes-os"
+                        id="detalhes1018">
+
+                        <h3 class="detalhes-titulo">
+                            Acompanhamento da OS
+                        </h3>
+
+
+                        <div class="timeline">
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        OS aberta
+                                    </strong>
+
+                                    <span>
+                                        Solicitação registrada.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Técnico atribuído
+                                    </strong>
+
+                                    <span>
+                                        Técnico Carlos foi atribuído.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Em análise
+                                    </strong>
+
+                                    <span>
+                                        Equipamento analisado.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Conserto em execução
+                                    </strong>
+
+                                    <span>
+                                        Serviço realizado.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Pronto para entrega
+                                    </strong>
+
+                                    <span>
+                                        Equipamento pronto.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Concluída
+                                    </strong>
+
+                                    <span>
+                                        Ordem de serviço concluída.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OS 1015 -->
+                <article
+                    class="os-card"
+                    data-os="1015">
+
+                    <div class="os-topo">
+
+                        <div>
+
+                            <span class="os-numero">
+                                OS #1015
+                            </span>
+
+                            <h2 class="os-titulo">
+                                Manutenção de notebook
+                            </h2>
+
+                        </div>
+
+
+                        <span class="os-status status-cancelada">
+                            Cancelada
+                        </span>
+
+                    </div>
+
+
+                    <p class="os-descricao">
+                        Manutenção preventiva de notebook.
+                    </p>
+
+
+                    <div class="os-data">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            18/09/2026
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-user-gear"></i>
+                            Técnico: Não atribuído
+                        </span>
+
+                    </div>
+
+
+                    <div class="os-footer">
+
+                        <div class="os-info">
+
+                            <span>
+                                Status atual
+                            </span>
+
+                            <strong>
+                                Cancelada
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            class="btn-detalhes"
+                            type="button"
+                            data-target="detalhes1015">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver detalhes
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- DETALHES -->
+                    <div
+                        class="detalhes-os"
+                        id="detalhes1015">
+
+                        <h3 class="detalhes-titulo">
+                            Acompanhamento da OS
+                        </h3>
+
+
+                        <div class="timeline">
+
+                            <div class="timeline-item concluido">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        OS aberta
+                                    </strong>
+
+                                    <span>
+                                        Solicitação registrada.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="timeline-item cancelada">
+
+                                <div class="timeline-bolinha">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+
+                                <div class="timeline-conteudo">
+
+                                    <strong>
+                                        Cancelada
+                                    </strong>
+
+                                    <span>
+                                        Esta ordem de serviço foi cancelada.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- SEM RESULTADO -->
+            <div
+                class="sem-resultado"
+                id="semResultado">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <h3>
+                    Nenhuma OS encontrada
+                </h3>
+
+                <p>
+                    Verifique o número informado e tente novamente.
+                </p>
+
+            </div>
+
+
+            <!-- RODAPÉ -->
+            <footer class="rodape">
+
+                <span>
+                    © 2026 Saqua OS
+                </span>
+
+                <span>
+                    Sistema de gerenciamento de ordens de serviço
+                </span>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="javaminhasos.js"></script>
+
+</body>
+
+</html>

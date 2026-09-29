@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Perfil</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="styleperfil.css">
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <svg class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="22" cy="22" r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+                <circle cx="22" cy="22" r="6"
+                    fill="url(#grad1)"/>
+
+                <g stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round">
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text x="52" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5">
+                    Saqua
+                </text>
+
+                <text x="114" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5">
+                    Os
+                </text>
+
+                <text x="52" y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3">
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+
+                        <stop offset="0%"
+                            stop-color="#6c8cff"/>
+
+                        <stop offset="100%"
+                            stop-color="#4b5eff"/>
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+
+            <div class="menu-grupo">
+
+                <button
+                    type="button"
+                    class="menu-titulo"
+                    id="btnUsuarios">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        Usuários
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down seta"></i>
+
+                </button>
+
+
+                <div class="submenu" id="submenuUsuarios">
+
+                    <a href="clientes.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Clientes</span>
+                    </a>
+
+                    <a href="atendentes.html">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Atendentes</span>
+                    </a>
+
+                    <a href="tecnicos.html">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Técnicos</span>
+                    </a>
+
+                    <a href="supervisores.html">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Supervisores</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="ordens-servico.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Ordens de Serviço</span>
+            </a>
+
+
+            <a href="relatorios.html">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Relatórios</span>
+            </a>
+
+
+            <a href="configuracoes.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </a>
+
+
+            <a href="perfil.html" class="ativo">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../login/login.html" id="btnSair">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <header class="topo">
+
+            <div class="titulo-area">
+
+                <span class="eyebrow">
+                    ADMINISTRAÇÃO
+                </span>
+
+                <h1>
+                    Meu Perfil
+                </h1>
+
+                <p>
+                    Gerencie seus dados pessoais e informações de acesso.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+                <button
+                    class="notificacao"
+                    id="btnNotificacao">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notificacao-badge">
+                        4
+                    </span>
+
+                </button>
+
+
+                <div class="perfil-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <span>
+                            Administrador
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- IDENTIDADE -->
+
+        <section class="identidade">
+
+            <div class="avatar-grande">
+                BG
+            </div>
+
+            <div class="identidade-info">
+
+                <span class="mini-titulo">
+                    CONTA
+                </span>
+
+                <h2>
+                    Bruno Goulart
+                </h2>
+
+                <p>
+                    Administrador do sistema
+                </p>
+
+                <span class="status-conta">
+                    <span></span>
+                    Conta ativa
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- DADOS E SEGURANÇA -->
+
+        <section class="grid-perfil">
+
+
+            <!-- DADOS PESSOAIS -->
+
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            INFORMAÇÕES
+                        </span>
+
+                        <h2>
+                            Dados pessoais
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-editar"
+                        id="btnEditar">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Editar dados
+
+                    </button>
+
+                </div>
+
+
+                <div class="formulario">
+
+                    <div class="campo">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            value="Bruno Goulart"
+                            disabled>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            value="bruno@saquaos.com"
+                            disabled>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telefone"
+                            value="(22) 99999-0000"
+                            disabled>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="cpf">
+                            CPF / Identificador
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            value="000.000.000-00"
+                            disabled>
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label for="endereco">
+                            Endereço
+                        </label>
+
+                        <input
+                            type="text"
+                            id="endereco"
+                            value="Saquarema - RJ"
+                            disabled>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-edicao">
+
+                    <button
+                        type="button"
+                        class="btn-cancelar"
+                        id="btnCancelar">
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-salvar"
+                        id="btnSalvar">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Salvar alterações
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEGURANÇA -->
+
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            SEGURANÇA
+                        </span>
+
+                        <h2>
+                            Acesso à conta
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="seguranca-item">
+
+                    <div class="seguranca-icone">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Senha
+                        </strong>
+
+                        <span>
+                            Proteja sua conta com uma senha segura.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-alterar-senha"
+                    id="btnAlterarSenha">
+
+                    Alterar senha
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <div
+                    class="area-senha"
+                    id="areaSenha">
+
+                    <div class="campo">
+
+                        <label for="novaSenha">
+                            Nova senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="novaSenha"
+                            placeholder="Digite a nova senha">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="confirmarSenha">
+                            Confirmar nova senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmarSenha"
+                            placeholder="Confirme a nova senha">
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-salvar-senha"
+                        id="btnSalvarSenha">
+
+                        Salvar nova senha
+
+                    </button>
+
+                </div>
+
+
+                <div class="seguranca-status">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Sua conta está protegida.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de Gestão de Serviços
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="javascriptperfil.js"></script>
+
+</body>
+
+</html>

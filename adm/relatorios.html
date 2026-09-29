@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Relatórios</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="stylerelatorios.css">
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <svg class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="22" cy="22" r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+                <circle cx="22" cy="22" r="6"
+                    fill="url(#grad1)"/>
+
+                <g stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round">
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text x="52" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5">
+                    Saqua
+                </text>
+
+                <text x="114" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5">
+                    Os
+                </text>
+
+                <text x="52" y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3">
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+
+                        <stop offset="0%"
+                            stop-color="#6c8cff"/>
+
+                        <stop offset="100%"
+                            stop-color="#4b5eff"/>
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+
+            <div class="menu-grupo">
+
+                <button
+                    type="button"
+                    class="menu-titulo"
+                    id="btnUsuarios">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        Usuários
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down seta"></i>
+
+                </button>
+
+
+                <div class="submenu" id="submenuUsuarios">
+
+                    <a href="clientes.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Clientes</span>
+                    </a>
+
+                    <a href="atendentes.html">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Atendentes</span>
+                    </a>
+
+                    <a href="tecnicos.html">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Técnicos</span>
+                    </a>
+
+                    <a href="supervisores.html">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Supervisores</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="ordens-servico.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Ordens de Serviço</span>
+            </a>
+
+
+            <a href="relatorios.html" class="ativo">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Relatórios</span>
+            </a>
+
+
+            <a href="configuracoes.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </a>
+
+
+            <a href="perfil.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../login/login.html" id="btnSair">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <header class="topo">
+
+            <div class="titulo-area">
+
+                <span class="eyebrow">
+                    ADMINISTRAÇÃO
+                </span>
+
+                <h1>
+                    Relatórios
+                </h1>
+
+                <p>
+                    Acompanhe os principais indicadores e resultados do sistema.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+                <button
+                    class="notificacao"
+                    id="btnNotificacao">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notificacao-badge">
+                        4
+                    </span>
+
+                </button>
+
+
+                <div class="perfil-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <span>
+                            Administrador
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- RESUMO -->
+
+        <section class="resumo">
+
+            <div class="card-resumo">
+
+                <div class="icone">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Total de OS</span>
+
+                    <strong>37</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <div class="icone amarelo">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Em andamento</span>
+
+                    <strong>7</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <div class="icone verde">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Concluídas</span>
+
+                    <strong>18</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-resumo">
+
+                <div class="icone roxo">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Taxa de conclusão</span>
+
+                    <strong>49%</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATUS -->
+
+        <section class="painel">
+
+            <div class="painel-titulo">
+
+                <div>
+
+                    <span class="mini-titulo">
+                        VISÃO GERAL
+                    </span>
+
+                    <h2>
+                        Status das Ordens de Serviço
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-lista">
+
+                <div class="status-linha">
+
+                    <div class="status-info">
+
+                        <span class="bolinha azul"></span>
+
+                        <span>
+                            Abertas
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        12
+                    </strong>
+
+                </div>
+
+
+                <div class="barra">
+
+                    <div
+                        class="barra-preenchida azul"
+                        style="width: 32%;">
+                    </div>
+
+                </div>
+
+
+                <div class="status-linha">
+
+                    <div class="status-info">
+
+                        <span class="bolinha roxo"></span>
+
+                        <span>
+                            Em andamento
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        7
+                    </strong>
+
+                </div>
+
+
+                <div class="barra">
+
+                    <div
+                        class="barra-preenchida roxo"
+                        style="width: 19%;">
+                    </div>
+
+                </div>
+
+
+                <div class="status-linha">
+
+                    <div class="status-info">
+
+                        <span class="bolinha verde"></span>
+
+                        <span>
+                            Concluídas
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        18
+                    </strong>
+
+                </div>
+
+
+                <div class="barra">
+
+                    <div
+                        class="barra-preenchida verde"
+                        style="width: 49%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DUAS COLUNAS -->
+
+        <section class="grid-paineis">
+
+
+            <!-- TÉCNICOS -->
+
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            DESEMPENHO
+                        </span>
+
+                        <h2>
+                            Técnicos
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tecnicos-lista">
+
+
+                    <div class="tecnico-linha">
+
+                        <div class="tecnico-avatar">
+                            BG
+                        </div>
+
+                        <div class="tecnico-info">
+
+                            <strong>
+                                Bruno Goulart
+                            </strong>
+
+                            <span>
+                                8 OS atribuídas
+                            </span>
+
+                        </div>
+
+                        <div class="tecnico-numero">
+                            63%
+                        </div>
+
+                    </div>
+
+
+                    <div class="tecnico-linha">
+
+                        <div class="tecnico-avatar">
+                            JT
+                        </div>
+
+                        <div class="tecnico-info">
+
+                            <strong>
+                                João Técnico
+                            </strong>
+
+                            <span>
+                                6 OS atribuídas
+                            </span>
+
+                        </div>
+
+                        <div class="tecnico-numero">
+                            67%
+                        </div>
+
+                    </div>
+
+
+                    <div class="tecnico-linha">
+
+                        <div class="tecnico-avatar">
+                            CT
+                        </div>
+
+                        <div class="tecnico-info">
+
+                            <strong>
+                                Carlos Técnico
+                            </strong>
+
+                            <span>
+                                5 OS atribuídas
+                            </span>
+
+                        </div>
+
+                        <div class="tecnico-numero">
+                            60%
+                        </div>
+
+                    </div>
+
+
+                    <div class="tecnico-linha">
+
+                        <div class="tecnico-avatar">
+                            RS
+                        </div>
+
+                        <div class="tecnico-info">
+
+                            <strong>
+                                Rafael Souza
+                            </strong>
+
+                            <span>
+                                4 OS atribuídas
+                            </span>
+
+                        </div>
+
+                        <div class="tecnico-numero">
+                            50%
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INDICADORES -->
+
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            INDICADORES
+                        </span>
+
+                        <h2>
+                            Operação
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicadores">
+
+
+                    <div class="indicador">
+
+                        <div class="indicador-icone azul">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                32
+                            </strong>
+
+                            <span>
+                                Clientes ativos
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="indicador">
+
+                        <div class="indicador-icone verde">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                7
+                            </strong>
+
+                            <span>
+                                Técnicos ativos
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="indicador">
+
+                        <div class="indicador-icone vermelho">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                3
+                            </strong>
+
+                            <span>
+                                OS prioritárias
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="indicador">
+
+                        <div class="indicador-icone roxo">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                5
+                            </strong>
+
+                            <span>
+                                Concluídas este mês
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATIVIDADES -->
+
+        <section class="painel">
+
+            <div class="painel-cabecalho">
+
+                <div>
+
+                    <span class="mini-titulo">
+                        ATIVIDADE RECENTE
+                    </span>
+
+                    <h2>
+                        Últimas movimentações
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="atividades">
+
+
+                <div class="atividade">
+
+                    <div class="atividade-icone azul">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            OS #1021 criada
+                        </strong>
+
+                        <span>
+                            Mariana Souza • há pouco
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="atividade">
+
+                    <div class="atividade-icone roxo">
+
+                        <i class="fa-solid fa-gears"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            OS #1024 em execução
+                        </strong>
+
+                        <span>
+                            Técnico Bruno Goulart • hoje
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="atividade">
+
+                    <div class="atividade-icone amarelo">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            OS #1018 em análise
+                        </strong>
+
+                        <span>
+                            Técnico João Técnico • hoje
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="atividade">
+
+                    <div class="atividade-icone verde">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            OS #1015 concluída
+                        </strong>
+
+                        <span>
+                            Técnico Carlos Técnico • 25/09/2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de Gestão de Serviços
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="javascriptrelatorios.js"></script>
+
+</body>
+
+</html>

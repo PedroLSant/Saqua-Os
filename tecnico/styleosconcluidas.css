@@ -1,0 +1,800 @@
+/* =========================================
+   SAQUA OS
+   OS CONCLUÍDAS - TÉCNICO
+   ========================================= */
+
+.conteudo {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TOPO
+   ========================================= */
+
+.topo-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #6c8cff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.topo h1 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.topo p {
+    margin: 7px 0 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESUMO
+   ========================================= */
+
+.resumo-concluidas {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 28px;
+    margin-bottom: 24px;
+
+    padding: 20px 22px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(10px);
+}
+
+.resumo-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(16, 185, 129, 0.10);
+
+    border: 1px solid rgba(16, 185, 129, 0.18);
+
+    color: #34d399;
+
+    font-size: 20px;
+}
+
+.resumo-numero {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.resumo-texto {
+    display: block;
+
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FILTROS
+   ========================================= */
+
+.filtros-concluidas {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.campo-pesquisa {
+    flex: 1;
+
+    position: relative;
+}
+
+.campo-pesquisa i {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 14px;
+}
+
+.campo-pesquisa input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px 13px 42px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: all 0.3s ease;
+}
+
+.campo-pesquisa input::placeholder {
+    color: rgba(255, 255, 255, 0.30);
+}
+
+.campo-pesquisa input:focus {
+    border-color: rgba(108, 140, 255, 0.45);
+
+    background: rgba(108, 140, 255, 0.04);
+
+    box-shadow:
+        0 0 0 3px rgba(108, 140, 255, 0.06);
+}
+
+.btn-limpar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 13px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: rgba(255, 255, 255, 0.60);
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-limpar:hover {
+    color: #ffffff;
+
+    background: rgba(108, 140, 255, 0.08);
+
+    border-color: rgba(108, 140, 255, 0.20);
+}
+
+
+/* =========================================
+   MENSAGEM
+   ========================================= */
+
+.mensagem-pesquisa {
+    min-height: 20px;
+
+    margin-bottom: 8px;
+
+    color: #ff8f8f;
+
+    font-size: 12px;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.mensagem-pesquisa.mostrar {
+    opacity: 1;
+}
+
+
+/* =========================================
+   LISTA
+   ========================================= */
+
+.lista-concluidas {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.concluida-card {
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.concluida-card:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(108, 140, 255, 0.20);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(108, 140, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+}
+
+
+/* =========================================
+   TOPO DO CARD
+   ========================================= */
+
+.concluida-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.numero-os {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #6c8cff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.concluida-topo h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.status-concluida {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: rgba(16, 185, 129, 0.09);
+
+    border: 1px solid rgba(16, 185, 129, 0.18);
+
+    color: #34d399;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+   ========================================= */
+
+.concluida-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    padding: 17px 0;
+}
+
+.concluida-info div {
+    min-width: 0;
+}
+
+.concluida-info span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.concluida-info strong {
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.prioridade-baixa {
+    color: #60a5fa !important;
+}
+
+.prioridade-normal {
+    color: #fbbf24 !important;
+}
+
+
+/* =========================================
+   SERVIÇO REALIZADO
+   ========================================= */
+
+.servico-realizado {
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.servico-realizado > span {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.servico-realizado > span i {
+    color: #6c8cff;
+}
+
+.servico-realizado p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.43);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RODAPÉ DO CARD
+   ========================================= */
+
+.concluida-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 16px;
+}
+
+.concluida-footer > span {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 11px;
+}
+
+.concluida-footer > span i {
+    color: rgba(108, 140, 255, 0.75);
+}
+
+.btn-detalhes {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    background: rgba(108, 140, 255, 0.08);
+
+    border: 1px solid rgba(108, 140, 255, 0.16);
+
+    border-radius: 8px;
+
+    color: #9eafff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-detalhes:hover {
+    background: rgba(108, 140, 255, 0.14);
+
+    border-color: rgba(108, 140, 255, 0.30);
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   SEM RESULTADO
+   ========================================= */
+
+.sem-resultado {
+    display: none;
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.018);
+
+    border: 1px dashed rgba(255, 255, 255, 0.08);
+
+    border-radius: 14px;
+}
+
+.sem-resultado.mostrar {
+    display: block;
+}
+
+.sem-resultado i {
+    margin-bottom: 15px;
+
+    color: rgba(108, 140, 255, 0.45);
+
+    font-size: 35px;
+}
+
+.sem-resultado h3 {
+    margin: 0 0 7px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 15px;
+}
+
+.sem-resultado p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 35px;
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+    color: rgba(255, 255, 255, 0.25);
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   MENU LATERAL
+   ========================================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    color: rgba(255, 255, 255, 0.60);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.menu a i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+
+    background: rgba(108, 140, 255, 0.08);
+
+    transform: translateX(2px);
+}
+
+.menu a:hover i {
+    color: #8fa8ff;
+}
+
+.menu a.ativo {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(108, 140, 255, 0.15),
+            rgba(108, 140, 255, 0.05)
+        );
+
+    border: 1px solid rgba(108, 140, 255, 0.12);
+}
+
+.menu a.ativo i {
+    color: #6c8cff;
+}
+
+.menu a span {
+    color: inherit;
+}
+
+.menu-badge {
+    margin-left: auto;
+
+    min-width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(108, 140, 255, 0.15);
+
+    border: 1px solid rgba(108, 140, 255, 0.30);
+
+    color: #8fa8ff !important;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   BOTÃO SAIR
+   ========================================= */
+
+.menu-final {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.menu-final a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.menu-final a i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.menu-final a:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    transform: translateX(2px);
+}
+
+.menu-final a:hover i {
+    color: #ff6b6b;
+}
+
+.menu-final a span {
+    color: inherit;
+}
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .concluida-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .perfil-topo {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filtros-concluidas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-limpar {
+        width: 100%;
+    }
+
+    .concluida-topo {
+        flex-direction: column;
+    }
+
+    .status-concluida {
+        align-self: flex-start;
+    }
+
+    .concluida-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-detalhes {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .rodape {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .concluida-info {
+        grid-template-columns: 1fr;
+    }
+
+}

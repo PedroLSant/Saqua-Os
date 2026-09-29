@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Configurações</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="styleconfiguracoes.css">
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <svg class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="22" cy="22" r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+                <circle cx="22" cy="22" r="6"
+                    fill="url(#grad1)"/>
+
+                <g stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round">
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text x="52" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5">
+                    Saqua
+                </text>
+
+                <text x="114" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5">
+                    Os
+                </text>
+
+                <text x="52" y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3">
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+
+                        <stop offset="0%"
+                            stop-color="#6c8cff"/>
+
+                        <stop offset="100%"
+                            stop-color="#4b5eff"/>
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+
+            <div class="menu-grupo">
+
+                <button
+                    type="button"
+                    class="menu-titulo"
+                    id="btnUsuarios">
+
+                    <span>
+                        <i class="fa-solid fa-users"></i>
+                        Usuários
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down seta"></i>
+
+                </button>
+
+
+                <div class="submenu" id="submenuUsuarios">
+
+                    <a href="clientes.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Clientes</span>
+                    </a>
+
+                    <a href="atendentes.html">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Atendentes</span>
+                    </a>
+
+                    <a href="tecnicos.html">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Técnicos</span>
+                    </a>
+
+                    <a href="supervisores.html">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Supervisores</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="ordens-servico.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Ordens de Serviço</span>
+            </a>
+
+
+            <a href="relatorios.html">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Relatórios</span>
+            </a>
+
+
+            <a href="configuracoes.html" class="ativo">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </a>
+
+
+            <a href="perfil.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../login/login.html" id="btnSair">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <header class="topo">
+
+            <div class="titulo-area">
+
+                <span class="eyebrow">
+                    ADMINISTRAÇÃO
+                </span>
+
+                <h1>
+                    Configurações
+                </h1>
+
+                <p>
+                    Gerencie as principais configurações do sistema.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+                <button
+                    class="notificacao"
+                    id="btnNotificacao">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notificacao-badge">
+                        4
+                    </span>
+
+                </button>
+
+
+                <div class="perfil-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <span>
+                            Administrador
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONFIGURAÇÕES -->
+
+        <section class="config-grid">
+
+
+            <!-- SISTEMA -->
+
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div class="cabecalho-icone azul">
+
+                        <i class="fa-solid fa-sliders"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            SISTEMA
+                        </span>
+
+                        <h2>
+                            Configurações gerais
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="nomeSistema">
+                        Nome do sistema
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeSistema"
+                        value="Saqua OS">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="descricaoSistema">
+                        Descrição
+                    </label>
+
+                    <input
+                        type="text"
+                        id="descricaoSistema"
+                        value="Sistema de Gestão de Serviços">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="emailSistema">
+                        E-mail de contato
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailSistema"
+                        value="contato@saquaos.com">
+
+                </div>
+
+            </div>
+
+
+            <!-- ATENDIMENTO -->
+
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div class="cabecalho-icone roxo">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            ATENDIMENTO
+                        </span>
+
+                        <h2>
+                            Regras de atendimento
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="prazoOS">
+                        Prazo padrão da OS
+                    </label>
+
+                    <select id="prazoOS">
+
+                        <option value="1">
+                            1 dia
+                        </option>
+
+                        <option value="2" selected>
+                            2 dias
+                        </option>
+
+                        <option value="3">
+                            3 dias
+                        </option>
+
+                        <option value="5">
+                            5 dias
+                        </option>
+
+                        <option value="7">
+                            7 dias
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="prioridade">
+                        Prioridade padrão
+                    </label>
+
+                    <select id="prioridade">
+
+                        <option value="baixa">
+                            Baixa
+                        </option>
+
+                        <option value="normal" selected>
+                            Normal
+                        </option>
+
+                        <option value="alta">
+                            Alta
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="toggle-linha">
+
+                    <div>
+
+                        <strong>
+                            Notificar alterações
+                        </strong>
+
+                        <span>
+                            Avisar quando houver mudança na OS.
+                        </span>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="notificarAlteracoes"
+                            checked>
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- USUÁRIOS -->
+
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div class="cabecalho-icone verde">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            USUÁRIOS
+                        </span>
+
+                        <h2>
+                            Controle de acesso
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="toggle-linha">
+
+                    <div>
+
+                        <strong>
+                            Aprovação de clientes
+                        </strong>
+
+                        <span>
+                            Novos clientes precisam ser aprovados.
+                        </span>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="aprovacaoClientes"
+                            checked>
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="toggle-linha">
+
+                    <div>
+
+                        <strong>
+                            Cadastro público
+                        </strong>
+
+                        <span>
+                            Permitir novos cadastros no sistema.
+                        </span>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="cadastroPublico"
+                            checked>
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="toggle-linha">
+
+                    <div>
+
+                        <strong>
+                            Login com Google
+                        </strong>
+
+                        <span>
+                            Permitir autenticação através do Google.
+                        </span>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="loginGoogle"
+                            checked>
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOTIFICAÇÕES -->
+
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div class="cabecalho-icone amarelo">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            NOTIFICAÇÕES
+                        </span>
+
+                        <h2>
+                            Preferências
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="toggle-linha">
+
+                    <div>
+
+                        <strong>
+                            Nova Ordem de Serviço
+                        </strong>
+
+                        <span>
+                            Notificar quando uma nova OS for criada.
+                        </span>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="notificarNovaOS"
+                            checked>
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="toggle-linha">
+
+                    <div>
+
+                        <strong>
+                            OS concluída
+                        </strong>
+
+                        <span>
+                            Avisar quando uma OS for concluída.
+                        </span>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="notificarConclusao"
+                            checked>
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="toggle-linha">
+
+                    <div>
+
+                        <strong>
+                            Alertas prioritários
+                        </strong>
+
+                        <span>
+                            Exibir avisos de OS prioritárias.
+                        </span>
+
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="alertasPrioritarios"
+                            checked>
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AÇÕES -->
+
+        <section class="acoes">
+
+            <button
+                type="button"
+                class="btn-secundario"
+                id="btnRestaurar">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Restaurar padrão
+
+            </button>
+
+
+            <button
+                type="button"
+                class="btn-principal"
+                id="btnSalvar">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Salvar configurações
+
+            </button>
+
+        </section>
+
+
+        <footer>
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de Gestão de Serviços
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="javascriptconfiguracoes.js"></script>
+
+</body>
+
+</html>

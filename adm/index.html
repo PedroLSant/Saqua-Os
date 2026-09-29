@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Administrador</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+
+                <div>
+                    <h2>Saqua OS</h2>
+                    <span>Administrador</span>
+                </div>
+            </div>
+
+
+            <nav class="menu">
+
+                <a href="#" class="ativo">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Usuários</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>Ordens de Serviço</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span>Produtos/Serviços</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span>Financeiro</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Relatórios</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configurações</span>
+                </a>
+
+            </nav>
+
+
+            <div class="menu-inferior">
+
+                <a href="#" id="btnSair">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="conteudo">
+
+            <!-- TOPO -->
+
+            <header class="topo">
+
+                <div>
+                    <h1>SAQUA OS</h1>
+                    <p>Bem-vindo ao painel administrativo do Saqua OS.</p>
+                </div>
+
+
+                <div class="topo-direita">
+
+                    <!-- SINO -->
+
+                    <div class="notificacao">
+
+                        <button id="btnNotificacao">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="contador">3</span>
+                        </button>
+
+
+                        <div class="painel-notificacao" id="painelNotificacao">
+
+                            <div class="notificacao-topo">
+                                <strong>Notificações</strong>
+
+                                <span>3 novas</span>
+                            </div>
+
+
+                            <div class="notificacao-item">
+
+                                <div class="icone-notificacao azul">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Novo cadastro</strong>
+                                    <p>Existe um cliente aguardando aprovação.</p>
+                                    <small>Agora</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="notificacao-item">
+
+                                <div class="icone-notificacao verde">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Nova OS</strong>
+                                    <p>Uma nova ordem de serviço foi criada.</p>
+                                    <small>Há 10 minutos</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="notificacao-item">
+
+                                <div class="icone-notificacao laranja">
+                                    <i class="fa-solid fa-user-gear"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Técnico pendente</strong>
+                                    <p>Existe um cadastro aguardando análise.</p>
+                                    <small>Há 30 minutos</small>
+                                </div>
+
+                            </div>
+
+
+                            <button class="ver-notificacoes">
+                                Ver todas as notificações
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PERFIL -->
+
+                    <div class="perfil">
+
+                        <div class="avatar">
+                            A
+                        </div>
+
+                        <div class="dados-perfil">
+                            <strong>Administrador</strong>
+                            <span>Administrador</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- CARDS -->
+
+            <section class="cards">
+
+                <div class="card">
+
+                    <div class="card-icone azul">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <span>Total de clientes</span>
+                        <strong>128</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icone verde">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <div>
+                        <span>Ordens de serviço</span>
+                        <strong>84</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icone laranja">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>OS em andamento</span>
+                        <strong>19</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icone vermelho">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>Aguardando aprovação</span>
+                        <strong>3</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ÁREA PRINCIPAL -->
+
+            <section class="grid-principal">
+
+
+                <!-- APROVAÇÕES -->
+
+                <div class="painel">
+
+                    <div class="painel-titulo">
+
+                        <div>
+                            <h2>Aprovações pendentes</h2>
+                            <p>Usuários aguardando análise</p>
+                        </div>
+
+                        <button class="btn-ver">
+                            Ver todos
+                        </button>
+
+                    </div>
+
+
+                    <div class="usuario-pendente">
+
+                        <div class="usuario-info">
+
+                            <div class="avatar usuario">
+                                JS
+                            </div>
+
+                            <div>
+                                <strong>João da Silva</strong>
+                                <span>joao@email.com</span>
+                            </div>
+
+                        </div>
+
+                        <span class="status pendente">
+                            Pendente
+                        </span>
+
+                        <button class="btn-acao">
+                            Ver cadastro
+                        </button>
+
+                    </div>
+
+
+                    <div class="usuario-pendente">
+
+                        <div class="usuario-info">
+
+                            <div class="avatar usuario">
+                                MS
+                            </div>
+
+                            <div>
+                                <strong>Maria Santos</strong>
+                                <span>maria@email.com</span>
+                            </div>
+
+                        </div>
+
+                        <span class="status pendente">
+                            Pendente
+                        </span>
+
+                        <button class="btn-acao">
+                            Ver cadastro
+                        </button>
+
+                    </div>
+
+
+                    <div class="usuario-pendente">
+
+                        <div class="usuario-info">
+
+                            <div class="avatar usuario">
+                                CF
+                            </div>
+
+                            <div>
+                                <strong>Carlos Ferreira</strong>
+                                <span>carlos@email.com</span>
+                            </div>
+
+                        </div>
+
+                        <span class="status pendente">
+                            Pendente
+                        </span>
+
+                        <button class="btn-acao">
+                            Ver cadastro
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATUS DAS OS -->
+
+                <div class="painel">
+
+                    <div class="painel-titulo">
+
+                        <div>
+                            <h2>Status das OS</h2>
+                            <p>Resumo atual</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-os">
+
+                        <div>
+                            <span class="bolinha aberta"></span>
+                            <span>Aberta</span>
+                            <strong>32</strong>
+                        </div>
+
+                        <div>
+                            <span class="bolinha andamento"></span>
+                            <span>Em andamento</span>
+                            <strong>19</strong>
+                        </div>
+
+                        <div>
+                            <span class="bolinha concluida"></span>
+                            <span>Concluída</span>
+                            <strong>28</strong>
+                        </div>
+
+                        <div>
+                            <span class="bolinha cancelada"></span>
+                            <span>Cancelada</span>
+                            <strong>5</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ÚLTIMAS OS -->
+
+            <section class="painel ultimas-os">
+
+                <div class="painel-titulo">
+
+                    <div>
+                        <h2>Últimas Ordens de Serviço</h2>
+                        <p>Acompanhamento das solicitações recentes</p>
+                    </div>
+
+                    <button class="btn-ver">
+                        Ver todas
+                    </button>
+
+                </div>
+
+
+                <div class="tabela">
+
+                    <div class="linha cabecalho">
+
+                        <span>OS</span>
+                        <span>Cliente</span>
+                        <span>Serviço</span>
+                        <span>Data</span>
+                        <span>Status</span>
+
+                    </div>
+
+
+                    <div class="linha">
+
+                        <span>#00084</span>
+                        <span>João da Silva</span>
+                        <span>Manutenção de computador</span>
+                        <span>27/09/2026</span>
+
+                        <span class="status aberta">
+                            Aberta
+                        </span>
+
+                    </div>
+
+
+                    <div class="linha">
+
+                        <span>#00083</span>
+                        <span>Maria Santos</span>
+                        <span>Instalação de sistema</span>
+                        <span>27/09/2026</span>
+
+                        <span class="status andamento">
+                            Em andamento
+                        </span>
+
+                    </div>
+
+
+                    <div class="linha">
+
+                        <span>#00082</span>
+                        <span>Pedro Oliveira</span>
+                        <span>Formatação</span>
+                        <span>26/09/2026</span>
+
+                        <span class="status concluida">
+                            Concluída
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Perfil</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="styleperfil.css">
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <svg class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="22" cy="22" r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+                <circle cx="22" cy="22" r="6"
+                    fill="url(#grad1)"/>
+
+                <g stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round">
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text x="52" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5">
+                    Saqua
+                </text>
+
+                <text x="114" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5">
+                    Os
+                </text>
+
+                <text x="52" y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3">
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+
+                        <stop offset="0%"
+                            stop-color="#6c8cff"/>
+
+                        <stop offset="100%"
+                            stop-color="#4b5eff"/>
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="clientes.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>
+                    Clientes
+                </span>
+
+            </a>
+
+
+            <a href="nova-os.html">
+
+                <i class="fa-solid fa-plus-circle"></i>
+
+                <span>
+                    Nova OS
+                </span>
+
+            </a>
+
+
+            <a href="ordens-servico.html">
+
+                <i class="fa-solid fa-clipboard-list"></i>
+
+                <span>
+                    Ordens de Serviço
+                </span>
+
+            </a>
+
+
+            <a href="perfil.html" class="ativo">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+                    Perfil
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../login/login.html"
+                id="btnSair">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Sair
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <header class="topo">
+
+            <div>
+
+                <span class="titulo-pequeno">
+                    MINHA CONTA
+                </span>
+
+                <h1>
+                    Meu Perfil
+                </h1>
+
+                <p>
+                    Consulte e gerencie seus dados pessoais.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+                <button
+                    class="notificacao"
+                    id="btnNotificacao">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button>
+
+
+                <div class="perfil-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <small>
+                            Atendente
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- IDENTIDADE -->
+
+        <section class="perfil-identidade">
+
+            <div class="avatar-grande">
+                BG
+            </div>
+
+            <div class="identidade-texto">
+
+                <span>
+                    USUÁRIO
+                </span>
+
+                <h2>
+                    Bruno Goulart
+                </h2>
+
+                <p>
+                    Atendente
+                </p>
+
+            </div>
+
+            <div class="status-conta">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Conta ativa
+
+            </div>
+
+        </section>
+
+
+        <!-- DADOS PESSOAIS -->
+
+        <section class="bloco">
+
+            <div class="bloco-titulo">
+
+                <div class="icone-bloco">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        INFORMAÇÕES
+                    </span>
+
+                    <h2>
+                        Dados pessoais
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="dados-grid">
+
+
+                <div class="dado">
+
+                    <span>
+                        Nome completo
+                    </span>
+
+                    <strong id="nome">
+                        Bruno Goulart
+                    </strong>
+
+                </div>
+
+
+                <div class="dado">
+
+                    <span>
+                        E-mail
+                    </span>
+
+                    <strong id="email">
+                        bruno@email.com
+                    </strong>
+
+                </div>
+
+
+                <div class="dado">
+
+                    <span>
+                        Telefone
+                    </span>
+
+                    <strong id="telefone">
+                        (22) 99999-9999
+                    </strong>
+
+                </div>
+
+
+                <div class="dado">
+
+                    <span>
+                        CPF / Identificador
+                    </span>
+
+                    <strong id="cpf">
+                        000.000.000-00
+                    </strong>
+
+                </div>
+
+
+                <div class="dado dado-completo">
+
+                    <span>
+                        Endereço
+                    </span>
+
+                    <strong id="endereco">
+                        Saquarema - RJ
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="acoes-dados">
+
+                <button
+                    class="btn-editar"
+                    id="btnEditar">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Editar dados
+
+                </button>
+
+            </div>
+
+
+            <!-- FORMULÁRIO DE EDIÇÃO -->
+
+            <div
+                class="form-edicao"
+                id="formEdicao">
+
+                <div class="dados-grid">
+
+                    <div class="campo">
+
+                        <label>
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="inputNome"
+                            value="Bruno Goulart">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="inputEmail"
+                            value="bruno@email.com">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Telefone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="inputTelefone"
+                            value="(22) 99999-9999">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            CPF / Identificador
+                        </label>
+
+                        <input
+                            type="text"
+                            id="inputCpf"
+                            value="000.000.000-00">
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label>
+                            Endereço
+                        </label>
+
+                        <input
+                            type="text"
+                            id="inputEndereco"
+                            value="Saquarema - RJ">
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-edicao">
+
+                    <button
+                        type="button"
+                        class="btn-cancelar"
+                        id="btnCancelar">
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-salvar"
+                        id="btnSalvar">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Salvar alterações
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEGURANÇA -->
+
+        <section class="bloco">
+
+            <div class="bloco-titulo">
+
+                <div class="icone-bloco">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        SEGURANÇA
+                    </span>
+
+                    <h2>
+                        Segurança da conta
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="seguranca">
+
+                <div class="seguranca-info">
+
+                    <div class="icone-seguranca">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Senha
+                        </strong>
+
+                        <p>
+                            Mantenha sua senha atualizada para proteger sua conta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn-senha"
+                    id="btnAlterarSenha">
+
+                    Alterar senha
+
+                </button>
+
+            </div>
+
+
+            <!-- ALTERAÇÃO DE SENHA -->
+
+            <div
+                class="senha-form"
+                id="senhaForm">
+
+                <div class="campo">
+
+                    <label>
+                        Nova senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="novaSenha"
+                        placeholder="Mínimo de 6 caracteres">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Confirmar nova senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        placeholder="Digite novamente">
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-salvar"
+                    id="btnSalvarSenha">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Atualizar senha
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de Gestão de Ordens de Serviço
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="javascriptperfil.js"></script>
+
+</body>
+
+</html>

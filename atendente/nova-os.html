@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Nova OS</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="stylenovaos.css">
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <svg class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="22" cy="22" r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+                <circle cx="22" cy="22" r="6"
+                    fill="url(#grad1)"/>
+
+                <g stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round">
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text x="52" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5">
+                    Saqua
+                </text>
+
+                <text x="114" y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5">
+                    Os
+                </text>
+
+                <text x="52" y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3">
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+
+                        <stop offset="0%"
+                            stop-color="#6c8cff"/>
+
+                        <stop offset="100%"
+                            stop-color="#4b5eff"/>
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="clientes.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Clientes</span>
+            </a>
+
+            <a href="nova-os.html" class="ativo">
+                <i class="fa-solid fa-plus-circle"></i>
+                <span>Nova OS</span>
+            </a>
+
+            <a href="ordens-servico.html">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Ordens de Serviço</span>
+            </a>
+
+            <a href="perfil.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../login/login.html" id="btnSair">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <header class="topo">
+
+            <div>
+
+                <span class="titulo-pequeno">
+                    ATENDIMENTO
+                </span>
+
+                <h1>
+                    Nova Ordem de Serviço
+                </h1>
+
+                <p>
+                    Cadastre uma nova solicitação para atendimento.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+                <button
+                    class="notificacao"
+                    id="btnNotificacao">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>3</span>
+
+                </button>
+
+
+                <div class="perfil-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <small>
+                            Atendente
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- FORMULÁRIO -->
+
+        <form id="formNovaOS">
+
+
+            <!-- CLIENTE -->
+
+            <section class="bloco">
+
+                <div class="bloco-titulo">
+
+                    <div class="icone-bloco">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ETAPA 01
+                        </span>
+
+                        <h2>
+                            Dados do cliente
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid-form">
+
+                    <div class="campo campo-grande">
+
+                        <label>
+                            Cliente *
+                        </label>
+
+                        <select id="cliente" required>
+
+                            <option value="">
+                                Selecione o cliente
+                            </option>
+
+                            <option value="carlos">
+                                Carlos Almeida
+                            </option>
+
+                            <option value="mariana">
+                                Mariana Souza
+                            </option>
+
+                            <option value="joao">
+                                João Ferreira
+                            </option>
+
+                            <option value="fernanda">
+                                Fernanda Lima
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="cliente@email.com">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Telefone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telefone"
+                            placeholder="(22) 99999-9999">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            CPF / Identificador
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            placeholder="CPF ou identificador">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- EQUIPAMENTO -->
+
+            <section class="bloco">
+
+                <div class="bloco-titulo">
+
+                    <div class="icone-bloco">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ETAPA 02
+                        </span>
+
+                        <h2>
+                            Equipamento
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid-form">
+
+                    <div class="campo">
+
+                        <label>
+                            Tipo de equipamento *
+                        </label>
+
+                        <select id="equipamento" required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="computador">
+                                Computador
+                            </option>
+
+                            <option value="notebook">
+                                Notebook
+                            </option>
+
+                            <option value="impressora">
+                                Impressora
+                            </option>
+
+                            <option value="celular">
+                                Celular
+                            </option>
+
+                            <option value="rede">
+                                Equipamento de rede
+                            </option>
+
+                            <option value="outro">
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Marca e modelo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="marcaModelo"
+                            placeholder="Ex.: Dell Inspiron 15">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Número de série
+                        </label>
+
+                        <input
+                            type="text"
+                            id="numeroSerie"
+                            placeholder="Número de série">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Prioridade *
+                        </label>
+
+                        <select id="prioridade" required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="baixa">
+                                Baixa
+                            </option>
+
+                            <option value="normal">
+                                Normal
+                            </option>
+
+                            <option value="alta">
+                                Alta
+                            </option>
+
+                            <option value="urgente">
+                                Urgente
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label>
+                            Acessórios / Estado do equipamento
+                        </label>
+
+                        <textarea
+                            id="acessorios"
+                            rows="3"
+                            placeholder="Informe acessórios entregues, estado físico, cabos, carregador etc."></textarea>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROBLEMA -->
+
+            <section class="bloco">
+
+                <div class="bloco-titulo">
+
+                    <div class="icone-bloco">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ETAPA 03
+                        </span>
+
+                        <h2>
+                            Problema relatado
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo campo-completo">
+
+                    <label>
+                        Descrição do problema *
+                    </label>
+
+                    <textarea
+                        id="problema"
+                        rows="5"
+                        required
+                        placeholder="Descreva o problema informado pelo cliente..."></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- ATENDIMENTO -->
+
+            <section class="bloco">
+
+                <div class="bloco-titulo">
+
+                    <div class="icone-bloco">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ETAPA 04
+                        </span>
+
+                        <h2>
+                            Atendimento
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="grid-form">
+
+                    <div class="campo">
+
+                        <label>
+                            Técnico responsável
+                        </label>
+
+                        <select id="tecnico">
+
+                            <option value="">
+                                A definir
+                            </option>
+
+                            <option value="bruno">
+                                Bruno Goulart
+                            </option>
+
+                            <option value="joao-tecnico">
+                                João Técnico
+                            </option>
+
+                            <option value="carlos-tecnico">
+                                Carlos Técnico
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Prazo para atendimento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="prazo">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Valor estimado
+                        </label>
+
+                        <input
+                            type="number"
+                            id="valor"
+                            step="0.01"
+                            min="0"
+                            placeholder="0,00">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Forma de pagamento
+                        </label>
+
+                        <select id="pagamento">
+
+                            <option value="">
+                                Não definido
+                            </option>
+
+                            <option value="dinheiro">
+                                Dinheiro
+                            </option>
+
+                            <option value="pix">
+                                PIX
+                            </option>
+
+                            <option value="cartao">
+                                Cartão
+                            </option>
+
+                            <option value="boleto">
+                                Boleto
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label>
+                            Observações internas
+                        </label>
+
+                        <textarea
+                            id="observacoes"
+                            rows="4"
+                            placeholder="Observações para a equipe interna..."></textarea>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATUS -->
+
+            <section class="bloco resumo-os">
+
+                <div>
+
+                    <span class="titulo-pequeno">
+                        STATUS INICIAL
+                    </span>
+
+                    <h2>
+                        Aguardando diagnóstico
+                    </h2>
+
+                    <p>
+                        Após criar a OS, ela ficará disponível para o técnico responsável.
+                    </p>
+
+                </div>
+
+                <div class="status-inicial">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Aguardando diagnóstico
+
+                </div>
+
+            </section>
+
+
+            <!-- AÇÕES -->
+
+            <div class="acoes-form">
+
+                <a
+                    href="index.html"
+                    class="btn-voltar">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Cancelar
+
+                </a>
+
+
+                <button
+                    type="submit"
+                    class="btn-criar">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Criar Ordem de Serviço
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <footer>
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de Gestão de Ordens de Serviço
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="javascriptnovaos.js"></script>
+
+</body>
+
+</html>

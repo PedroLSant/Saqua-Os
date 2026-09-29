@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Saqua OS - OS Pendentes</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styleospendentes.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- FUNDO -->
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+
+    <!-- LINHAS ANIMADAS -->
+
+    <div class="linha linha-1"></div>
+    <div class="linha linha-2"></div>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo-container">
+
+            <svg
+                class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+
+                <circle
+                    cx="22"
+                    cy="22"
+                    r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"
+                />
+
+                <circle
+                    cx="22"
+                    cy="22"
+                    r="6"
+                    fill="url(#grad1)"
+                />
+
+                <g
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                >
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text
+                    x="52"
+                    y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5"
+                >
+                    Saqua
+                </text>
+
+                <text
+                    x="114"
+                    y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5"
+                >
+                    Os
+                </text>
+
+                <text
+                    x="52"
+                    y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3"
+                >
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient
+                        id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#6c8cff"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#4b5eff"
+                        />
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="minhas-os.html">
+
+                <i class="fa-solid fa-clipboard-list"></i>
+
+                <span>Minhas OS</span>
+
+            </a>
+
+
+            <a
+                href="os-pendentes.html"
+                class="ativo"
+            >
+
+                <i class="fa-solid fa-clock"></i>
+
+                <span>OS Pendentes</span>
+
+                <span class="menu-badge">3</span>
+
+            </a>
+
+
+            <a href="os-andamento.html">
+
+                <i class="fa-solid fa-gears"></i>
+
+                <span>OS Em andamento</span>
+
+            </a>
+
+
+            <a href="os-concluidas.html">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>OS Concluídas</span>
+
+            </a>
+
+
+            <a href="perfil.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Perfil</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SAIR -->
+
+        <div class="menu-final">
+
+            <a
+                href="../login/login.html"
+                id="btnSair"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+
+        <!-- TOPO -->
+
+        <header class="topo">
+
+            <div>
+
+                <span class="topo-label">
+                    ÁREA DO TÉCNICO
+                </span>
+
+                <h1>
+                    Ordens de Serviço Pendentes
+                </h1>
+
+                <p>
+                    Confira as ordens que aguardam sua análise.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+
+                <!-- NOTIFICAÇÃO -->
+
+                <button
+                    class="btn-notificacao"
+                    id="btnNotificacao"
+                    type="button"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notificacao-badge">
+                        2
+                    </span>
+
+                </button>
+
+
+                <!-- PERFIL -->
+
+                <div class="usuario-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <span>
+                            Técnico
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- RESUMO -->
+
+        <section class="resumo-pendente">
+
+
+            <div class="resumo-icon">
+
+                <i class="fa-solid fa-clock"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    OS aguardando atendimento
+                </span>
+
+                <strong>
+                    3
+                </strong>
+
+            </div>
+
+
+            <div class="resumo-texto">
+
+                Existem ordens aguardando diagnóstico
+                ou início do atendimento técnico.
+
+            </div>
+
+        </section>
+
+
+        <!-- FILTROS -->
+
+        <section class="filtros-pendentes">
+
+            <div class="campo-pesquisa">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="pesquisaOS"
+                    placeholder="Pesquisar por OS ou cliente..."
+                >
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnLimpar"
+                class="btn-limpar"
+            >
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Limpar
+
+            </button>
+
+        </section>
+
+
+        <div
+            id="mensagemPesquisa"
+            class="mensagem-pesquisa"
+        ></div>
+
+
+        <!-- LISTA -->
+
+        <section
+            class="lista-pendentes"
+            id="listaPendentes"
+        >
+
+
+            <!-- OS 1021 -->
+
+            <article
+                class="pendente-card"
+                data-os="1021"
+                data-cliente="Mariana Souza"
+            >
+
+                <div class="pendente-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            OS #1021
+                        </span>
+
+                        <h2>
+                            Instalação de impressora
+                        </h2>
+
+                    </div>
+
+
+                    <span class="status-pendente">
+                        Aguardando diagnóstico
+                    </span>
+
+                </div>
+
+
+                <div class="pendente-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <div>
+
+                            <span>
+                                Cliente
+                            </span>
+
+                            <strong>
+                                Mariana Souza
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-print"></i>
+
+                        <div>
+
+                            <span>
+                                Equipamento
+                            </span>
+
+                            <strong>
+                                Impressora
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <div>
+
+                            <span>
+                                Data
+                            </span>
+
+                            <strong>
+                                25/09/2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        <div>
+
+                            <span>
+                                Prioridade
+                            </span>
+
+                            <strong class="prioridade-normal">
+                                Normal
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="problema">
+
+                    <span>
+                        Problema relatado
+                    </span>
+
+                    <p>
+                        Cliente informa que a impressora
+                        não está imprimindo corretamente.
+                        Solicita avaliação e instalação.
+                    </p>
+
+                </div>
+
+
+                <div class="pendente-footer">
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Saquarema - RJ
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="btn-atender"
+                        data-os="1021"
+                    >
+
+                        <i class="fa-solid fa-wrench"></i>
+
+                        Atender OS
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- OS 1018 -->
+
+            <article
+                class="pendente-card"
+                data-os="1018"
+                data-cliente="João Ferreira"
+            >
+
+                <div class="pendente-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            OS #1018
+                        </span>
+
+                        <h2>
+                            Configuração de rede
+                        </h2>
+
+                    </div>
+
+
+                    <span class="status-pendente">
+                        Em análise
+                    </span>
+
+                </div>
+
+
+                <div class="pendente-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <div>
+
+                            <span>
+                                Cliente
+                            </span>
+
+                            <strong>
+                                João Ferreira
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-network-wired"></i>
+
+                        <div>
+
+                            <span>
+                                Equipamento
+                            </span>
+
+                            <strong>
+                                Rede
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <div>
+
+                            <span>
+                                Data
+                            </span>
+
+                            <strong>
+                                20/09/2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        <div>
+
+                            <span>
+                                Prioridade
+                            </span>
+
+                            <strong class="prioridade-normal">
+                                Normal
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="problema">
+
+                    <span>
+                        Problema relatado
+                    </span>
+
+                    <p>
+                        Computadores apresentando problemas
+                        de conexão com a rede local.
+                        Necessária análise da infraestrutura.
+                    </p>
+
+                </div>
+
+
+                <div class="pendente-footer">
+
+                    <span>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Saquarema - RJ
+
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="btn-atender"
+                        data-os="1018"
+                    >
+
+                        <i class="fa-solid fa-wrench"></i>
+
+                        Atender OS
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- OS 1012 -->
+
+            <article
+                class="pendente-card"
+                data-os="1012"
+                data-cliente="Rafael Martins"
+            >
+
+                <div class="pendente-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            OS #1012
+                        </span>
+
+                        <h2>
+                            Manutenção de computador
+                        </h2>
+
+                    </div>
+
+
+                    <span class="status-pendente prioridade-alta">
+                        Prioridade alta
+                    </span>
+
+                </div>
+
+
+                <div class="pendente-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <div>
+
+                            <span>
+                                Cliente
+                            </span>
+
+                            <strong>
+                                Rafael Martins
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-desktop"></i>
+
+                        <div>
+
+                            <span>
+                                Equipamento
+                            </span>
+
+                            <strong>
+                                Computador
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <div>
+
+                            <span>
+                                Data
+                            </span>
+
+                            <strong>
+                                27/09/2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        <div>
+
+                            <span>
+                                Prioridade
+                            </span>
+
+                            <strong class="prioridade-alta-texto">
+                                Alta
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="problema">
+
+                    <span>
+                        Problema relatado
+                    </span>
+
+                    <p>
+                        Computador não liga após queda de energia.
+                        Cliente solicita avaliação urgente
+                        do equipamento.
+                    </p>
+
+                </div>
+
+
+                <div class="pendente-footer">
+
+                    <span>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Saquarema - RJ
+
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="btn-atender"
+                        data-os="1012"
+                    >
+
+                        <i class="fa-solid fa-wrench"></i>
+
+                        Atender OS
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- SEM RESULTADO -->
+
+        <section
+            class="sem-resultado"
+            id="semResultado"
+        >
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            <h2>
+                Nenhuma OS encontrada
+            </h2>
+
+            <p>
+                Não encontramos nenhuma ordem
+                para a pesquisa realizada.
+            </p>
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="rodape">
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de gerenciamento de ordens de serviço
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="javascriptospendentes.js"></script>
+
+</body>
+
+</html>

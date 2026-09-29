@@ -1,0 +1,513 @@
+/* =========================================================
+   PERFIL DO CLIENTE - SAQUA OS
+   ========================================================= */
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.cabecalho-perfil {
+    margin-bottom: 25px;
+}
+
+.cabecalho-perfil h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.cabecalho-perfil p {
+    margin: 8px 0 0;
+    color: #9299b2;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.perfil-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+
+/* =========================================================
+   IDENTIFICAÇÃO
+   ========================================================= */
+
+.card-identificacao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    margin-bottom: 18px;
+    border: 1px solid #252b44;
+    border-radius: 14px;
+    background: rgba(14, 17, 29, 0.9);
+}
+
+
+.avatar-grande {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        #6c8cff,
+        #4b5eff
+    );
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    box-shadow:
+        0 8px 25px rgba(75, 94, 255, 0.25);
+}
+
+
+.identificacao-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.identificacao-info h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 21px;
+}
+
+
+.tipo-usuario {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #9da6c1;
+    font-size: 12px;
+}
+
+
+.tipo-usuario i {
+    color: #6c8cff;
+}
+
+
+.status-conta {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #34d399;
+    font-size: 11px;
+}
+
+
+.status-conta i {
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.perfil-card {
+    margin-bottom: 18px;
+    padding: 22px;
+    border: 1px solid #252b44;
+    border-radius: 14px;
+    background: rgba(14, 17, 29, 0.9);
+}
+
+
+/* =========================================================
+   TÍTULO DO CARD
+   ========================================================= */
+
+.card-titulo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 24px;
+}
+
+
+.icone-titulo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(108, 140, 255, 0.12);
+    color: #6c8cff;
+}
+
+
+.icone-titulo.seguranca {
+    background: rgba(139, 92, 246, 0.12);
+    color: #a78bfa;
+}
+
+
+.card-titulo h2 {
+    margin: 0 0 4px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+.card-titulo p {
+    margin: 0;
+    color: #70788f;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.campos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+.campo-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.campo-largo {
+    grid-column: span 2;
+}
+
+
+.campo-perfil label {
+    color: #aeb5c9;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.input-perfil {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 0 13px;
+    box-sizing: border-box;
+    border: 1px solid #292f47;
+    border-radius: 8px;
+    background: #10131f;
+    transition: 0.2s;
+}
+
+
+.input-perfil:focus-within {
+    border-color: #6c8cff;
+    box-shadow:
+        0 0 0 3px rgba(108, 140, 255, 0.07);
+}
+
+
+.input-perfil i {
+    width: 15px;
+    color: #59637e;
+    font-size: 13px;
+}
+
+
+.input-perfil input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+
+.input-perfil input:disabled {
+    color: #858da4;
+    cursor: not-allowed;
+}
+
+
+.input-perfil input::placeholder {
+    color: #5d657c;
+}
+
+
+/* =========================================================
+   BOTÕES DO PERFIL
+   ========================================================= */
+
+.acoes-perfil {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #252a40;
+}
+
+
+.btn-editar,
+.btn-salvar {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 18px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.btn-editar {
+    border: 1px solid #303751;
+    background: #151a2b;
+    color: #aeb7d2;
+}
+
+
+.btn-editar:hover {
+    border-color: #6c8cff;
+    color: #ffffff;
+}
+
+
+.btn-salvar {
+    border: none;
+    background: linear-gradient(
+        135deg,
+        #6c8cff,
+        #4b5eff
+    );
+    color: #ffffff;
+}
+
+
+.btn-salvar:hover {
+    transform: translateY(-1px);
+    box-shadow:
+        0 8px 22px rgba(75, 94, 255, 0.25);
+}
+
+
+/* =========================================================
+   SEGURANÇA
+   ========================================================= */
+
+.seguranca-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid #252b42;
+    border-radius: 10px;
+    background: rgba(10, 13, 23, 0.65);
+}
+
+
+.seguranca-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(139, 92, 246, 0.1);
+    color: #a78bfa;
+}
+
+
+.seguranca-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.seguranca-info strong {
+    color: #e0e4ef;
+    font-size: 13px;
+}
+
+
+.seguranca-info span {
+    color: #70788f;
+    font-size: 11px;
+}
+
+
+.btn-senha {
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid #303751;
+    border-radius: 8px;
+    background: #151a2b;
+    color: #aeb7d2;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.btn-senha:hover {
+    border-color: #8b5cf6;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ALTERAR SENHA
+   ========================================================= */
+
+.alterar-senha {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+    padding: 20px;
+    border: 1px solid #292f48;
+    border-radius: 10px;
+    background: rgba(10, 13, 23, 0.55);
+}
+
+
+.alterar-senha.aberto {
+    display: grid;
+}
+
+
+.btn-confirmar-senha {
+    grid-column: span 2;
+    justify-self: end;
+    height: 40px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(
+        135deg,
+        #6c8cff,
+        #4b5eff
+    );
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.btn-confirmar-senha:hover {
+    box-shadow:
+        0 7px 20px rgba(75, 94, 255, 0.22);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .campos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-largo {
+        grid-column: span 1;
+    }
+
+    .alterar-senha {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-confirmar-senha {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cabecalho-perfil h1 {
+        font-size: 23px;
+    }
+
+
+    .card-identificacao {
+        padding: 18px;
+    }
+
+
+    .avatar-grande {
+        width: 60px;
+        height: 60px;
+        font-size: 19px;
+    }
+
+
+    .identificacao-info h2 {
+        font-size: 18px;
+    }
+
+
+    .perfil-card {
+        padding: 17px;
+    }
+
+
+    .seguranca-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+
+    .seguranca-info {
+        min-width: calc(100% - 70px);
+    }
+
+
+    .btn-senha {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+
+    .acoes-perfil {
+        flex-direction: column;
+    }
+
+
+    .btn-editar,
+    .btn-salvar {
+        width: 100%;
+    }
+
+}

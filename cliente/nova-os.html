@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Saqua OS - Nova Solicitação</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="icon"
+        href="../favicon_new.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- FUNDO -->
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+    <div class="fundo">
+
+        <svg
+            viewBox="0 0 1440 800"
+            preserveAspectRatio="none"
+        >
+
+            <path
+                class="line"
+                d="M0,200 C400,100 800,300 1440,200"
+            />
+
+            <path
+                class="line"
+                d="M0,300 C400,200 800,400 1440,300"
+            />
+
+            <path
+                class="line"
+                d="M0,400 C400,300 800,500 1440,400"
+            />
+
+            <path
+                class="line"
+                d="M0,500 C400,400 800,600 1440,500"
+            />
+
+        </svg>
+
+    </div>
+
+
+    <!-- LAYOUT -->
+
+    <div class="painel">
+
+
+        <!-- MENU -->
+
+        <aside class="sidebar">
+
+            <a
+                href="index.html"
+                class="logo-link"
+            >
+
+                <svg
+                    class="logo-svg"
+                    viewBox="0 0 200 44"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <circle
+                        cx="22"
+                        cy="22"
+                        r="16"
+                        fill="none"
+                        stroke="url(#grad1)"
+                        stroke-width="2.5"
+                    />
+
+                    <circle
+                        cx="22"
+                        cy="22"
+                        r="6"
+                        fill="url(#grad1)"
+                    />
+
+                    <g
+                        stroke="url(#grad1)"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                    >
+
+                        <line
+                            x1="22"
+                            y1="2"
+                            x2="22"
+                            y2="7"
+                        />
+
+                        <line
+                            x1="22"
+                            y1="37"
+                            x2="22"
+                            y2="42"
+                        />
+
+                        <line
+                            x1="2"
+                            y1="22"
+                            x2="7"
+                            y2="22"
+                        />
+
+                        <line
+                            x1="37"
+                            y1="22"
+                            x2="42"
+                            y2="22"
+                        />
+
+                        <line
+                            x1="8"
+                            y1="8"
+                            x2="12"
+                            y2="12"
+                        />
+
+                        <line
+                            x1="32"
+                            y1="32"
+                            x2="36"
+                            y2="36"
+                        />
+
+                        <line
+                            x1="36"
+                            y1="8"
+                            x2="32"
+                            y2="12"
+                        />
+
+                        <line
+                            x1="12"
+                            y1="32"
+                            x2="8"
+                            y2="36"
+                        />
+
+                    </g>
+
+                    <text
+                        x="52"
+                        y="20"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="18"
+                        font-weight="700"
+                        fill="white"
+                    >
+                        Saqua
+                    </text>
+
+                    <text
+                        x="114"
+                        y="20"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="18"
+                        font-weight="700"
+                        fill="url(#grad1)"
+                    >
+                        Os
+                    </text>
+
+                    <text
+                        x="52"
+                        y="36"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="10"
+                        fill="rgba(255,255,255,0.4)"
+                        letter-spacing="3"
+                    >
+                        SISTEMAS
+                    </text>
+
+                    <defs>
+
+                        <linearGradient
+                            id="grad1"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#6c8cff"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#4b5eff"
+                            />
+
+                        </linearGradient>
+
+                    </defs>
+
+                </svg>
+
+            </a>
+
+
+            <nav class="menu">
+
+                <a
+                    href="index.html"
+                    class="menu-item"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Início</span>
+
+                </a>
+
+
+                <a
+                    href="nova-os.html"
+                    class="menu-item ativo"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>Nova Solicitação</span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    <span>Minhas OS</span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>Acompanhar OS</span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Meu Perfil</span>
+
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a
+                    href="../login/login.html"
+                    id="btnSair"
+                    class="menu-item sair"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Sair</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="conteudo">
+
+
+            <!-- TOPO -->
+
+            <header class="topo">
+
+                <div>
+
+                    <span class="titulo-pequeno">
+                        NOVA SOLICITAÇÃO
+                    </span>
+
+                    <h1>
+                        Abrir uma Ordem de Serviço
+                    </h1>
+
+                    <p>
+                        Informe os detalhes do problema para solicitar atendimento.
+                    </p>
+
+                </div>
+
+
+                <div class="topo-direita">
+
+                    <button
+                        class="btn-notificacao"
+                        id="btnNotificacao"
+                    >
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span class="badge">
+                            2
+                        </span>
+
+                    </button>
+
+
+                    <div class="perfil">
+
+                        <div class="avatar">
+                            C
+                        </div>
+
+                        <div class="perfil-info">
+
+                            <strong>
+                                Cliente
+                            </strong>
+
+                            <span>
+                                Cliente
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- FORMULÁRIO -->
+
+            <section class="formulario-card">
+
+
+                <div class="formulario-titulo">
+
+                    <div class="icone-formulario">
+
+                        <i class="fa-solid fa-clipboard-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Dados da solicitação
+                        </h2>
+
+                        <p>
+                            Preencha as informações abaixo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="formSolicitacao">
+
+
+                    <!-- TÍTULO -->
+
+                    <div class="campo">
+
+                        <label for="titulo">
+                            Título do problema
+                        </label>
+
+                        <input
+                            type="text"
+                            id="titulo"
+                            placeholder="Ex.: Computador não liga"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- DESCRIÇÃO -->
+
+                    <div class="campo">
+
+                        <label for="descricao">
+                            Descrição do problema
+                        </label>
+
+                        <textarea
+                            id="descricao"
+                            rows="6"
+                            placeholder="Descreva o problema com o máximo de detalhes possível..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- LINHA -->
+
+                    <div class="campos-linha">
+
+
+                        <!-- EQUIPAMENTO -->
+
+                        <div class="campo">
+
+                            <label for="equipamento">
+                                Equipamento
+                            </label>
+
+                            <select id="equipamento">
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option>
+                                    Computador
+                                </option>
+
+                                <option>
+                                    Notebook
+                                </option>
+
+                                <option>
+                                    Impressora
+                                </option>
+
+                                <option>
+                                    Rede / Internet
+                                </option>
+
+                                <option>
+                                    Outro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PRIORIDADE -->
+
+                        <div class="campo">
+
+                            <label for="prioridade">
+                                Prioridade
+                            </label>
+
+                            <select id="prioridade">
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="baixa">
+                                    Baixa
+                                </option>
+
+                                <option value="media">
+                                    Média
+                                </option>
+
+                                <option value="alta">
+                                    Alta
+                                </option>
+
+                                <option value="urgente">
+                                    Urgente
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCAL -->
+
+                    <div class="campo">
+
+                        <label for="local">
+                            Local do atendimento
+                        </label>
+
+                        <input
+                            type="text"
+                            id="local"
+                            placeholder="Ex.: Sala 03, escritório, residência..."
+                        >
+
+                    </div>
+
+
+                    <!-- FOTO -->
+
+                    <div class="campo">
+
+                        <label>
+                            Foto do equipamento
+                        </label>
+
+                        <label
+                            for="foto"
+                            class="upload"
+                        >
+
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                            <span>
+                                Clique para adicionar uma foto
+                            </span>
+
+                            <small>
+                                JPG, PNG ou WEBP
+                            </small>
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="foto"
+                            accept="image/*"
+                            hidden
+                        >
+
+                    </div>
+
+
+                    <!-- BOTÕES -->
+
+                    <div class="formulario-acoes">
+
+                        <a
+                            href="index.html"
+                            class="btn-cancelar"
+                        >
+                            Cancelar
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="btn-enviar"
+                        >
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Enviar Solicitação
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <footer>
+
+                © 2026 Saqua OS — Todos os direitos reservados.
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script>
+
+        const form =
+            document.getElementById(
+                "formSolicitacao"
+            );
+
+
+        form.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                alert(
+                    "Solicitação enviada com sucesso!"
+                );
+
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
+
+
+        const btnSair =
+            document.getElementById(
+                "btnSair"
+            );
+
+
+        btnSair.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const confirmar =
+                    confirm(
+                        "Deseja realmente sair do sistema?"
+                    );
+
+
+                if (confirmar) {
+
+                    window.location.href =
+                        "../login/login.html";
+
+                }
+
+            }
+        );
+
+
+        const btnNotificacao =
+            document.getElementById(
+                "btnNotificacao"
+            );
+
+
+        btnNotificacao.addEventListener(
+            "click",
+            function() {
+
+                alert(
+                    "Você possui 2 notificações."
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

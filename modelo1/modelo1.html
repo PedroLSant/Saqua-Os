@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinançasPro – Modelo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#0a0a12;color:#e2e8f0}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:#0f0f1a;border-bottom:1px solid rgba(255,255,255,.05)}
+.logo{font-size:20px;font-weight:700;color:#10b981}
+nav a{margin-left:22px;text-decoration:none;color:#64748b;font-size:14px;transition:.2s}nav a:hover{color:#e2e8f0}
+.resumo{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:28px 40px 0}
+.box{display:flex;align-items:center;gap:16px;padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);transition:transform .2s}.box:hover{transform:translateY(-3px)}
+.box-icon{font-size:26px;width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.box-receita .box-icon{background:rgba(16,185,129,.12)}.box-despesa .box-icon{background:rgba(239,68,68,.12)}.box-saldo .box-icon{background:rgba(59,130,246,.12)}.box-pendente .box-icon{background:rgba(245,158,11,.12)}
+.box h4{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.05em;font-weight:600;margin-bottom:4px}
+.box-valor{font-size:22px;font-weight:800;color:#fff}.box-receita .box-valor{color:#10b981}.box-despesa .box-valor{color:#ef4444}.box-saldo .box-valor{color:#3b82f6}
+.conteudo{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;padding:24px 40px}
+.painel{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:24px}
+.painel h3{margin:0 0 18px;font-size:15px;color:#94a3b8;font-weight:600}
+.painel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.painel-header h3{margin:0}
+.grafico-barras{display:flex;align-items:flex-end;gap:14px;height:180px;padding:0 8px}
+.barra-grupo{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px}
+.barra-container{display:flex;gap:4px;align-items:flex-end;height:160px;width:100%}
+.barra{flex:1;border-radius:5px 5px 0 0;min-height:4px;transition:height .6s ease}
+.barra-receita{background:linear-gradient(180deg,#10b981,#059669)}.barra-despesa{background:linear-gradient(180deg,#ef4444,#dc2626)}
+.barra-label{font-size:11px;color:#64748b}
+.grafico-legenda{display:flex;gap:18px;justify-content:center;margin-top:16px}
+.legenda-item{font-size:12px;color:#64748b;display:flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:3px}.dot-receita{background:#10b981}.dot-despesa{background:#ef4444}
+.btn-add{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);color:#10b981;padding:7px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:.2s}.btn-add:hover{background:#10b981;color:#fff}
+.transacao-item{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04)}.transacao-item:last-child{border:none}
+.transacao-icone{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;flex-shrink:0}
+.ic-receita{background:rgba(16,185,129,.1);color:#10b981}.ic-despesa{background:rgba(239,68,68,.1);color:#ef4444}
+.transacao-info{flex:1;min-width:0}.transacao-desc{font-size:14px;font-weight:600;color:#e2e8f0;display:block}.transacao-cat{font-size:12px;color:#64748b}
+.transacao-valor{font-size:14px;font-weight:700;white-space:nowrap}.val-positivo{color:#10b981}.val-negativo{color:#ef4444}
+.categorias-section{padding:0 40px 40px}
+.categorias-grid{display:flex;flex-direction:column;gap:14px}
+.cat-item{display:flex;flex-direction:column;gap:6px}
+.cat-barra-bg{height:8px;background:rgba(255,255,255,.05);border-radius:8px;overflow:hidden}
+.cat-barra-fill{height:100%;border-radius:8px;transition:width .6s ease}
+.cat-info{display:flex;justify-content:space-between}.cat-nome{font-size:13px;color:#94a3b8}.cat-valor{font-size:13px;color:#64748b}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:100}
+.modal{background:#12121e;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;width:100%;max-width:380px;display:flex;flex-direction:column;gap:12px}
+.modal h2{font-size:18px;color:#fff}.modal input,.modal select{width:100%;padding:11px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.4);color:#e2e8f0;font-size:14px;font-family:inherit}
+.modal-btns{display:flex;gap:10px;margin-top:6px}
+.btn-cancelar{flex:1;padding:11px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:none;color:#94a3b8;cursor:pointer;font-family:inherit;font-size:14px}
+.btn-salvar{flex:1;padding:11px;border-radius:8px;border:none;background:#10b981;color:#fff;cursor:pointer;font-weight:600;font-family:inherit;font-size:14px}
+.btn-nav{position:fixed;bottom:30px;padding:14px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:14px;z-index:50;transition:.3s;box-shadow:0 8px 25px rgba(0,0,0,.3)}
+.btn-voltar{left:30px;background:linear-gradient(135deg,#10b981,#059669);color:#fff}
+.btn-proximo{right:30px;background:linear-gradient(135deg,#10b981,#059669);color:#fff}
+.btn-nav:hover{transform:translateY(-4px) scale(1.05)}
+@media(max-width:900px){.resumo{grid-template-columns:repeat(2,1fr)}.conteudo{grid-template-columns:1fr}header,.resumo,.conteudo,.categorias-section{padding-left:20px;padding-right:20px}}
+@media(max-width:500px){.resumo{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><span class="logo">💰 FinançasPro</span><nav><a href="#">Dashboard</a><a href="#">Transações</a><a href="#">Relatórios</a></nav></header>
+<section class="resumo">
+  <div class="box box-receita"><span class="box-icon">📈</span><div><h4>Receitas</h4><span class="box-valor" id="tR">R$ 0</span></div></div>
+  <div class="box box-despesa"><span class="box-icon">📉</span><div><h4>Despesas</h4><span class="box-valor" id="tD">R$ 0</span></div></div>
+  <div class="box box-saldo"><span class="box-icon">💎</span><div><h4>Saldo</h4><span class="box-valor" id="tS">R$ 0</span></div></div>
+  <div class="box box-pendente"><span class="box-icon">⏳</span><div><h4>Contas a pagar</h4><span class="box-valor">3</span></div></div>
+</section>
+<section class="conteudo">
+  <div class="painel"><h3>Fluxo Mensal</h3><div class="grafico-barras" id="graf"></div><div class="grafico-legenda"><span class="legenda-item"><span class="dot dot-receita"></span> Receitas</span><span class="legenda-item"><span class="dot dot-despesa"></span> Despesas</span></div></div>
+  <div class="painel"><div class="painel-header"><h3>Últimas Transações</h3><button class="btn-add" onclick="abrirM()">+ Nova</button></div><div id="lista"></div></div>
+</section>
+<section class="categorias-section"><div class="painel"><h3>Despesas por Categoria</h3><div class="categorias-grid" id="cats"></div></div></section>
+<div class="modal-overlay" id="modal"><div class="modal"><h2>Nova Transação</h2><select id="tipo"><option value="receita">Receita</option><option value="despesa">Despesa</option></select><input type="text" id="desc" placeholder="Descrição"><input type="number" id="val" placeholder="Valor" step="0.01"><select id="cat"><option>Salário</option><option>Freelance</option><option>Alimentação</option><option>Transporte</option><option>Aluguel</option><option>Lazer</option><option>Outros</option></select><div class="modal-btns"><button class="btn-cancelar" onclick="fecharM()">Cancelar</button><button class="btn-salvar" onclick="addT()">Salvar</button></div></div></div>
+<a href="../inicio/inicio.html" class="btn-nav btn-voltar">← Voltar</a>
+<a href="../modelo2/modelo2.html" class="btn-nav btn-proximo">Próximo →</a>
+<script>
+let t=[{tipo:"receita",d:"Salário Janeiro",v:5500,c:"Salário",dt:"05/01"},{tipo:"receita",d:"Freelance site",v:1800,c:"Freelance",dt:"12/01"},{tipo:"despesa",d:"Aluguel",v:1200,c:"Aluguel",dt:"10/01"},{tipo:"despesa",d:"Supermercado",v:850,c:"Alimentação",dt:"15/01"},{tipo:"despesa",d:"Uber + Gasolina",v:180,c:"Transporte",dt:"18/01"},{tipo:"despesa",d:"Netflix + Spotify",v:65,c:"Lazer",dt:"20/01"},{tipo:"receita",d:"Salário Fevereiro",v:5500,c:"Salário",dt:"05/02"},{tipo:"despesa",d:"Aluguel Fev",v:1200,c:"Aluguel",dt:"10/02"},{tipo:"despesa",d:"Restaurante",v:320,c:"Alimentação",dt:"14/02"},{tipo:"receita",d:"Projeto app",v:3200,c:"Freelance",dt:"22/02"}];
+const ms=["Jan","Fev","Mar","Abr","Mai","Jun"],dm=[{r:7300,d:2295},{r:8700,d:1520},{r:6100,d:2800},{r:9200,d:3100},{r:7800,d:2400},{r:8500,d:1900}];
+function render(){let r=0,dp=0;t.forEach(x=>{x.tipo==="receita"?r+=x.v:dp+=x.v});
+document.getElementById("tR").textContent=f(r);document.getElementById("tD").textContent=f(dp);document.getElementById("tS").textContent=f(r-dp);
+document.getElementById("lista").innerHTML=t.slice(-8).reverse().map(x=>`<div class="transacao-item"><div class="transacao-icone ${x.tipo==='receita'?'ic-receita':'ic-despesa'}">${x.tipo==='receita'?'↑':'↓'}</div><div class="transacao-info"><span class="transacao-desc">${x.d}</span><span class="transacao-cat">${x.c} · ${x.dt}</span></div><span class="transacao-valor ${x.tipo==='receita'?'val-positivo':'val-negativo'}">${x.tipo==='receita'?'+':'-'} ${f(x.v)}</span></div>`).join("");
+const mx=Math.max(...dm.map(x=>Math.max(x.r,x.d)));
+document.getElementById("graf").innerHTML=dm.map((x,i)=>`<div class="barra-grupo"><div class="barra-container"><div class="barra barra-receita" style="height:${(x.r/mx)*100}%"></div><div class="barra barra-despesa" style="height:${(x.d/mx)*100}%"></div></div><span class="barra-label">${ms[i]}</span></div>`).join("");
+const cs={};t.filter(x=>x.tipo==="despesa").forEach(x=>{cs[x.c]=(cs[x.c]||0)+x.v});const tot=Object.values(cs).reduce((a,b)=>a+b,0);
+const cl=["#ef4444","#f59e0b","#3b82f6","#8b5cf6","#10b981","#ec4899"];
+document.getElementById("cats").innerHTML=Object.entries(cs).sort((a,b)=>b[1]-a[1]).map(([n,v],i)=>`<div class="cat-item"><div class="cat-barra-bg"><div class="cat-barra-fill" style="width:${(v/tot)*100}%;background:${cl[i%cl.length]}"></div></div><div class="cat-info"><span class="cat-nome">${n}</span><span class="cat-valor">${f(v)} (${Math.round((v/tot)*100)}%)</span></div></div>`).join("")}
+function f(v){return"R$ "+v.toFixed(2).replace(".",",")}
+function addT(){const tp=document.getElementById("tipo").value,ds=document.getElementById("desc").value,vl=parseFloat(document.getElementById("val").value),ct=document.getElementById("cat").value;if(!ds||!vl)return;const d=new Date();t.push({tipo:tp,d:ds,v:vl,c:ct,dt:`${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}`});fecharM();render()}
+function abrirM(){document.getElementById("modal").style.display="flex"}
+function fecharM(){document.getElementById("modal").style.display="none"}
+render();
+</script>
+</body>
+</html>

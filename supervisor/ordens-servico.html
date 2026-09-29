@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Saqua OS - Ordens de Serviço</title>
+
+    <link
+        rel="stylesheet"
+        href="styleordensservico.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+
+    <!-- MENU -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <svg
+                class="logo-svg"
+                viewBox="0 0 200 44"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+
+                <circle
+                    cx="22"
+                    cy="22"
+                    r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"
+                />
+
+                <circle
+                    cx="22"
+                    cy="22"
+                    r="6"
+                    fill="url(#grad1)"
+                />
+
+                <g
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                >
+
+                    <line x1="22" y1="2" x2="22" y2="7"/>
+                    <line x1="22" y1="37" x2="22" y2="42"/>
+                    <line x1="2" y1="22" x2="7" y2="22"/>
+                    <line x1="37" y1="22" x2="42" y2="22"/>
+
+                    <line x1="8" y1="8" x2="12" y2="12"/>
+                    <line x1="32" y1="32" x2="36" y2="36"/>
+                    <line x1="36" y1="8" x2="32" y2="12"/>
+                    <line x1="12" y1="32" x2="8" y2="36"/>
+
+                </g>
+
+                <text
+                    x="52"
+                    y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="white"
+                    letter-spacing="0.5"
+                >
+                    Saqua
+                </text>
+
+                <text
+                    x="114"
+                    y="20"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="18"
+                    font-weight="700"
+                    fill="url(#grad1)"
+                    letter-spacing="0.5"
+                >
+                    Os
+                </text>
+
+                <text
+                    x="52"
+                    y="36"
+                    font-family="'Segoe UI',sans-serif"
+                    font-size="10"
+                    fill="rgba(255,255,255,0.4)"
+                    letter-spacing="3"
+                >
+                    SISTEMAS
+                </text>
+
+                <defs>
+
+                    <linearGradient
+                        id="grad1"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#6c8cff"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#4b5eff"
+                        />
+
+                    </linearGradient>
+
+                </defs>
+
+            </svg>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a
+                href="ordens-servico.html"
+                class="ativo"
+            >
+
+                <i class="fa-solid fa-clipboard-list"></i>
+
+                <span>Ordens de Serviço</span>
+
+            </a>
+
+
+            <a href="tecnicos.html">
+
+                <i class="fa-solid fa-user-gear"></i>
+
+                <span>Técnicos</span>
+
+            </a>
+
+
+            <a href="relatorios.html">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>Relatórios</span>
+
+            </a>
+
+
+            <a href="perfil.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Perfil</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a
+                href="../login/login.html"
+                id="btnSair"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+
+        <header class="topo">
+
+            <div>
+
+                <span class="titulo-pequeno">
+                    SUPERVISÃO
+                </span>
+
+                <h1>
+                    Ordens de Serviço
+                </h1>
+
+                <p>
+                    Acompanhe todas as ordens de serviço da operação.
+                </p>
+
+            </div>
+
+
+            <div class="topo-direita">
+
+                <button
+                    class="notificacao"
+                    id="btnNotificacao"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="badge">
+                        3
+                    </span>
+
+                </button>
+
+
+                <div class="perfil-topo">
+
+                    <div class="avatar">
+                        BG
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                        <span>
+                            Supervisor
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- RESUMO -->
+
+        <section class="cards">
+
+
+            <div class="card">
+
+                <div class="card-icone azul">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Total de OS
+                    </span>
+
+                    <strong>
+                        37
+                    </strong>
+
+                    <small>
+                        Ordens cadastradas
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icone amarelo">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Abertas
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <small>
+                        Aguardando atendimento
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icone roxo">
+
+                    <i class="fa-solid fa-gears"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Em andamento
+                    </span>
+
+                    <strong>
+                        7
+                    </strong>
+
+                    <small>
+                        Em execução
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icone verde">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Concluídas
+                    </span>
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <small>
+                        Serviços finalizados
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- FILTROS -->
+
+        <section class="filtros">
+
+            <div class="campo-pesquisa">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="pesquisaOS"
+                    placeholder="Pesquisar por OS ou cliente..."
+                >
+
+            </div>
+
+
+            <select id="filtroStatus">
+
+                <option value="">
+                    Todos os status
+                </option>
+
+                <option value="Aberta">
+                    Aberta
+                </option>
+
+                <option value="Aguardando diagnóstico">
+                    Aguardando diagnóstico
+                </option>
+
+                <option value="Em análise">
+                    Em análise
+                </option>
+
+                <option value="Aguardando aprovação">
+                    Aguardando aprovação
+                </option>
+
+                <option value="Aguardando peça">
+                    Aguardando peça
+                </option>
+
+                <option value="Conserto em execução">
+                    Conserto em execução
+                </option>
+
+                <option value="Pronto para entrega">
+                    Pronto para entrega
+                </option>
+
+                <option value="Concluída">
+                    Concluída
+                </option>
+
+                <option value="Cancelada">
+                    Cancelada
+                </option>
+
+            </select>
+
+
+            <button
+                id="btnLimpar"
+                class="btn-limpar"
+            >
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Limpar
+
+            </button>
+
+        </section>
+
+
+        <div
+            id="mensagemPesquisa"
+            class="mensagem-pesquisa"
+        ></div>
+
+
+
+        <!-- LISTA -->
+
+        <section class="lista-os">
+
+
+            <!-- OS 1024 -->
+
+            <article
+                class="os-card"
+                data-os="1024"
+                data-cliente="Carlos Almeida"
+                data-status="Conserto em execução"
+            >
+
+                <div class="os-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            #1024
+                        </span>
+
+                        <h2>
+                            Carlos Almeida
+                        </h2>
+
+                        <p>
+                            Manutenção de computador
+                        </p>
+
+                    </div>
+
+
+                    <div class="os-status">
+
+                        <span class="prioridade alta">
+                            Alta
+                        </span>
+
+                        <span class="status execucao">
+                            Conserto em execução
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="os-info">
+
+                    <div>
+
+                        <span>
+                            Técnico
+                        </span>
+
+                        <strong>
+                            Bruno Goulart
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Abertura
+                        </span>
+
+                        <strong>
+                            28/09/2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Prazo
+                        </span>
+
+                        <strong>
+                            30/09/2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Valor
+                        </span>
+
+                        <strong>
+                            R$ 350,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="detalhes"
+                    id="detalhes-1024"
+                >
+
+                    <div>
+
+                        <span>
+                            Equipamento
+                        </span>
+
+                        <strong>
+                            Computador
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Problema relatado
+                        </span>
+
+                        <strong>
+                            Computador desligando sozinho.
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn-detalhes"
+                    data-os="1024"
+                >
+
+                    Ver detalhes
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- OS 1021 -->
+
+            <article
+                class="os-card"
+                data-os="1021"
+                data-cliente="Mariana Souza"
+                data-status="Aberta"
+            >
+
+                <div class="os-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            #1021
+                        </span>
+
+                        <h2>
+                            Mariana Souza
+                        </h2>
+
+                        <p>
+                            Instalação de impressora
+                        </p>
+
+                    </div>
+
+
+                    <div class="os-status">
+
+                        <span class="prioridade normal">
+                            Normal
+                        </span>
+
+                        <span class="status aberta">
+                            Aberta
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="os-info">
+
+                    <div>
+
+                        <span>
+                            Técnico
+                        </span>
+
+                        <strong>
+                            A definir
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Abertura
+                        </span>
+
+                        <strong>
+                            27/09/2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Prazo
+                        </span>
+
+                        <strong>
+                            30/09/2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Valor
+                        </span>
+
+                        <strong>
+                            R$ 180,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="detalhes"
+                    id="detalhes-1021"
+                >
+
+                    <div>
+
+                        <span>
+                            Equipamento
+                        </span>
+
+                        <strong>
+                            Impressora
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Problema relatado
+                        </span>
+
+                        <strong>
+                            Impressora não está imprimindo.
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn-detalhes"
+                    data-os="1021"
+                >
+
+                    Ver detalhes
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- OS 1018 -->
+
+            <article
+                class="os-card"
+                data-os="1018"
+                data-cliente="João Ferreira"
+                data-status="Em análise"
+            >
+
+                <div class="os-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            #1018
+                        </span>
+
+                        <h2>
+                            João Ferreira
+                        </h2>
+
+                        <p>
+                            Configuração de rede
+                        </p>
+
+                    </div>
+
+
+                    <div class="os-status">
+
+                        <span class="prioridade normal">
+                            Normal
+                        </span>
+
+                        <span class="status analise">
+                            Em análise
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="os-info">
+
+                    <div>
+
+                        <span>
+                            Técnico
+                        </span>
+
+                        <strong>
+                            João Técnico
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Abertura
+                        </span>
+
+                        <strong>
+                            26/09/2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Prazo
+                        </span>
+
+                        <strong>
+                            29/09/2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Valor
+                        </span>
+
+                        <strong>
+                            R$ 250,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="detalhes"
+                    id="detalhes-1018"
+                >
+
+                    <div>
+
+                        <span>
+                            Equipamento
+                        </span>
+
+                        <strong>
+                            Rede
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Problema relatado
+                        </span>
+
+                        <strong>
+                            Problemas de conexão na rede.
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn-detalhes"
+                    data-os="1018"
+                >
+
+                    Ver detalhes
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+
+            <!-- OS 1015 -->
+
+            <article
+                class="os-card"
+                data-os="1015"
+                data-cliente="Fernanda Lima"
+                data-status="Concluída"
+            >
+
+                <div class="os-topo">
+
+                    <div>
+
+                        <span class="numero-os">
+                            #1015
+                        </span>
+
+                        <h2>
+                            Fernanda Lima
+                        </h2>
+
+                        <p>
+                            Manutenção de notebook
+                        </p>
+
+                    </div>
+
+
+                    <div class="os-status">
+
+                        <span class="prioridade baixa">
+                            Baixa
+                        </span>
+
+                        <span class="status concluida">
+                            Concluída
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="os-info">
+
+                    <div>
+
+                        <span>
+                            Técnico
+                        </span>
+
+                        <strong>
+                            Carlos Técnico
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Abertura
+                        </span>
+
+                        <strong>
+                            20/09/2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Conclusão
+                        </span>
+
+                        <strong>
+                            25/09/2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Valor
+                        </span>
+
+                        <strong>
+                            R$ 280,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="detalhes"
+                    id="detalhes-1015"
+                >
+
+                    <div>
+
+                        <span>
+                            Equipamento
+                        </span>
+
+                        <strong>
+                            Notebook
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Problema relatado
+                        </span>
+
+                        <strong>
+                            Notebook apresentava lentidão.
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn-detalhes"
+                    data-os="1015"
+                >
+
+                    Ver detalhes
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </article>
+
+
+        </section>
+
+
+
+        <div
+            id="semResultado"
+            class="sem-resultado"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <h3>
+                Nenhuma OS encontrada
+            </h3>
+
+            <p>
+                Tente alterar os filtros ou o termo pesquisado.
+            </p>
+
+        </div>
+
+
+
+        <footer>
+
+            <span>
+                © 2026 Saqua OS
+            </span>
+
+            <span>
+                Sistema de Gerenciamento de Ordens de Serviço
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="javascriptordensservico.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaquaOs</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #050505; display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+
+    .splash {
+      display: flex; flex-direction: column; align-items: center; gap: 20px;
+      animation: fadeOut 0.5s ease 2.5s forwards;
+    }
+
+    .splash-logo {
+      width: 80px; height: 80px; position: relative;
+      animation: pulsar 1.5s ease infinite;
+    }
+
+    .splash-logo svg { width: 100%; height: 100%; }
+
+    .splash-texto {
+      font-family: 'Segoe UI', sans-serif; font-size: 28px; font-weight: 800;
+      color: white; letter-spacing: 2px; opacity: 0;
+      animation: aparecer 0.6s ease 0.5s forwards;
+    }
+    .splash-texto span { color: #6c8cff; }
+
+    .splash-bar {
+      width: 120px; height: 3px; background: rgba(255,255,255,0.1);
+      border-radius: 3px; overflow: hidden; opacity: 0;
+      animation: aparecer 0.4s ease 0.8s forwards;
+    }
+    .splash-bar-fill {
+      width: 0%; height: 100%; background: linear-gradient(90deg, #6c8cff, #4b5eff);
+      border-radius: 3px; animation: carregar 1.5s ease 1s forwards;
+    }
+
+    @keyframes pulsar {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes carregar {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; transform: scale(0.95); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="splash">
+  <div class="splash-logo">
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="40" cy="40" r="28" fill="none" stroke="url(#sg)" stroke-width="3"/>
+      <circle cx="40" cy="40" r="10" fill="url(#sg)"/>
+      <g stroke="url(#sg)" stroke-width="3" stroke-linecap="round">
+        <line x1="40" y1="4" x2="40" y2="12"/>
+        <line x1="40" y1="68" x2="40" y2="76"/>
+        <line x1="4" y1="40" x2="12" y2="40"/>
+        <line x1="68" y1="40" x2="76" y2="40"/>
+        <line x1="14" y1="14" x2="20" y2="20"/>
+        <line x1="60" y1="60" x2="66" y2="66"/>
+        <line x1="66" y1="14" x2="60" y2="20"/>
+        <line x1="20" y1="60" x2="14" y2="66"/>
+      </g>
+      <defs>
+        <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#6c8cff"/>
+          <stop offset="100%" stop-color="#4b5eff"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="splash-texto">Saqua<span>Os</span></div>
+  <div class="splash-bar"><div class="splash-bar-fill"></div></div>
+</div>
+
+<script>
+  setTimeout(() => {
+    window.location.href = "/inicio/inicio.html";
+  }, 3000);
+</script>
+</body>
+</html>

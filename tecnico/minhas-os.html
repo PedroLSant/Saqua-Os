@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Minhas OS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleminhasos.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- FUNDO -->
+
+    <div class="fundo-grid"></div>
+
+    <div class="orbe orbe-1"></div>
+    <div class="orbe orbe-2"></div>
+    <div class="orbe orbe-3"></div>
+
+    <div class="fundo">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+
+
+    <!-- PAINEL -->
+
+    <div class="painel">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo-link">
+
+                <svg class="logo-svg"
+                    viewBox="0 0 200 44"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <circle cx="22" cy="22" r="16"
+                        fill="none"
+                        stroke="url(#grad1)"
+                        stroke-width="2.5"/>
+
+                    <circle cx="22" cy="22" r="6"
+                        fill="url(#grad1)"/>
+
+                    <g stroke="url(#grad1)"
+                        stroke-width="2.5"
+                        stroke-linecap="round">
+
+                        <line x1="22" y1="2" x2="22" y2="7"/>
+                        <line x1="22" y1="37" x2="22" y2="42"/>
+
+                        <line x1="2" y1="22" x2="7" y2="22"/>
+                        <line x1="37" y1="22" x2="42" y2="22"/>
+
+                        <line x1="8" y1="8" x2="12" y2="12"/>
+                        <line x1="32" y1="32" x2="36" y2="36"/>
+
+                        <line x1="36" y1="8" x2="32" y2="12"/>
+                        <line x1="12" y1="32" x2="8" y2="36"/>
+
+                    </g>
+
+                    <text x="52"
+                        y="20"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="18"
+                        font-weight="700"
+                        fill="white"
+                        letter-spacing="0.5">
+                        Saqua
+                    </text>
+
+                    <text x="114"
+                        y="20"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="18"
+                        font-weight="700"
+                        fill="url(#grad1)"
+                        letter-spacing="0.5">
+                        Os
+                    </text>
+
+                    <text x="52"
+                        y="36"
+                        font-family="'Segoe UI',sans-serif"
+                        font-size="10"
+                        fill="rgba(255,255,255,0.4)"
+                        letter-spacing="3">
+                        SISTEMAS
+                    </text>
+
+                    <defs>
+
+                        <linearGradient id="grad1"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%">
+
+                            <stop offset="0%"
+                                stop-color="#6c8cff"/>
+
+                            <stop offset="100%"
+                                stop-color="#4b5eff"/>
+
+                        </linearGradient>
+
+                    </defs>
+
+                </svg>
+
+            </a>
+
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <a href="index.html"
+                    class="menu-item">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="minhas-os.html"
+                    class="menu-item ativo">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    <span>Minhas OS</span>
+
+                </a>
+
+
+                <a href="os-andamento.html"
+                    class="menu-item">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>OS Pendentes</span>
+
+                </a>
+
+
+                <a href="os-andamento.html"
+                    class="menu-item">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    <span>OS Em andamento</span>
+
+                </a>
+
+
+                <a href="os-concluidas.html"
+                    class="menu-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>OS Concluídas</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- MENU FINAL -->
+
+            <div class="menu-final">
+
+                <a href="perfil.html"
+                    class="menu-item">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Perfil</span>
+
+                </a>
+
+
+                <a href="../login/login.html"
+                    class="menu-item sair"
+                    id="btnSair">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Sair</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ================= CONTEÚDO ================= -->
+
+        <main class="conteudo">
+
+
+            <!-- TOPO -->
+
+            <header class="topo">
+
+                <div>
+
+                    <div class="titulo-pequeno">
+                        Atendimento técnico
+                    </div>
+
+                    <h1>
+                        Minhas Ordens de Serviço
+                    </h1>
+
+                </div>
+
+
+                <div class="topo-direita">
+
+                    <button class="btn-notificacao"
+                        id="btnNotificacao"
+                        title="Notificações">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="badge">
+                            2
+                        </span>
+
+                    </button>
+
+
+                    <a href="perfil.html"
+                        class="perfil">
+
+                        <div class="avatar">
+                            BG
+                        </div>
+
+                        <div class="perfil-info">
+
+                            <strong>
+                                Bruno Goulart
+                            </strong>
+
+                            <span>
+                                Técnico
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================= CABEÇALHO ================= -->
+
+            <section class="cabecalho-os">
+
+                <div>
+
+                    <span class="titulo-pequeno">
+                        Ordens atribuídas
+                    </span>
+
+                    <h2>
+                        Serviços sob sua responsabilidade
+                    </h2>
+
+                </div>
+
+
+                <div class="contador-os">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    <strong>
+                        8
+                    </strong>
+
+                    <span>
+                        OS
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= PESQUISA ================= -->
+
+            <section class="filtros-os">
+
+                <div class="campo-pesquisa">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="pesquisaOS"
+                        placeholder="Pesquisar pelo número da OS ou cliente...">
+
+                </div>
+
+
+                <select id="filtroStatus">
+
+                    <option value="todos">
+                        Todos os status
+                    </option>
+
+                    <option value="aberta">
+                        Aberta
+                    </option>
+
+                    <option value="diagnostico">
+                        Aguardando diagnóstico
+                    </option>
+
+                    <option value="analise">
+                        Em análise
+                    </option>
+
+                    <option value="aprovacao">
+                        Aguardando aprovação
+                    </option>
+
+                    <option value="peca">
+                        Aguardando peça
+                    </option>
+
+                    <option value="execucao">
+                        Conserto em execução
+                    </option>
+
+                    <option value="entrega">
+                        Pronto para entrega
+                    </option>
+
+                    <option value="concluida">
+                        Concluída
+                    </option>
+
+                    <option value="cancelada">
+                        Cancelada
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="btn-limpar"
+                    id="btnLimpar">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    Limpar
+
+                </button>
+
+            </section>
+
+
+            <div
+                id="mensagemPesquisa"
+                class="mensagem-pesquisa">
+            </div>
+
+
+
+            <!-- ================= LISTA DE OS ================= -->
+
+            <section class="os-container">
+
+
+                <!-- OS 1024 -->
+
+                <article class="os-card"
+                    data-os="1024"
+                    data-status="execucao"
+                    data-cliente="Carlos Almeida">
+
+                    <div class="os-topo">
+
+                        <div>
+
+                            <span class="os-numero">
+                                #1024
+                            </span>
+
+                            <h3 class="os-titulo">
+                                Manutenção de computador
+                            </h3>
+
+                            <p class="os-descricao">
+                                Computador apresentando lentidão
+                                e travamentos durante o uso.
+                            </p>
+
+                        </div>
+
+
+                        <span class="os-status status-execucao">
+                            Conserto em execução
+                        </span>
+
+                    </div>
+
+
+                    <div class="os-informacoes">
+
+                        <div>
+                            <i class="fa-solid fa-user"></i>
+                            <span>Cliente</span>
+                            <strong>Carlos Almeida</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>Data</span>
+                            <strong>28/09/2026</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-desktop"></i>
+                            <span>Equipamento</span>
+                            <strong>Computador</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span>Prioridade</span>
+                            <strong>Alta</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="os-footer">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Saquarema - RJ
+                        </span>
+
+
+                        <button
+                            class="btn-detalhes"
+                            data-target="detalhes1024">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver detalhes
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="detalhes-os"
+                        id="detalhes1024">
+
+                        <h4>
+                            Detalhes da OS
+                        </h4>
+
+                        <p>
+                            <strong>Problema relatado:</strong>
+                            Computador apresentando lentidão,
+                            travamentos e demora para iniciar.
+                        </p>
+
+                        <p>
+                            <strong>Diagnóstico:</strong>
+                            Necessidade de manutenção do sistema
+                            e avaliação do armazenamento.
+                        </p>
+
+                        <p>
+                            <strong>Serviço:</strong>
+                            Manutenção preventiva e otimização
+                            do sistema.
+                        </p>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>OS aberta</span>
+                            </div>
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>Técnico atribuído</span>
+                            </div>
+
+                            <div class="timeline-item atual">
+                                <span class="timeline-bolinha"></span>
+                                <span>Conserto em execução</span>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timeline-bolinha"></span>
+                                <span>Pronto para entrega</span>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timeline-bolinha"></span>
+                                <span>Concluída</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- OS 1021 -->
+
+                <article class="os-card"
+                    data-os="1021"
+                    data-status="diagnostico"
+                    data-cliente="Mariana Souza">
+
+                    <div class="os-topo">
+
+                        <div>
+
+                            <span class="os-numero">
+                                #1021
+                            </span>
+
+                            <h3 class="os-titulo">
+                                Instalação de impressora
+                            </h3>
+
+                            <p class="os-descricao">
+                                Instalação e configuração de
+                                impressora para uso no escritório.
+                            </p>
+
+                        </div>
+
+
+                        <span class="os-status status-diagnostico">
+                            Aguardando diagnóstico
+                        </span>
+
+                    </div>
+
+
+                    <div class="os-informacoes">
+
+                        <div>
+                            <i class="fa-solid fa-user"></i>
+                            <span>Cliente</span>
+                            <strong>Mariana Souza</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>Data</span>
+                            <strong>25/09/2026</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-print"></i>
+                            <span>Equipamento</span>
+                            <strong>Impressora</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-flag"></i>
+                            <span>Prioridade</span>
+                            <strong>Normal</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="os-footer">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Saquarema - RJ
+                        </span>
+
+
+                        <button
+                            class="btn-detalhes"
+                            data-target="detalhes1021">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver detalhes
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="detalhes-os"
+                        id="detalhes1021">
+
+                        <h4>
+                            Detalhes da OS
+                        </h4>
+
+                        <p>
+                            <strong>Problema relatado:</strong>
+                            Impressora nova aguardando
+                            configuração.
+                        </p>
+
+                        <p>
+                            <strong>Diagnóstico:</strong>
+                            Ainda não realizado.
+                        </p>
+
+                        <p>
+                            <strong>Serviço:</strong>
+                            Instalação dos drivers e configuração
+                            da impressora.
+                        </p>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>OS aberta</span>
+                            </div>
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>Técnico atribuído</span>
+                            </div>
+
+                            <div class="timeline-item atual">
+                                <span class="timeline-bolinha"></span>
+                                <span>Aguardando diagnóstico</span>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timeline-bolinha"></span>
+                                <span>Em análise</span>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timeline-bolinha"></span>
+                                <span>Concluída</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- OS 1018 -->
+
+                <article class="os-card"
+                    data-os="1018"
+                    data-status="analise"
+                    data-cliente="João Ferreira">
+
+                    <div class="os-topo">
+
+                        <div>
+
+                            <span class="os-numero">
+                                #1018
+                            </span>
+
+                            <h3 class="os-titulo">
+                                Configuração de rede
+                            </h3>
+
+                            <p class="os-descricao">
+                                Configuração de rede interna
+                                para novos equipamentos.
+                            </p>
+
+                        </div>
+
+
+                        <span class="os-status status-analise">
+                            Em análise
+                        </span>
+
+                    </div>
+
+
+                    <div class="os-informacoes">
+
+                        <div>
+                            <i class="fa-solid fa-user"></i>
+                            <span>Cliente</span>
+                            <strong>João Ferreira</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>Data</span>
+                            <strong>20/09/2026</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-network-wired"></i>
+                            <span>Equipamento</span>
+                            <strong>Rede</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-flag"></i>
+                            <span>Prioridade</span>
+                            <strong>Normal</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="os-footer">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Saquarema - RJ
+                        </span>
+
+
+                        <button
+                            class="btn-detalhes"
+                            data-target="detalhes1018">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver detalhes
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="detalhes-os"
+                        id="detalhes1018">
+
+                        <h4>
+                            Detalhes da OS
+                        </h4>
+
+                        <p>
+                            <strong>Problema relatado:</strong>
+                            Necessidade de configuração
+                            de rede para novos computadores.
+                        </p>
+
+                        <p>
+                            <strong>Diagnóstico:</strong>
+                            Equipamentos identificados.
+                        </p>
+
+                        <p>
+                            <strong>Serviço:</strong>
+                            Configuração de rede,
+                            IP e conectividade.
+                        </p>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>OS aberta</span>
+                            </div>
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>Técnico atribuído</span>
+                            </div>
+
+                            <div class="timeline-item atual">
+                                <span class="timeline-bolinha"></span>
+                                <span>Em análise</span>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timeline-bolinha"></span>
+                                <span>Conserto em execução</span>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timeline-bolinha"></span>
+                                <span>Concluída</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- OS 1015 -->
+
+                <article class="os-card"
+                    data-os="1015"
+                    data-status="concluida"
+                    data-cliente="Fernanda Lima">
+
+                    <div class="os-topo">
+
+                        <div>
+
+                            <span class="os-numero">
+                                #1015
+                            </span>
+
+                            <h3 class="os-titulo">
+                                Manutenção de notebook
+                            </h3>
+
+                            <p class="os-descricao">
+                                Limpeza e manutenção preventiva
+                                do equipamento.
+                            </p>
+
+                        </div>
+
+
+                        <span class="os-status status-concluida">
+                            Concluída
+                        </span>
+
+                    </div>
+
+
+                    <div class="os-informacoes">
+
+                        <div>
+                            <i class="fa-solid fa-user"></i>
+                            <span>Cliente</span>
+                            <strong>Fernanda Lima</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>Data</span>
+                            <strong>18/09/2026</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-laptop"></i>
+                            <span>Equipamento</span>
+                            <strong>Notebook</strong>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-flag"></i>
+                            <span>Prioridade</span>
+                            <strong>Baixa</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="os-footer">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Saquarema - RJ
+                        </span>
+
+
+                        <button
+                            class="btn-detalhes"
+                            data-target="detalhes1015">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver detalhes
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="detalhes-os"
+                        id="detalhes1015">
+
+                        <h4>
+                            Detalhes da OS
+                        </h4>
+
+                        <p>
+                            <strong>Problema relatado:</strong>
+                            Notebook apresentando aquecimento.
+                        </p>
+
+                        <p>
+                            <strong>Diagnóstico:</strong>
+                            Acúmulo de poeira no sistema
+                            de refrigeração.
+                        </p>
+
+                        <p>
+                            <strong>Serviço:</strong>
+                            Limpeza interna e manutenção preventiva.
+                        </p>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>OS aberta</span>
+                            </div>
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>Técnico atribuído</span>
+                            </div>
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>Diagnóstico</span>
+                            </div>
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>Conserto</span>
+                            </div>
+
+                            <div class="timeline-item concluido">
+                                <span class="timeline-bolinha"></span>
+                                <span>Concluída</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SEM RESULTADO -->
+
+                <div
+                    class="sem-resultado"
+                    id="semResultado">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <h3>
+                        Nenhuma OS encontrada
+                    </h3>
+
+                    <p>
+                        Tente pesquisar por outro número
+                        ou cliente.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- RODAPÉ -->
+
+            <footer>
+
+                <span>
+                    © 2026 Saqua OS
+                </span>
+
+                <span>
+                    Sistema de Gestão de Ordens de Serviço
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="javascriptminhasos.js"></script>
+
+</body>
+
+</html>

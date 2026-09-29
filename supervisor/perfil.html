@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Saqua OS - Meu Perfil</title>
+
+    <link rel="stylesheet"
+          href="styleperfil.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="fundo-grid"></div>
+
+<div class="orbe orbe-1"></div>
+<div class="orbe orbe-2"></div>
+<div class="orbe orbe-3"></div>
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <svg class="logo-svg"
+             viewBox="0 0 200 44"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <circle cx="22"
+                    cy="22"
+                    r="16"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="2.5"/>
+
+            <circle cx="22"
+                    cy="22"
+                    r="6"
+                    fill="url(#grad1)"/>
+
+            <g stroke="url(#grad1)"
+               stroke-width="2.5"
+               stroke-linecap="round">
+
+                <line x1="22" y1="2"
+                      x2="22" y2="7"/>
+
+                <line x1="22" y1="37"
+                      x2="22" y2="42"/>
+
+                <line x1="2" y1="22"
+                      x2="7" y2="22"/>
+
+                <line x1="37" y1="22"
+                      x2="42" y2="22"/>
+
+                <line x1="8" y1="8"
+                      x2="12" y2="12"/>
+
+                <line x1="32" y1="32"
+                      x2="36" y2="36"/>
+
+                <line x1="36" y1="8"
+                      x2="32" y2="12"/>
+
+                <line x1="12" y1="32"
+                      x2="8" y2="36"/>
+
+            </g>
+
+            <text x="52"
+                  y="20"
+                  font-family="'Segoe UI',sans-serif"
+                  font-size="18"
+                  font-weight="700"
+                  fill="white"
+                  letter-spacing="0.5">
+                Saqua
+            </text>
+
+            <text x="114"
+                  y="20"
+                  font-family="'Segoe UI',sans-serif"
+                  font-size="18"
+                  font-weight="700"
+                  fill="url(#grad1)"
+                  letter-spacing="0.5">
+                Os
+            </text>
+
+            <text x="52"
+                  y="36"
+                  font-family="'Segoe UI',sans-serif"
+                  font-size="10"
+                  fill="rgba(255,255,255,0.4)"
+                  letter-spacing="3">
+                SISTEMAS
+            </text>
+
+            <defs>
+
+                <linearGradient id="grad1"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="100%">
+
+                    <stop offset="0%"
+                          stop-color="#6c8cff"/>
+
+                    <stop offset="100%"
+                          stop-color="#4b5eff"/>
+
+                </linearGradient>
+
+            </defs>
+
+        </svg>
+
+    </div>
+
+
+    <nav class="menu">
+
+        <a href="index.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="ordens-servico.html">
+
+            <i class="fa-solid fa-clipboard-list"></i>
+
+            <span>Ordens de Serviço</span>
+
+        </a>
+
+
+        <a href="tecnicos.html">
+
+            <i class="fa-solid fa-user-gear"></i>
+
+            <span>Técnicos</span>
+
+        </a>
+
+
+        <a href="relatorios.html">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Relatórios</span>
+
+        </a>
+
+
+        <a href="perfil.html"
+           class="ativo">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>Perfil</span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="menu-final">
+
+        <a href="../login/login.html"
+           id="btnSair">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Sair</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================
+     CONTEÚDO
+========================================= -->
+
+<main class="conteudo">
+
+
+    <header class="topo">
+
+        <div class="titulo-area">
+
+            <span class="categoria">
+                CONTA
+            </span>
+
+            <h1>
+                Meu Perfil
+            </h1>
+
+            <p>
+                Consulte e atualize seus dados pessoais.
+            </p>
+
+        </div>
+
+
+        <div class="topo-direita">
+
+            <button class="notificacao"
+                    id="btnNotificacao">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>3</span>
+
+            </button>
+
+
+            <div class="perfil-topo">
+
+                <div class="avatar">
+                    BG
+                </div>
+
+                <div>
+
+                    <strong>
+                        Bruno Goulart
+                    </strong>
+
+                    <small>
+                        Supervisor
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         IDENTIDADE
+    ========================================= -->
+
+    <section class="identidade-card">
+
+
+        <div class="avatar-grande">
+            BG
+        </div>
+
+
+        <div class="identidade-info">
+
+            <span class="cargo">
+                SUPERVISOR
+            </span>
+
+            <h2>
+                Bruno Goulart
+            </h2>
+
+            <p>
+                Supervisor de Operações
+            </p>
+
+            <div class="status-conta">
+
+                <span></span>
+
+                Conta ativa
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         DADOS PESSOAIS
+    ========================================= -->
+
+    <section class="painel">
+
+
+        <div class="painel-titulo">
+
+            <div>
+
+                <span>
+                    INFORMAÇÕES
+                </span>
+
+                <h2>
+                    Dados pessoais
+                </h2>
+
+            </div>
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+
+        <div class="formulario">
+
+
+            <div class="campo">
+
+                <label>
+                    Nome completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    value="Bruno Goulart"
+                    disabled
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    value="bruno@saquaos.com.br"
+                    disabled
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    Telefone
+                </label>
+
+                <input
+                    type="text"
+                    id="telefone"
+                    value="(22) 99999-0000"
+                    disabled
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    CPF / Identificador
+                </label>
+
+                <input
+                    type="text"
+                    id="identificador"
+                    value="000.000.000-00"
+                    disabled
+                >
+
+            </div>
+
+
+            <div class="campo campo-completo">
+
+                <label>
+                    Endereço
+                </label>
+
+                <input
+                    type="text"
+                    id="endereco"
+                    value="Saquarema - RJ"
+                    disabled
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <div class="acoes">
+
+            <button
+                id="btnEditar"
+                class="btn-editar">
+
+                <i class="fa-solid fa-pen"></i>
+
+                Editar dados
+
+            </button>
+
+
+            <button
+                id="btnCancelar"
+                class="btn-cancelar">
+
+                Cancelar
+
+            </button>
+
+
+            <button
+                id="btnSalvar"
+                class="btn-salvar">
+
+                <i class="fa-solid fa-check"></i>
+
+                Salvar alterações
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         SEGURANÇA
+    ========================================= -->
+
+    <section class="painel">
+
+
+        <div class="painel-titulo">
+
+            <div>
+
+                <span>
+                    SEGURANÇA
+                </span>
+
+                <h2>
+                    Senha de acesso
+                </h2>
+
+            </div>
+
+            <i class="fa-solid fa-lock"></i>
+
+        </div>
+
+
+        <div class="seguranca">
+
+
+            <div class="seguranca-info">
+
+                <div class="icone-seguranca">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Alterar senha
+                    </strong>
+
+                    <p>
+                        Mantenha sua conta protegida utilizando uma senha segura.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="btnAlterarSenha"
+                class="btn-senha">
+
+                Alterar senha
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+        </div>
+
+
+        <div
+            id="areaSenha"
+            class="area-senha">
+
+
+            <div class="campo">
+
+                <label>
+                    Nova senha
+                </label>
+
+                <input
+                    type="password"
+                    id="novaSenha"
+                    placeholder="Digite a nova senha"
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    Confirmar nova senha
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    placeholder="Digite novamente"
+                >
+
+            </div>
+
+
+            <button
+                id="btnSalvarSenha"
+                class="btn-salvar">
+
+                <i class="fa-solid fa-check"></i>
+
+                Salvar nova senha
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+
+        <span>
+            © 2026 Saqua OS
+        </span>
+
+        <span>
+            Sistema de Gestão de Ordens de Serviço
+        </span>
+
+    </footer>
+
+
+</main>
+
+
+<script src="javascriptperfil.js"></script>
+
+</body>
+
+</html>
